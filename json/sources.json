@@ -1,0 +1,211 @@
+{  
+   "hn":{  
+      "title":"Hacker News",
+      "sources":{  
+         "Hacker News":"https://news.ycombinator.com/"
+      }
+   },
+   "producthunt":{  
+      "title":"Product Hunt",
+      "sources":{  
+         "Product Hunt":"http://www.producthunt.com/"
+      }
+   },
+   "github":{  
+      "title":"Github",
+      "sources":{  
+         "Github":"https://github.com/trending"
+      }
+   },
+   "medium":{  
+      "title":"Medium",
+      "sources":{  
+         "Medium":"https://medium.com/"
+      }
+   },
+   "dn":{  
+      "title":"Designer News",
+      "sources":{  
+         "Designer News":"https://news.layervault.com/"
+      }
+   },
+   "readability":{  
+      "title":"Readability Top Reads",
+      "sources":{  
+         "Readability":"https://readability.com/topreads/"
+      }
+   },
+   "slashdot":{  
+      "title":"Slashdot",
+      "sources":{  
+         "Slashdot":"http://slashdot.org"
+      }
+   },
+   "php":{  
+      "title":"PHP",
+      "sources":{  
+         "PHP Weekly":"http://www.phpweekly.com/"
+      }
+   },
+   "html5":{  
+      "title":"HTML5",
+      "sources":{  
+         "HTML5 Weekly":"http://html5weekly.com/"
+      }
+   },
+   "css":{  
+      "title":"CSS",
+      "sources":{  
+         "CSS Weekly":"http://css-weekly.com/",
+         "Responsive Design Weekly":"http://responsivedesignweekly.com/"
+      }
+   },
+   "js":{  
+      "title":"JavaScript",
+      "sources":{  
+         "JavaScript Weekly":"http://javascriptweekly.com/",
+         "Node Weekly":"http://nodeweekly.com/",
+         "Ember Weekly":"http://emberweekly.com/",
+         "EchoJS":"https://twitter.com/echojs",
+         "JavaScript Live":"https://twitter.com/JavaScriptDaily"
+      }
+   },
+   "ruby":{  
+      "title":"Ruby",
+      "sources":{  
+         "Ruby Weekly":"http://rubyweekly.com/"
+      }
+   },
+   "db":{  
+      "title":"Database",
+      "sources":{  
+         "DB Weekly":"http://dbweekly.com/",
+         "Postgres Weekly":"http://postgresweekly.com/",
+         "NoSQL Weekly":"http://www.nosqlweekly.com/"
+      }
+   },
+   "programmer":{  
+      "title":"Programmer",
+      "sources":{  
+         "Status Code":"http://statuscode.org/",
+         "Reddit Programming":"https://www.reddit.com/r/programming/top/?sort=top&t=week"
+      }
+   },
+   "webdesign":{  
+      "title":"Web Design",
+      "sources":{  
+         "Sidebar":"http://sidebar.io/",
+         "Web Design Weekly":"https://web-design-weekly.com/",
+         "Hey Designer":"http://heydesigner.com/",
+         "Reddit Web Design":"https://www.reddit.com/r/web_design/top/?sort=top&t=week"
+      }
+   },
+   "uxdesign":{  
+      "title":"UX Design",
+      "sources":{  
+         "UX Design Weekly":"http://uxdesignweekly.com/",
+         "UX Weekly":"http://uxwkly.com/"
+      }
+   },
+   "gamedev":{  
+      "title":"Game Development",
+      "sources":{  
+         "Gamedev.js Weekly":"http://gamedevjsweekly.com/"
+      }
+   },
+   "webdev":{  
+      "title":"Web Development",
+      "sources":{  
+         "Breaking Development":"http://bdconf.com/",
+         "Versioning":"http://www.sitepoint.com/versioning/",
+         "Web Development Reading List":"https://wdrl.info/",
+         "Reddit Webdev":"https://www.reddit.com/r/webdev/top/?sort=top&t=week",
+         "CancelBubble":"https://twitter.com/cancelBubble"
+      }
+   },
+   "mobile":{  
+      "title":"Mobile",
+      "sources":{  
+         "Mobile Web Weekly":"http://mobilewebweekly.co/"
+      }
+   },
+   "web-operations":{  
+      "title":"Web Operations",
+      "sources":{  
+         "Web Operations Weekly":"http://webopsweekly.com/"
+      }
+   },
+   "web-performance":{  
+      "title":"Web Performance",
+      "sources":{  
+         "Web Performance News":"http://www.webperformancenews.com/"
+      }
+   },
+   "tools":{  
+      "title":"Tools",
+      "sources":{  
+         "Web Tools Weekly":"http://webtoolsweekly.com/"
+      }
+   },
+   "python":{  
+      "title":"Python",
+      "sources":{  
+         "Python Weekly":"http://www.pythonweekly.com/",
+         "PyCoders Weekly":"http://pycoders.com/"
+      }
+   },
+   "go":{  
+      "title":"Go",
+      "sources":{  
+         "Go Newsletter":"http://golangweekly.com/"
+      }
+   },
+   "ios":{  
+      "title":"IOS",
+      "sources":{  
+         "IOS Dev Weekly":"https://iosdevweekly.com/"
+      }
+   },
+   "android":{  
+      "title":"Android",
+      "sources":{  
+         "Android Weekly":"http://androidweekly.net/"
+      }
+   },
+   "perl":{  
+      "title":"Perl",
+      "sources":{  
+         "Perl Weekly":"http://perlweekly.com/"
+      }
+   },
+   "devops":{  
+      "title":"Devops",
+      "sources":{  
+         "DevOps Weekly":"http://www.devopsweekly.com/"
+      }
+   },
+   "wordpress":{  
+      "title":"Wordpress",
+      "sources":{  
+         "wpMail":"http://wpmail.me/"
+      }
+   },
+   "longreads-tech":{  
+      "title":"Longreads",
+      "sources":{  
+         "Longreads Tech":"http://longreads.com/articles/search/?q=Tech"
+      }
+   },
+   "nondev":{  
+      "title":"Non-developer",
+      "sources":{  
+         "Next Draft":"http://nextdraft.com/"
+      }
+   },
+   "pockethits":{  
+      "title":"Pocket Hits",
+      "sources":{  
+         "Next Draft":"https://twitter.com/PocketHits"
+      }
+   }
+}
