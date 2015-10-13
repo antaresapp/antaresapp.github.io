@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Wern Ancheta">
+	<meta name="keywords" content="news,web-development,programming,design">
+	<meta name="description" content="Your developer news. All in one place.">
+
+       
+	<meta property="og:title" content="Antares">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="assets/img/icon.png">
+	<meta property="og:url" content="http://antaresapp.github.io">
+	<meta property="og:description" content="Your developer news. All in one place.">
+
+	    
+	<meta name="twitter:card" content="Your developer news. All in one place.">
+	<meta name="twitter:title" content="Antares">
+	<meta name="twitter:description" content="Your developer news. All in one place.">
+	<meta name="twitter:image" content="assets/img/favicons/android-icon-72x72.png">
+
+	<title>Antares</title>
+	<link rel="stylesheet" href="assets/css/news.css">
+	<link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+	<h1>Antares</h1>
+	<span class="sub-text">Your developer news. All in one place.</span>
+	<div id="mobile-nav">
+		<select name="news_sources" id="news_sources">
+						<option value="/hn" >Hacker News</option>
+						<option value="/github" >Github</option>
+						<option value="/medium" >Medium</option>
+						<option value="/dn" >Designer News</option>
+						<option value="/php" >PHP</option>
+						<option value="/html5" >HTML5</option>
+						<option value="/css" >CSS</option>
+						<option value="/js" >JavaScript</option>
+						<option value="/ruby" >Ruby</option>
+						<option value="/db" >Database</option>
+						<option value="/programmer" >Programmer</option>
+						<option value="/webdesign" >Web Design</option>
+						<option value="/uxdesign" >UX Design</option>
+						<option value="/gamedev" >Game Development</option>
+						<option value="/webdev" >Web Development</option>
+						<option value="/mobile" >Mobile</option>
+						<option value="/tools" >Tools</option>
+						<option value="/python" >Python</option>
+						<option value="/go" >Go</option>
+						<option value="/perl" >Perl</option>
+						<option value="/devops" >Devops</option>
+						<option value="/wordpress" >Wordpress</option>
+						<option value="/nondev" >Non-developer</option>
+						<option value="/realtime" >RealTime</option>
+						<option value="/swift" >Swift</option>
+						<option value="/web-audio" >Web Audio</option>
+						<option value="/dotnet" >.Net</option>
+						<option value="/scala" >Scala Times</option>
+						<option value="/product" >Product</option>
+						<option value="/raspberrypi" >RaspBerry Pi</option>
+						<option value="/rust" selected>This Week in Rust</option>
+						<option value="/clojure" >Clojure</option>
+						<option value="/machine-learning" >Machine Learning</option>
+						<option value="/people" >People</option>
+						<option value="/data-science" >Data Science</option>
+					</select>
+	</div>
+</header>
+<div id="nav">
+	<ul>	
+				<li><a href="/hn">Hacker News</a></li>
+				<li><a href="/github">Github</a></li>
+				<li><a href="/medium">Medium</a></li>
+				<li><a href="/dn">Designer News</a></li>
+				<li><a href="/php">PHP</a></li>
+				<li><a href="/html5">HTML5</a></li>
+				<li><a href="/css">CSS</a></li>
+				<li><a href="/js">JavaScript</a></li>
+				<li><a href="/ruby">Ruby</a></li>
+				<li><a href="/db">Database</a></li>
+				<li><a href="/programmer">Programmer</a></li>
+				<li><a href="/webdesign">Web Design</a></li>
+				<li><a href="/uxdesign">UX Design</a></li>
+				<li><a href="/gamedev">Game Development</a></li>
+				<li><a href="/webdev">Web Development</a></li>
+				<li><a href="/mobile">Mobile</a></li>
+				<li><a href="/tools">Tools</a></li>
+				<li><a href="/python">Python</a></li>
+				<li><a href="/go">Go</a></li>
+				<li><a href="/perl">Perl</a></li>
+				<li><a href="/devops">Devops</a></li>
+				<li><a href="/wordpress">Wordpress</a></li>
+				<li><a href="/nondev">Non-developer</a></li>
+				<li><a href="/realtime">RealTime</a></li>
+				<li><a href="/swift">Swift</a></li>
+				<li><a href="/web-audio">Web Audio</a></li>
+				<li><a href="/dotnet">.Net</a></li>
+				<li><a href="/scala">Scala Times</a></li>
+				<li><a href="/product">Product</a></li>
+				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
+				<li><a href="/rust">This Week in Rust</a></li>
+				<li><a href="/clojure">Clojure</a></li>
+				<li><a href="/machine-learning">Machine Learning</a></li>
+				<li><a href="/people">People</a></li>
+				<li><a href="/data-science">Data Science</a></li>
+			</ul>
+</div>
+
+
+<div id="news">
+	<div id="news-category">
+		<h2>rust</h2>
+		Sources: 
+					<a href="http://this-week-in-rust.org/" target="_blank">This Week in Rust</a>
+			</div>
+		<div class="small">Last updated: 2015-10-13 PHT</div>
+	<div class="clear"></div>
+	<ul id="items">				
+			<li class="item">
+			<div class="date ">Oct 13</div>
+			<a href="http://creativecommons.org/licenses/by-sa/4.0/" class="item-link" target="_blank">cc-by-sa-4.0</a>
+			<div>
+				<a href="http://creativecommons.org" class="source" target="_blank">creativecommons.org</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://creativecommons.org/licenses/by-sa/4.0/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://creativecommons.org/licenses/by-sa/4.0/&text=cc-by-sa-4.0" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://creativecommons.org/licenses/by-sa/4.0/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://creativecommons.org/licenses/by-sa/4.0/&title=cc-by-sa-4.0" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://creativecommons.org/licenses/by-sa/4.0/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1255" class="item-link" target="_blank">Stabilize OS string to bytes conversions</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1255" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1255&text=Stabilize OS string to bytes conversions" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1255" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1255&title=Stabilize OS string to bytes conversions" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1255" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1257" class="item-link" target="_blank">Implement .drain(range) and .drain() respectively as appropriate on collections.</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1257" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1257&text=Implement .drain(range) and .drain() respectively as appropriate on collections." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1257" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1257&title=Implement .drain(range) and .drain() respectively as appropriate on collections." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1257" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1309" class="item-link" target="_blank">Add a string-like API to the OsString and OsStr types</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1309" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1309&text=Add a string-like API to the OsString and OsStr types" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1309" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1309&title=Add a string-like API to the OsString and OsStr types" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1309" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.meetup.com/de/Rust-Berlin/events/225137978/" class="item-link" target="_blank">10/14. RustBerlin Hack and Learn</a>
+			<div>
+				<a href="http://meetup.com" class="source" target="_blank">meetup.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.meetup.com/de/Rust-Berlin/events/225137978/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.meetup.com/de/Rust-Berlin/events/225137978/&text=10/14. RustBerlin Hack and Learn" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.meetup.com/de/Rust-Berlin/events/225137978/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.meetup.com/de/Rust-Berlin/events/225137978/&title=10/14. RustBerlin Hack and Learn" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.meetup.com/de/Rust-Berlin/events/225137978/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.meetup.com/Rust-Meetup-Hamburg/events/225865482/" class="item-link" target="_blank">10/20. Rust Hack and Learn Hamburg</a>
+			<div>
+				<a href="http://meetup.com" class="source" target="_blank">meetup.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.meetup.com/Rust-Meetup-Hamburg/events/225865482/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.meetup.com/Rust-Meetup-Hamburg/events/225865482/&text=10/20. Rust Hack and Learn Hamburg" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.meetup.com/Rust-Meetup-Hamburg/events/225865482/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.meetup.com/Rust-Meetup-Hamburg/events/225865482/&title=10/20. Rust Hack and Learn Hamburg" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.meetup.com/Rust-Meetup-Hamburg/events/225865482/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1245" class="item-link" target="_blank">Amend #911 const-fn to allow unsafe const functions</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1245" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1245&text=Amend #911 const-fn to allow unsafe const functions" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1245" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1245&title=Amend #911 const-fn to allow unsafe const functions" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1245" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1228" class="item-link" target="_blank">Place left arrow syntax (place <- expr)</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1228" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1228&text=Place left arrow syntax (place <- expr)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1228" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1228&title=Place left arrow syntax (place <- expr)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1228" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1260" class="item-link" target="_blank">Allow a re-export for main</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1260" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1260&text=Allow a re-export for main" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1260" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1260&title=Allow a re-export for main" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1260" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28811" class="item-link" target="_blank">Add AsRef/AsMut impls to Box/Rc/Arc</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28811" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28811&text=Add AsRef/AsMut impls to Box/Rc/Arc" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28811" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28811&title=Add AsRef/AsMut impls to Box/Rc/Arc" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28811" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28779" class="item-link" target="_blank">rustc: Don't lint about isize/usize in FFI</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28779" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28779&text=rustc: Don't lint about isize/usize in FFI" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28779" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28779&title=rustc: Don't lint about isize/usize in FFI" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28779" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28768" class="item-link" target="_blank">rustc: Improve the dep-info experience</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28768" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28768&text=rustc: Improve the dep-info experience" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28768" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28768&title=rustc: Improve the dep-info experience" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28768" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/cargo/pull/1903" class="item-link" target="_blank">Cargo: Fix make and make doc on Mac OS X 10.11 El Capitan</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/cargo/pull/1903" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/cargo/pull/1903&text=Cargo: Fix make and make doc on Mac OS X 10.11 El Capitan" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/cargo/pull/1903" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/cargo/pull/1903&title=Cargo: Fix make and make doc on Mac OS X 10.11 El Capitan" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/cargo/pull/1903" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28869" class="item-link" target="_blank">Book: Add documentation on custom allocators</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28869" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28869&text=Book: Add documentation on custom allocators" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28869" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28869&title=Book: Add documentation on custom allocators" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28869" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28926" class="item-link" target="_blank">Book: New "Syntax Index" chapter</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28926" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28926&text=Book: New "Syntax Index" chapter" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28926" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28926&title=Book: New "Syntax Index" chapter" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28926" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust.vim/pull/16" class="item-link" target="_blank">rust.vim: Add rudimentary support for the playpen</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust.vim/pull/16" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust.vim/pull/16&text=rust.vim: Add rudimentary support for the playpen" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust.vim/pull/16" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust.vim/pull/16&title=rust.vim: Add rudimentary support for the playpen" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust.vim/pull/16" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/sublime-rust/pull/65" class="item-link" target="_blank">sublime-rust: Major changes</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/sublime-rust/pull/65" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/sublime-rust/pull/65&text=sublime-rust: Major changes" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/sublime-rust/pull/65" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/sublime-rust/pull/65&title=sublime-rust: Major changes" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/sublime-rust/pull/65" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1268" class="item-link" target="_blank">Allow overlapping implementations for marker traits</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1268" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1268&text=Allow overlapping implementations for marker traits" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1268" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1268&title=Allow overlapping implementations for marker traits" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1268" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rfcs/pull/1254" class="item-link" target="_blank">Ordered ranges 2.0</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rfcs/pull/1254" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rfcs/pull/1254&text=Ordered ranges 2.0" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rfcs/pull/1254" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rfcs/pull/1254&title=Ordered ranges 2.0" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rfcs/pull/1254" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.redox-os.org/blog/fired-fast-init-system/" class="item-link" target="_blank">fired</a>
+			<div>
+				<a href="http://redox-os.org" class="source" target="_blank">redox-os.org</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.redox-os.org/blog/fired-fast-init-system/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.redox-os.org/blog/fired-fast-init-system/&text=fired" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.redox-os.org/blog/fired-fast-init-system/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.redox-os.org/blog/fired-fast-init-system/&title=fired" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.redox-os.org/blog/fired-fast-init-system/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://ashleygwilliams.github.io/rust-release-explorer/" class="item-link" target="_blank">Rust Release Explorer</a>
+			<div>
+				<a href="http://ashleygwilliams.github.io" class="source" target="_blank">ashleygwilliams.github.io</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://ashleygwilliams.github.io/rust-release-explorer/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://ashleygwilliams.github.io/rust-release-explorer/&text=Rust Release Explorer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://ashleygwilliams.github.io/rust-release-explorer/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://ashleygwilliams.github.io/rust-release-explorer/&title=Rust Release Explorer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://ashleygwilliams.github.io/rust-release-explorer/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/killercup/cargo-edit" class="item-link" target="_blank">cargo-edit</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/killercup/cargo-edit" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/killercup/cargo-edit&text=cargo-edit" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/killercup/cargo-edit" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/killercup/cargo-edit&title=cargo-edit" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/killercup/cargo-edit" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/arthurprs/metrohash-rs" class="item-link" target="_blank">Rust MetroHash</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/arthurprs/metrohash-rs" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/arthurprs/metrohash-rs&text=Rust MetroHash" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/arthurprs/metrohash-rs" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/arthurprs/metrohash-rs&title=Rust MetroHash" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/arthurprs/metrohash-rs" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/mitchmindtree/rose_tree-rs" class="item-link" target="_blank">rose_tree</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/mitchmindtree/rose_tree-rs" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/mitchmindtree/rose_tree-rs&text=rose_tree" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/mitchmindtree/rose_tree-rs" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/mitchmindtree/rose_tree-rs&title=rose_tree" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/mitchmindtree/rose_tree-rs" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/mitchmindtree/daggy" class="item-link" target="_blank">daggy</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/mitchmindtree/daggy" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/mitchmindtree/daggy&text=daggy" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/mitchmindtree/daggy" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/mitchmindtree/daggy&title=daggy" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/mitchmindtree/daggy" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/hyunsik/hdfs-rs" class="item-link" target="_blank">hdfs-rs</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/hyunsik/hdfs-rs" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/hyunsik/hdfs-rs&text=hdfs-rs" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/hyunsik/hdfs-rs" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/hyunsik/hdfs-rs&title=hdfs-rs" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/hyunsik/hdfs-rs" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/attichacker/cargo.el" class="item-link" target="_blank">cargo.el</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/attichacker/cargo.el" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/attichacker/cargo.el&text=cargo.el" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/attichacker/cargo.el" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/attichacker/cargo.el&title=cargo.el" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/attichacker/cargo.el" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28748" class="item-link" target="_blank">Turn on MIR construction unconditionally</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28748" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28748&text=Turn on MIR construction unconditionally" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28748" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28748&title=Turn on MIR construction unconditionally" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28748" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28560" class="item-link" target="_blank">Make function pointers implement traits for up to 12 parameters</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28560" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28560&text=Make function pointers implement traits for up to 12 parameters" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28560" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28560&title=Make function pointers implement traits for up to 12 parameters" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28560" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/27897" class="item-link" target="_blank">Implement Read, BufRead, Write and Seek for Cursor<Box<[u8]>></a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/27897" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/27897&text=Implement Read, BufRead, Write and Seek for Cursor<Box<[u8]>>" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/27897" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/27897&title=Implement Read, BufRead, Write and Seek for Cursor<Box<[u8]>>" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/27897" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28521" class="item-link" target="_blank">Shrink metadata size</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28521" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28521&text=Shrink metadata size" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28521" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28521&title=Shrink metadata size" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28521" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28861" class="item-link" target="_blank">Implement RFC 1238: nonparametric dropck</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28861" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28861&text=Implement RFC 1238: nonparametric dropck" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28861" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28861&title=Implement RFC 1238: nonparametric dropck" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28861" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/rust-lang/rust/pull/28826" class="item-link" target="_blank">Integer parsing should accept leading plus</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rust-lang/rust/pull/28826" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/rust-lang/rust/pull/28826&text=Integer parsing should accept leading plus" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/rust-lang/rust/pull/28826" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rust-lang/rust/pull/28826&title=Integer parsing should accept leading plus" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/rust-lang/rust/pull/28826" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.redox-os.org/news/this-week-in-redox-1/" class="item-link" target="_blank">This week in Redox 1</a>
+			<div>
+				<a href="http://redox-os.org" class="source" target="_blank">redox-os.org</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.redox-os.org/news/this-week-in-redox-1/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.redox-os.org/news/this-week-in-redox-1/&text=This week in Redox 1" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.redox-os.org/news/this-week-in-redox-1/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.redox-os.org/news/this-week-in-redox-1/&title=This week in Redox 1" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.redox-os.org/news/this-week-in-redox-1/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://blog.servo.org/2015/10/05/twis-36/" class="item-link" target="_blank">This week in Servo 36</a>
+			<div>
+				<a href="http://servo.org" class="source" target="_blank">servo.org</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://blog.servo.org/2015/10/05/twis-36/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://blog.servo.org/2015/10/05/twis-36/&text=This week in Servo 36" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://blog.servo.org/2015/10/05/twis-36/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://blog.servo.org/2015/10/05/twis-36/&title=This week in Servo 36" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://blog.servo.org/2015/10/05/twis-36/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://techwhirl.com/conference-report-friendly-diverse-rust-camp/" class="item-link" target="_blank">Conference report: Friendly, diverse Rust Camp</a>
+			<div>
+				<a href="http://techwhirl.com" class="source" target="_blank">techwhirl.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://techwhirl.com/conference-report-friendly-diverse-rust-camp/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://techwhirl.com/conference-report-friendly-diverse-rust-camp/&text=Conference report: Friendly, diverse Rust Camp" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://techwhirl.com/conference-report-friendly-diverse-rust-camp/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://techwhirl.com/conference-report-friendly-diverse-rust-camp/&title=Conference report: Friendly, diverse Rust Camp" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://techwhirl.com/conference-report-friendly-diverse-rust-camp/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://ruudvanasseldonk.com/2015/10/06/neither-necessary-nor-sufficient" class="item-link" target="_blank">Neither necessary nor sufficient</a>
+			<div>
+				<a href="http://ruudvanasseldonk.com" class="source" target="_blank">ruudvanasseldonk.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://ruudvanasseldonk.com/2015/10/06/neither-necessary-nor-sufficient" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://ruudvanasseldonk.com/2015/10/06/neither-necessary-nor-sufficient&text=Neither necessary nor sufficient" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://ruudvanasseldonk.com/2015/10/06/neither-necessary-nor-sufficient" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://ruudvanasseldonk.com/2015/10/06/neither-necessary-nor-sufficient&title=Neither necessary nor sufficient" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://ruudvanasseldonk.com/2015/10/06/neither-necessary-nor-sufficient" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.ncameron.org/blog/rustfmt-ing-rust/" class="item-link" target="_blank">Rustfmt-ing Rust</a>
+			<div>
+				<a href="http://ncameron.org" class="source" target="_blank">ncameron.org</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.ncameron.org/blog/rustfmt-ing-rust/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.ncameron.org/blog/rustfmt-ing-rust/&text=Rustfmt-ing Rust" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.ncameron.org/blog/rustfmt-ing-rust/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.ncameron.org/blog/rustfmt-ing-rust/&title=Rustfmt-ing Rust" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.ncameron.org/blog/rustfmt-ing-rust/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-structs-part-4-extended-enums-and-thin-traits/" class="item-link" target="_blank">Virtual structs part 4: Extended enums and thin traits</a>
+			<div>
+				<a href="http://smallcultfollowing.com" class="source" target="_blank">smallcultfollowing.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-structs-part-4-extended-enums-and-thin-traits/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-structs-part-4-extended-enums-and-thin-traits/&text=Virtual structs part 4: Extended enums and thin traits" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-structs-part-4-extended-enums-and-thin-traits/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-structs-part-4-extended-enums-and-thin-traits/&title=Virtual structs part 4: Extended enums and thin traits" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-structs-part-4-extended-enums-and-thin-traits/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.ncameron.org/blog/macros/" class="item-link" target="_blank">Macros</a>
+			<div>
+				<a href="http://ncameron.org" class="source" target="_blank">ncameron.org</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.ncameron.org/blog/macros/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.ncameron.org/blog/macros/&text=Macros" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.ncameron.org/blog/macros/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.ncameron.org/blog/macros/&title=Macros" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.ncameron.org/blog/macros/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://llogiq.github.io/2015/10/09/lint-data.html" class="item-link" target="_blank">Lints that collect data per crate</a>
+			<div>
+				<a href="http://llogiq.github.io" class="source" target="_blank">llogiq.github.io</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://llogiq.github.io/2015/10/09/lint-data.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://llogiq.github.io/2015/10/09/lint-data.html&text=Lints that collect data per crate" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://llogiq.github.io/2015/10/09/lint-data.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://llogiq.github.io/2015/10/09/lint-data.html&title=Lints that collect data per crate" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://llogiq.github.io/2015/10/09/lint-data.html" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://bluss.github.io/rust/fun/2015/10/11/stuff-the-identity-function-does/" class="item-link" target="_blank">Stuff the identity function does (in Rust)</a>
+			<div>
+				<a href="http://bluss.github.io" class="source" target="_blank">bluss.github.io</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://bluss.github.io/rust/fun/2015/10/11/stuff-the-identity-function-does/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://bluss.github.io/rust/fun/2015/10/11/stuff-the-identity-function-does/&text=Stuff the identity function does (in Rust)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://bluss.github.io/rust/fun/2015/10/11/stuff-the-identity-function-does/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://bluss.github.io/rust/fun/2015/10/11/stuff-the-identity-function-does/&title=Stuff the identity function does (in Rust)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://bluss.github.io/rust/fun/2015/10/11/stuff-the-identity-function-does/" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://www.ralfj.de/blog/2015/10/12/formalizing-rust.html" class="item-link" target="_blank">Formalizing Rust</a>
+			<div>
+				<a href="http://ralfj.de" class="source" target="_blank">ralfj.de</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://www.ralfj.de/blog/2015/10/12/formalizing-rust.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://www.ralfj.de/blog/2015/10/12/formalizing-rust.html&text=Formalizing Rust" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://www.ralfj.de/blog/2015/10/12/formalizing-rust.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://www.ralfj.de/blog/2015/10/12/formalizing-rust.html&title=Formalizing Rust" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://www.ralfj.de/blog/2015/10/12/formalizing-rust.html" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/srijs/rust-plumbum" class="item-link" target="_blank">Plumbum</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/srijs/rust-plumbum" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/srijs/rust-plumbum&text=Plumbum" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/srijs/rust-plumbum" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/srijs/rust-plumbum&title=Plumbum" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/srijs/rust-plumbum" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/raymontag/rust-keepass" class="item-link" target="_blank">rust-keepass</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/raymontag/rust-keepass" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/raymontag/rust-keepass&text=rust-keepass" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/raymontag/rust-keepass" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/raymontag/rust-keepass&title=rust-keepass" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/raymontag/rust-keepass" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/DualSpark/rusoto" class="item-link" target="_blank">Rusoto</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/DualSpark/rusoto" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/DualSpark/rusoto&text=Rusoto" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/DualSpark/rusoto" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/DualSpark/rusoto&title=Rusoto" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/DualSpark/rusoto" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://llogiq.github.io/2015/10/05/safety-freedom.html" class="item-link" target="_blank">Safety = Freedom</a>
+			<div>
+				<a href="http://llogiq.github.io" class="source" target="_blank">llogiq.github.io</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://llogiq.github.io/2015/10/05/safety-freedom.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://llogiq.github.io/2015/10/05/safety-freedom.html&text=Safety = Freedom" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://llogiq.github.io/2015/10/05/safety-freedom.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://llogiq.github.io/2015/10/05/safety-freedom.html&title=Safety = Freedom" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://llogiq.github.io/2015/10/05/safety-freedom.html" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+		</ul>
+</div>
+
+	<div id="app">
+		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
+	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		</a>
+	</div>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.infinitescroll.js"></script>
+	<script src="assets/js/news.js"></script>
+</body>
+</html>

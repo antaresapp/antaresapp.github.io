@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Wern Ancheta">
+	<meta name="keywords" content="news,web-development,programming,design">
+	<meta name="description" content="Your developer news. All in one place.">
+
+       
+	<meta property="og:title" content="Antares">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="assets/img/icon.png">
+	<meta property="og:url" content="http://antaresapp.github.io">
+	<meta property="og:description" content="Your developer news. All in one place.">
+
+	    
+	<meta name="twitter:card" content="Your developer news. All in one place.">
+	<meta name="twitter:title" content="Antares">
+	<meta name="twitter:description" content="Your developer news. All in one place.">
+	<meta name="twitter:image" content="assets/img/favicons/android-icon-72x72.png">
+
+	<title>Antares</title>
+	<link rel="stylesheet" href="assets/css/news.css">
+	<link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+	<h1>Antares</h1>
+	<span class="sub-text">Your developer news. All in one place.</span>
+	<div id="mobile-nav">
+		<select name="news_sources" id="news_sources">
+						<option value="/hn" >Hacker News</option>
+						<option value="/github" >Github</option>
+						<option value="/medium" >Medium</option>
+						<option value="/dn" >Designer News</option>
+						<option value="/php" >PHP</option>
+						<option value="/html5" >HTML5</option>
+						<option value="/css" >CSS</option>
+						<option value="/js" >JavaScript</option>
+						<option value="/ruby" >Ruby</option>
+						<option value="/db" >Database</option>
+						<option value="/programmer" >Programmer</option>
+						<option value="/webdesign" >Web Design</option>
+						<option value="/uxdesign" >UX Design</option>
+						<option value="/gamedev" >Game Development</option>
+						<option value="/webdev" >Web Development</option>
+						<option value="/mobile" >Mobile</option>
+						<option value="/tools" >Tools</option>
+						<option value="/python" >Python</option>
+						<option value="/go" >Go</option>
+						<option value="/perl" >Perl</option>
+						<option value="/devops" >Devops</option>
+						<option value="/wordpress" >Wordpress</option>
+						<option value="/nondev" >Non-developer</option>
+						<option value="/realtime" >RealTime</option>
+						<option value="/swift" >Swift</option>
+						<option value="/web-audio" >Web Audio</option>
+						<option value="/dotnet" >.Net</option>
+						<option value="/scala" >Scala Times</option>
+						<option value="/product" >Product</option>
+						<option value="/raspberrypi" >RaspBerry Pi</option>
+						<option value="/rust" >This Week in Rust</option>
+						<option value="/clojure" >Clojure</option>
+						<option value="/machine-learning" selected>Machine Learning</option>
+						<option value="/people" >People</option>
+						<option value="/data-science" >Data Science</option>
+					</select>
+	</div>
+</header>
+<div id="nav">
+	<ul>	
+				<li><a href="/hn">Hacker News</a></li>
+				<li><a href="/github">Github</a></li>
+				<li><a href="/medium">Medium</a></li>
+				<li><a href="/dn">Designer News</a></li>
+				<li><a href="/php">PHP</a></li>
+				<li><a href="/html5">HTML5</a></li>
+				<li><a href="/css">CSS</a></li>
+				<li><a href="/js">JavaScript</a></li>
+				<li><a href="/ruby">Ruby</a></li>
+				<li><a href="/db">Database</a></li>
+				<li><a href="/programmer">Programmer</a></li>
+				<li><a href="/webdesign">Web Design</a></li>
+				<li><a href="/uxdesign">UX Design</a></li>
+				<li><a href="/gamedev">Game Development</a></li>
+				<li><a href="/webdev">Web Development</a></li>
+				<li><a href="/mobile">Mobile</a></li>
+				<li><a href="/tools">Tools</a></li>
+				<li><a href="/python">Python</a></li>
+				<li><a href="/go">Go</a></li>
+				<li><a href="/perl">Perl</a></li>
+				<li><a href="/devops">Devops</a></li>
+				<li><a href="/wordpress">Wordpress</a></li>
+				<li><a href="/nondev">Non-developer</a></li>
+				<li><a href="/realtime">RealTime</a></li>
+				<li><a href="/swift">Swift</a></li>
+				<li><a href="/web-audio">Web Audio</a></li>
+				<li><a href="/dotnet">.Net</a></li>
+				<li><a href="/scala">Scala Times</a></li>
+				<li><a href="/product">Product</a></li>
+				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
+				<li><a href="/rust">This Week in Rust</a></li>
+				<li><a href="/clojure">Clojure</a></li>
+				<li><a href="/machine-learning">Machine Learning</a></li>
+				<li><a href="/people">People</a></li>
+				<li><a href="/data-science">Data Science</a></li>
+			</ul>
+</div>
+
+
+<div id="news">
+	<div id="news-category">
+		<h2>machine-learning</h2>
+		Sources: 
+					<a href="http://www.mln.io/" target="_blank">Machine Learning Newsletter</a>
+					<a href="http://aiweekly.co/" target="_blank">AI Weekly</a>
+			</div>
+		<div class="small">Last updated: 2015-10-13 PHT</div>
+	<div class="clear"></div>
+	<ul id="items">				
+			<li class="item">
+			<div class="date ">Oct 13</div>
+			<a href="http://cur.at/I6TNyo9?m=web" class="item-link" target="_blank">Top 5 arXiv Deep Learning Papers, Explained</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/I6TNyo9?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/I6TNyo9?m=web&text=Top 5 arXiv Deep Learning Papers, Explained" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/I6TNyo9?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/I6TNyo9?m=web&title=Top 5 arXiv Deep Learning Papers, Explained" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/I6TNyo9?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/nUhYBeK?m=web" class="item-link" target="_blank">Unsupervised feature learning and Deep Learning tutorial</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/nUhYBeK?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/nUhYBeK?m=web&text=Unsupervised feature learning and Deep Learning tutorial" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/nUhYBeK?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/nUhYBeK?m=web&title=Unsupervised feature learning and Deep Learning tutorial" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/nUhYBeK?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/eIBwskk?m=web" class="item-link" target="_blank">Speech and natural language processing resources</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/eIBwskk?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/eIBwskk?m=web&text=Speech and natural language processing resources" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/eIBwskk?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/eIBwskk?m=web&title=Speech and natural language processing resources" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/eIBwskk?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/eQXFE5G?m=web" class="item-link" target="_blank">Synaptic.js</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/eQXFE5G?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/eQXFE5G?m=web&text=Synaptic.js" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/eQXFE5G?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/eQXFE5G?m=web&title=Synaptic.js" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/eQXFE5G?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/oIUpQNP?m=web" class="item-link" target="_blank">Mindori: On-demand GPUs for Neural Networks</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/oIUpQNP?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/oIUpQNP?m=web&text=Mindori: On-demand GPUs for Neural Networks" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/oIUpQNP?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/oIUpQNP?m=web&title=Mindori: On-demand GPUs for Neural Networks" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/oIUpQNP?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/vYGU6kA?m=web" class="item-link" target="_blank">Lessons learned from working at Continuum</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/vYGU6kA?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/vYGU6kA?m=web&text=Lessons learned from working at Continuum" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/vYGU6kA?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/vYGU6kA?m=web&title=Lessons learned from working at Continuum" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/vYGU6kA?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/5rIsjk5?m=web" class="item-link" target="_blank">Five principles for applying data science for social good</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/5rIsjk5?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/5rIsjk5?m=web&text=Five principles for applying data science for social good" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/5rIsjk5?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/5rIsjk5?m=web&title=Five principles for applying data science for social good" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/5rIsjk5?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/LDihfbz?m=web" class="item-link" target="_blank">Elementary, My Dear Watson</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/LDihfbz?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/LDihfbz?m=web&text=Elementary, My Dear Watson" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/LDihfbz?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/LDihfbz?m=web&title=Elementary, My Dear Watson" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/LDihfbz?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/hLsnUUb?m=web" class="item-link" target="_blank">Deep Learning robot takes 10 days to teach itself to grasp</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/hLsnUUb?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/hLsnUUb?m=web&text=Deep Learning robot takes 10 days to teach itself to grasp" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/hLsnUUb?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/hLsnUUb?m=web&title=Deep Learning robot takes 10 days to teach itself to grasp" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/hLsnUUb?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/keuZf7F?m=web" class="item-link" target="_blank">The deception that lurks in our data-driven world</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/keuZf7F?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/keuZf7F?m=web&text=The deception that lurks in our data-driven world" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/keuZf7F?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/keuZf7F?m=web&title=The deception that lurks in our data-driven world" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/keuZf7F?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://cur.at/JoV7x1x?m=web" class="item-link" target="_blank">What to do with “small” data?</a>
+			<div>
+				<a href="http://cur.at" class="source" target="_blank">cur.at</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://cur.at/JoV7x1x?m=web" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://cur.at/JoV7x1x?m=web&text=What to do with “small” data?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://cur.at/JoV7x1x?m=web" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://cur.at/JoV7x1x?m=web&title=What to do with “small” data?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://cur.at/JoV7x1x?m=web" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://apaszke.github.io/lstm-explained.html" class="item-link" target="_blank">LSTM Explained</a>
+			<div>
+				<a href="http://apaszke.github.io" class="source" target="_blank">apaszke.github.io</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://apaszke.github.io/lstm-explained.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://apaszke.github.io/lstm-explained.html&text=LSTM Explained" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://apaszke.github.io/lstm-explained.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://apaszke.github.io/lstm-explained.html&title=LSTM Explained" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://apaszke.github.io/lstm-explained.html" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://engineering.linkedin.com/open-source/featurefu-building-featureful-machine-learning-models" class="item-link" target="_blank">Linkedin Opensources FeatureFu</a>
+			<div>
+				<a href="http://linkedin.com" class="source" target="_blank">linkedin.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://engineering.linkedin.com/open-source/featurefu-building-featureful-machine-learning-models" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://engineering.linkedin.com/open-source/featurefu-building-featureful-machine-learning-models&text=Linkedin Opensources FeatureFu" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://engineering.linkedin.com/open-source/featurefu-building-featureful-machine-learning-models" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://engineering.linkedin.com/open-source/featurefu-building-featureful-machine-learning-models&title=Linkedin Opensources FeatureFu" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://engineering.linkedin.com/open-source/featurefu-building-featureful-machine-learning-models" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://github.com/avehtari/BDA_py_demos" class="item-link" target="_blank">Bayesian Data Analysis Demos</a>
+			<div>
+				<a href="http://github.com" class="source" target="_blank">github.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://github.com/avehtari/BDA_py_demos" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://github.com/avehtari/BDA_py_demos&text=Bayesian Data Analysis Demos" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://github.com/avehtari/BDA_py_demos" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/avehtari/BDA_py_demos&title=Bayesian Data Analysis Demos" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://github.com/avehtari/BDA_py_demos" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+		</ul>
+</div>
+
+	<div id="app">
+		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
+	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		</a>
+	</div>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.infinitescroll.js"></script>
+	<script src="assets/js/news.js"></script>
+</body>
+</html>

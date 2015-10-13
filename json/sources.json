@@ -5,12 +5,6 @@
          "Hacker News":"https://news.ycombinator.com/"
       }
    },
-   "producthunt":{  
-      "title":"Product Hunt",
-      "sources":{  
-         "Product Hunt":"http://www.producthunt.com/"
-      }
-   },
    "github":{  
       "title":"Github",
       "sources":{  
@@ -29,18 +23,6 @@
          "Designer News":"https://news.layervault.com/"
       }
    },
-   "readability":{  
-      "title":"Readability Top Reads",
-      "sources":{  
-         "Readability":"https://readability.com/topreads/"
-      }
-   },
-   "slashdot":{  
-      "title":"Slashdot",
-      "sources":{  
-         "Slashdot":"http://slashdot.org"
-      }
-   },
    "php":{  
       "title":"PHP",
       "sources":{  
@@ -57,7 +39,8 @@
       "title":"CSS",
       "sources":{  
          "CSS Weekly":"http://css-weekly.com/",
-         "Responsive Design Weekly":"http://responsivedesignweekly.com/"
+         "Responsive Design Weekly":"http://responsivedesignweekly.com/",
+         "sass news":"http://sassnews.com/"
       }
    },
    "js":{  
@@ -67,13 +50,15 @@
          "Node Weekly":"http://nodeweekly.com/",
          "Ember Weekly":"http://emberweekly.com/",
          "EchoJS":"https://twitter.com/echojs",
-         "JavaScript Live":"https://twitter.com/JavaScriptDaily"
+         "JavaScript Live":"https://twitter.com/JavaScriptDaily",
+         "ES Weekly":"http://esweekly.com/"
       }
    },
    "ruby":{  
       "title":"Ruby",
       "sources":{  
-         "Ruby Weekly":"http://rubyweekly.com/"
+         "Ruby Weekly":"http://rubyweekly.com/",
+         "Green Ruby News":"http://greenruby.org/"
       }
    },
    "db":{  
@@ -81,7 +66,12 @@
       "sources":{  
          "DB Weekly":"http://dbweekly.com/",
          "Postgres Weekly":"http://postgresweekly.com/",
-         "NoSQL Weekly":"http://www.nosqlweekly.com/"
+         "NoSQL Weekly":"http://www.nosqlweekly.com/",
+         "Redis Watch":"https://redislabs.com/redis-watch-archive",
+         "Redis Weekly":"http://redisweekly.com/",
+         "Weekly MySQL News":"http://mysqlnewsletter.com/",
+         "Big Data Weekly":"http://www.bigdataweekly.com/",
+         "Hadoop Weekly":"http://www.hadoopweekly.com/"
       }
    },
    "programmer":{  
@@ -104,7 +94,9 @@
       "title":"UX Design",
       "sources":{  
          "UX Design Weekly":"http://uxdesignweekly.com/",
-         "UX Weekly":"http://uxwkly.com/"
+         "UX Weekly":"http://uxwkly.com/",
+         "Hacking UI":"http://hackingui.com/",
+         "Product Design Weekly":"http://designweekly.atomic.io/"
       }
    },
    "gamedev":{  
@@ -120,31 +112,24 @@
          "Versioning":"http://www.sitepoint.com/versioning/",
          "Web Development Reading List":"https://wdrl.info/",
          "Reddit Webdev":"https://www.reddit.com/r/webdev/top/?sort=top&t=week",
-         "CancelBubble":"https://twitter.com/cancelBubble"
+         "CancelBubble":"https://twitter.com/cancelBubble",
+         "The Changelog":"https://changelog.com/weekly/",
+         "Full Web Weekly":"http://fullweb.io/"
       }
    },
    "mobile":{  
       "title":"Mobile",
       "sources":{  
-         "Mobile Web Weekly":"http://mobilewebweekly.co/"
-      }
-   },
-   "web-operations":{  
-      "title":"Web Operations",
-      "sources":{  
-         "Web Operations Weekly":"http://webopsweekly.com/"
-      }
-   },
-   "web-performance":{  
-      "title":"Web Performance",
-      "sources":{  
-         "Web Performance News":"http://www.webperformancenews.com/"
+         "Mobile Web Weekly":"http://mobilewebweekly.co/",
+         "IOS Dev Weekly":"https://iosdevweekly.com/",
+         "Android Weekly":"http://androidweekly.net/"
       }
    },
    "tools":{  
       "title":"Tools",
       "sources":{  
-         "Web Tools Weekly":"http://webtoolsweekly.com/"
+         "Web Tools Weekly":"http://webtoolsweekly.com/",
+         "StackShare":"http://stackshare.io/"
       }
    },
    "python":{  
@@ -160,18 +145,6 @@
          "Go Newsletter":"http://golangweekly.com/"
       }
    },
-   "ios":{  
-      "title":"IOS",
-      "sources":{  
-         "IOS Dev Weekly":"https://iosdevweekly.com/"
-      }
-   },
-   "android":{  
-      "title":"Android",
-      "sources":{  
-         "Android Weekly":"http://androidweekly.net/"
-      }
-   },
    "perl":{  
       "title":"Perl",
       "sources":{  
@@ -181,7 +154,9 @@
    "devops":{  
       "title":"Devops",
       "sources":{  
-         "DevOps Weekly":"http://www.devopsweekly.com/"
+         "Web Operations Weekly":"http://webopsweekly.com/",
+         "DevOps Weekly":"http://www.devopsweekly.com/",
+         "Docker Weekly":"https://blog.docker.com/docker-weekly-archives/"
       }
    },
    "wordpress":{  
@@ -190,22 +165,92 @@
          "wpMail":"http://wpmail.me/"
       }
    },
-   "longreads-tech":{  
-      "title":"Longreads",
-      "sources":{  
-         "Longreads Tech":"http://longreads.com/articles/search/?q=Tech"
-      }
-   },
    "nondev":{  
       "title":"Non-developer",
       "sources":{  
-         "Next Draft":"http://nextdraft.com/"
+         "Next Draft":"http://nextdraft.com/",
+         "Readability":"https://readability.com/topreads/",
+         "Slashdot":"http://slashdot.org",
+         "Longreads Tech":"http://longreads.com/articles/search/?q=Tech",
+         "Next Draft":"https://twitter.com/PocketHits",
+         "Upvoted Science & Technology":"http://upvoted.com/topic/science-tech",
+         "Upvoted News":"http://upvoted.com/topic/news"
       }
    },
-   "pockethits":{  
-      "title":"Pocket Hits",
-      "sources":{  
-         "Next Draft":"https://twitter.com/PocketHits"
+   "realtime":{
+      "title":"RealTime",
+      "sources":{
+         "RealTime Weekly":"http://realtimeweekly.co/",
+         "WebRTC Weekly":"https://webrtcweekly.com/"
       }
-   }
+   },
+   "swift":{
+      "title":"Swift",
+      "sources":{
+         "Swift Weekly":"http://swiftweekly.com/"
+      }
+   },
+   "web-audio":{
+      "title":"Web Audio",
+      "sources":{
+         "Web Audio Weekly":"http://blog.chrislowis.co.uk/waw.html"
+      }
+   },
+   "dotnet":{
+      "title":".Net",
+      "sources":{
+         "DotNet Weekly":"http://www.dotnetweekly.com/"
+      }
+   },
+   "scala":{
+      "title":"Scala Times",
+      "sources":{
+         "Scala Times":"http://www.scalatimes.com/"
+      }
+   },
+   "product":{
+      "title":"Product",
+      "sources":{
+         "Product Hunt":"http://www.producthunt.com/",
+         "Makers Weekly":"http://us2.campaign-archive1.com/home/?u=7c8dfc9b9c88fe1e1d5360f9e&id=4e523a566c",
+         "Useronboard":"https://www.useronboard.com/"
+      }
+   },
+   "raspberrypi":{
+      "title":"RaspBerry Pi",
+      "sources":{
+         "RasPi Weekly":"http://www.raspiweekly.com/"
+      }
+   },
+   "rust":{
+      "title":"This Week in Rust",
+      "sources":{
+         "This Week in Rust":"http://this-week-in-rust.org/"
+      }
+   },
+   "clojure":{
+      "title":"Clojure",
+      "sources":{
+         "Clojure Gazette":"http://www.clojuregazette.com/"
+      }
+   },
+   "machine-learning":{
+      "title":"Machine Learning",
+      "sources":{
+         "Machine Learning Newsletter":"http://www.mln.io/",
+         "AI Weekly":"http://aiweekly.co/"
+      }
+   },
+   "people":{
+      "title":"People",
+      "sources":{
+         "Software Lead Weekly":"http://softwareleadweekly.com/"
+      }
+   },
+   "data-science":{
+      "title":"Data Science",
+      "sources":{
+         "Data Science Weekly":"http://www.datascienceweekly.org/"
+      }
+   }                                     
 }

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Wern Ancheta">
+	<meta name="keywords" content="news,web-development,programming,design">
+	<meta name="description" content="Your developer news. All in one place.">
+
+       
+	<meta property="og:title" content="Antares">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="assets/img/icon.png">
+	<meta property="og:url" content="http://antaresapp.github.io">
+	<meta property="og:description" content="Your developer news. All in one place.">
+
+	    
+	<meta name="twitter:card" content="Your developer news. All in one place.">
+	<meta name="twitter:title" content="Antares">
+	<meta name="twitter:description" content="Your developer news. All in one place.">
+	<meta name="twitter:image" content="assets/img/favicons/android-icon-72x72.png">
+
+	<title>Antares</title>
+	<link rel="stylesheet" href="assets/css/news.css">
+	<link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+	<h1>Antares</h1>
+	<span class="sub-text">Your developer news. All in one place.</span>
+	<div id="mobile-nav">
+		<select name="news_sources" id="news_sources">
+						<option value="/hn" >Hacker News</option>
+						<option value="/github" >Github</option>
+						<option value="/medium" >Medium</option>
+						<option value="/dn" >Designer News</option>
+						<option value="/php" >PHP</option>
+						<option value="/html5" >HTML5</option>
+						<option value="/css" >CSS</option>
+						<option value="/js" >JavaScript</option>
+						<option value="/ruby" >Ruby</option>
+						<option value="/db" >Database</option>
+						<option value="/programmer" >Programmer</option>
+						<option value="/webdesign" >Web Design</option>
+						<option value="/uxdesign" >UX Design</option>
+						<option value="/gamedev" >Game Development</option>
+						<option value="/webdev" >Web Development</option>
+						<option value="/mobile" >Mobile</option>
+						<option value="/tools" >Tools</option>
+						<option value="/python" >Python</option>
+						<option value="/go" >Go</option>
+						<option value="/perl" >Perl</option>
+						<option value="/devops" >Devops</option>
+						<option value="/wordpress" >Wordpress</option>
+						<option value="/nondev" >Non-developer</option>
+						<option value="/realtime" >RealTime</option>
+						<option value="/swift" >Swift</option>
+						<option value="/web-audio" >Web Audio</option>
+						<option value="/dotnet" >.Net</option>
+						<option value="/scala" >Scala Times</option>
+						<option value="/product" selected>Product</option>
+						<option value="/raspberrypi" >RaspBerry Pi</option>
+						<option value="/rust" >This Week in Rust</option>
+						<option value="/clojure" >Clojure</option>
+						<option value="/machine-learning" >Machine Learning</option>
+						<option value="/people" >People</option>
+						<option value="/data-science" >Data Science</option>
+					</select>
+	</div>
+</header>
+<div id="nav">
+	<ul>	
+				<li><a href="/hn">Hacker News</a></li>
+				<li><a href="/github">Github</a></li>
+				<li><a href="/medium">Medium</a></li>
+				<li><a href="/dn">Designer News</a></li>
+				<li><a href="/php">PHP</a></li>
+				<li><a href="/html5">HTML5</a></li>
+				<li><a href="/css">CSS</a></li>
+				<li><a href="/js">JavaScript</a></li>
+				<li><a href="/ruby">Ruby</a></li>
+				<li><a href="/db">Database</a></li>
+				<li><a href="/programmer">Programmer</a></li>
+				<li><a href="/webdesign">Web Design</a></li>
+				<li><a href="/uxdesign">UX Design</a></li>
+				<li><a href="/gamedev">Game Development</a></li>
+				<li><a href="/webdev">Web Development</a></li>
+				<li><a href="/mobile">Mobile</a></li>
+				<li><a href="/tools">Tools</a></li>
+				<li><a href="/python">Python</a></li>
+				<li><a href="/go">Go</a></li>
+				<li><a href="/perl">Perl</a></li>
+				<li><a href="/devops">Devops</a></li>
+				<li><a href="/wordpress">Wordpress</a></li>
+				<li><a href="/nondev">Non-developer</a></li>
+				<li><a href="/realtime">RealTime</a></li>
+				<li><a href="/swift">Swift</a></li>
+				<li><a href="/web-audio">Web Audio</a></li>
+				<li><a href="/dotnet">.Net</a></li>
+				<li><a href="/scala">Scala Times</a></li>
+				<li><a href="/product">Product</a></li>
+				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
+				<li><a href="/rust">This Week in Rust</a></li>
+				<li><a href="/clojure">Clojure</a></li>
+				<li><a href="/machine-learning">Machine Learning</a></li>
+				<li><a href="/people">People</a></li>
+				<li><a href="/data-science">Data Science</a></li>
+			</ul>
+</div>
+
+
+<div id="news">
+	<div id="news-category">
+		<h2>product</h2>
+		Sources: 
+					<a href="http://www.producthunt.com/" target="_blank">Product Hunt</a>
+					<a href="http://us2.campaign-archive1.com/home/?u=7c8dfc9b9c88fe1e1d5360f9e&id=4e523a566c" target="_blank">Makers Weekly</a>
+					<a href="https://www.useronboard.com/" target="_blank">Useronboard</a>
+			</div>
+		<div class="small">Last updated: 2015-10-13 PHT</div>
+	<div class="clear"></div>
+	<ul id="items">				
+			<li class="item">
+			<div class="date ">Oct 13</div>
+			<a href="http://www.useronboard.com/how-ashleymadison-onboards-new-users/?subscriber=yes" class="item-link" target="_blank"> 	  How Ashley Madison Onboards New Users | User Onboarding  </a>
+			<div>
+				<a href="http://useronboard.com" class="source" target="_blank">useronboard.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.useronboard.com/how-ashleymadison-onboards-new-users/?subscriber=yes" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.useronboard.com/how-ashleymadison-onboards-new-users/?subscriber=yes&text= 	  How Ashley Madison Onboards New Users | User Onboarding  " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.useronboard.com/how-ashleymadison-onboards-new-users/?subscriber=yes" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.useronboard.com/how-ashleymadison-onboards-new-users/?subscriber=yes&title= 	  How Ashley Madison Onboards New Users | User Onboarding  " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.useronboard.com/how-ashleymadison-onboards-new-users/?subscriber=yes" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://thenounproject.com/gabbRDZ" class="item-link" target="_blank">Gabriela Rodriguez</a>
+			<div>
+				<a href="http://thenounproject.com" class="source" target="_blank">thenounproject.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://thenounproject.com/gabbRDZ" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://thenounproject.com/gabbRDZ&text=Gabriela Rodriguez" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://thenounproject.com/gabbRDZ" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://thenounproject.com/gabbRDZ&title=Gabriela Rodriguez" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://thenounproject.com/gabbRDZ" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://thenounproject.com/Darren" class="item-link" target="_blank">Darren Barone</a>
+			<div>
+				<a href="http://thenounproject.com" class="source" target="_blank">thenounproject.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://thenounproject.com/Darren" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://thenounproject.com/Darren&text=Darren Barone" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://thenounproject.com/Darren" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://thenounproject.com/Darren&title=Darren Barone" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://thenounproject.com/Darren" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://vimeo.com/116295698?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="item-link" target="_blank">Neven Mrgan on Why Skeuomorphism Is Like a Classic Car</a>
+			<div>
+				<a href="http://vimeo.com" class="source" target="_blank">vimeo.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://vimeo.com/116295698?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://vimeo.com/116295698?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&text=Neven Mrgan on Why Skeuomorphism Is Like a Classic Car" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://vimeo.com/116295698?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://vimeo.com/116295698?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&title=Neven Mrgan on Why Skeuomorphism Is Like a Classic Car" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://vimeo.com/116295698?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.designdetails.fm/episode-1-feat-sam-soffes/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="item-link" target="_blank">Design Details Podcast</a>
+			<div>
+				<a href="http://designdetails.fm" class="source" target="_blank">designdetails.fm</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.designdetails.fm/episode-1-feat-sam-soffes/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.designdetails.fm/episode-1-feat-sam-soffes/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&text=Design Details Podcast" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.designdetails.fm/episode-1-feat-sam-soffes/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.designdetails.fm/episode-1-feat-sam-soffes/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&title=Design Details Podcast" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.designdetails.fm/episode-1-feat-sam-soffes/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://artsy.github.io/blog/2015/01/04/cocoapods-and-frameworks/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="item-link" target="_blank">Cocoapods and Frameworks</a>
+			<div>
+				<a href="http://artsy.github.io" class="source" target="_blank">artsy.github.io</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://artsy.github.io/blog/2015/01/04/cocoapods-and-frameworks/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://artsy.github.io/blog/2015/01/04/cocoapods-and-frameworks/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&text=Cocoapods and Frameworks" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://artsy.github.io/blog/2015/01/04/cocoapods-and-frameworks/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://artsy.github.io/blog/2015/01/04/cocoapods-and-frameworks/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&title=Cocoapods and Frameworks" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://artsy.github.io/blog/2015/01/04/cocoapods-and-frameworks/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://petersteinberger.com/blog/2015/uikit-debug-mode/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="item-link" target="_blank">UIKit Debug Mode</a>
+			<div>
+				<a href="http://petersteinberger.com" class="source" target="_blank">petersteinberger.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://petersteinberger.com/blog/2015/uikit-debug-mode/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://petersteinberger.com/blog/2015/uikit-debug-mode/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&text=UIKit Debug Mode" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://petersteinberger.com/blog/2015/uikit-debug-mode/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://petersteinberger.com/blog/2015/uikit-debug-mode/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&title=UIKit Debug Mode" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://petersteinberger.com/blog/2015/uikit-debug-mode/?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.objc.io/snippets/12.html?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="item-link" target="_blank">Snippet: Enums Instead of Booleans</a>
+			<div>
+				<a href="http://objc.io" class="source" target="_blank">objc.io</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.objc.io/snippets/12.html?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.objc.io/snippets/12.html?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&text=Snippet: Enums Instead of Booleans" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.objc.io/snippets/12.html?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.objc.io/snippets/12.html?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&title=Snippet: Enums Instead of Booleans" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.objc.io/snippets/12.html?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://itunes.apple.com/us/app/capptivate.co/id940220184?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="item-link" target="_blank">Capptivate for iOS</a>
+			<div>
+				<a href="http://apple.com" class="source" target="_blank">apple.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://itunes.apple.com/us/app/capptivate.co/id940220184?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://itunes.apple.com/us/app/capptivate.co/id940220184?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&text=Capptivate for iOS" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://itunes.apple.com/us/app/capptivate.co/id940220184?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://itunes.apple.com/us/app/capptivate.co/id940220184?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&title=Capptivate for iOS" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://itunes.apple.com/us/app/capptivate.co/id940220184?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="https://itunes.apple.com/app/sip-color/id934379679?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="item-link" target="_blank">Sip Color for iOS</a>
+			<div>
+				<a href="http://apple.com" class="source" target="_blank">apple.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=https://itunes.apple.com/app/sip-color/id934379679?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=https://itunes.apple.com/app/sip-color/id934379679?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&text=Sip Color for iOS" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=https://itunes.apple.com/app/sip-color/id934379679?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=https://itunes.apple.com/app/sip-color/id934379679?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207&title=Sip Color for iOS" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=https://itunes.apple.com/app/sip-color/id934379679?utm_source=makersweekly.com&amp;utm_medium=email&amp;utm_campaign=makers%20weekly%207" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://twitter.com/jaysonlane" class="item-link" target="_blank">@mention me</a>
+			<div>
+				<a href="http://twitter.com" class="source" target="_blank">twitter.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://twitter.com/jaysonlane" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://twitter.com/jaysonlane&text=@mention me" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://twitter.com/jaysonlane" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://twitter.com/jaysonlane&title=@mention me" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://twitter.com/jaysonlane" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/instmap" class="item-link" target="_blank">Instmap</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/instmap" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/instmap&text=Instmap" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/instmap" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/instmap&title=Instmap" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/instmap" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/vvatch-tv" class="item-link" target="_blank">vvatch.tv</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/vvatch-tv" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/vvatch-tv&text=vvatch.tv" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/vvatch-tv" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/vvatch-tv&title=vvatch.tv" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/vvatch-tv" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/autoplay" class="item-link" target="_blank">Autoplay</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/autoplay" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/autoplay&text=Autoplay" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/autoplay" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/autoplay&title=Autoplay" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/autoplay" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/house-party-fm" class="item-link" target="_blank">House Party FM</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/house-party-fm" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/house-party-fm&text=House Party FM" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/house-party-fm" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/house-party-fm&title=House Party FM" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/house-party-fm" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/equipmentshare-2" class="item-link" target="_blank">EquipmentShare</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/equipmentshare-2" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/equipmentshare-2&text=EquipmentShare" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/equipmentshare-2" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/equipmentshare-2&title=EquipmentShare" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/equipmentshare-2" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/sell-it-easy" class="item-link" target="_blank">Sell It Easy</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/sell-it-easy" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/sell-it-easy&text=Sell It Easy" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/sell-it-easy" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/sell-it-easy&title=Sell It Easy" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/sell-it-easy" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/daily-ui" class="item-link" target="_blank">Daily UI</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/daily-ui" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/daily-ui&text=Daily UI" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/daily-ui" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/daily-ui&title=Daily UI" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/daily-ui" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/coolors-2-0-for-ios" class="item-link" target="_blank">Coolors 2.0 for iOS</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/coolors-2-0-for-ios" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/coolors-2-0-for-ios&text=Coolors 2.0 for iOS" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/coolors-2-0-for-ios" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/coolors-2-0-for-ios&title=Coolors 2.0 for iOS" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/coolors-2-0-for-ios" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/textcast" class="item-link" target="_blank">Textcast</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/textcast" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/textcast&text=Textcast" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/textcast" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/textcast&title=Textcast" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/textcast" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/contact-form7-customizer" class="item-link" target="_blank">Contact Form7 Customizer</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/contact-form7-customizer" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/contact-form7-customizer&text=Contact Form7 Customizer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/contact-form7-customizer" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/contact-form7-customizer&title=Contact Form7 Customizer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/contact-form7-customizer" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/pocket-programming" class="item-link" target="_blank">Pocket Programming</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/pocket-programming" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/pocket-programming&text=Pocket Programming" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/pocket-programming" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/pocket-programming&title=Pocket Programming" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/pocket-programming" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/knowledgetree" class="item-link" target="_blank">KnowledgeTree</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/knowledgetree" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/knowledgetree&text=KnowledgeTree" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/knowledgetree" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/knowledgetree&title=KnowledgeTree" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/knowledgetree" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/i-style-myself-2" class="item-link" target="_blank">I STYLE MYSELF</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/i-style-myself-2" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/i-style-myself-2&text=I STYLE MYSELF" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/i-style-myself-2" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/i-style-myself-2&title=I STYLE MYSELF" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/i-style-myself-2" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/appstarter-io" class="item-link" target="_blank">AppStarter.io</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/appstarter-io" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/appstarter-io&text=AppStarter.io" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/appstarter-io" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/appstarter-io&title=AppStarter.io" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/appstarter-io" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/tribe-4" class="item-link" target="_blank">Tribe</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/tribe-4" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/tribe-4&text=Tribe" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/tribe-4" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/tribe-4&title=Tribe" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/tribe-4" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/myeffecto" class="item-link" target="_blank">MyEffecto</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/myeffecto" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/myeffecto&text=MyEffecto" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/myeffecto" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/myeffecto&title=MyEffecto" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/myeffecto" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/gophr" class="item-link" target="_blank">Gophr</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/gophr" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/gophr&text=Gophr" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/gophr" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/gophr&title=Gophr" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/gophr" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/rvwr" class="item-link" target="_blank">RVWR</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/rvwr" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/rvwr&text=RVWR" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/rvwr" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/rvwr&title=RVWR" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/rvwr" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/raise-emoji" class="item-link" target="_blank">Raise Emoji</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/raise-emoji" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/raise-emoji&text=Raise Emoji" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/raise-emoji" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/raise-emoji&title=Raise Emoji" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/raise-emoji" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/made-for-food-trucks" class="item-link" target="_blank">Made for Food Trucks</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/made-for-food-trucks" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/made-for-food-trucks&text=Made for Food Trucks" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/made-for-food-trucks" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/made-for-food-trucks&title=Made for Food Trucks" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/made-for-food-trucks" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/slogan-generator" class="item-link" target="_blank">Slogan Generator</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/slogan-generator" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/slogan-generator&text=Slogan Generator" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/slogan-generator" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/slogan-generator&title=Slogan Generator" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/slogan-generator" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/riidepass" class="item-link" target="_blank">RiidePass</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/riidepass" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/riidepass&text=RiidePass" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/riidepass" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/riidepass&title=RiidePass" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/riidepass" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/upright" class="item-link" target="_blank">UpRight</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/upright" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/upright&text=UpRight" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/upright" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/upright&title=UpRight" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/upright" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/monthly-mix" class="item-link" target="_blank">Monthly Mix</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/monthly-mix" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/monthly-mix&text=Monthly Mix" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/monthly-mix" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/monthly-mix&title=Monthly Mix" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/monthly-mix" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/sage-2" class="item-link" target="_blank">Sage</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/sage-2" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/sage-2&text=Sage" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/sage-2" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/sage-2&title=Sage" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/sage-2" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/fake-checkin" class="item-link" target="_blank">Fake Checkin</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/fake-checkin" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/fake-checkin&text=Fake Checkin" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/fake-checkin" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/fake-checkin&title=Fake Checkin" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/fake-checkin" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/called-it" class="item-link" target="_blank">Called It!</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/called-it" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/called-it&text=Called It!" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/called-it" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/called-it&title=Called It!" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/called-it" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/freebiesjedi" class="item-link" target="_blank">Freebiesjedi</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/freebiesjedi" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/freebiesjedi&text=Freebiesjedi" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/freebiesjedi" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/freebiesjedi&title=Freebiesjedi" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/freebiesjedi" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/timetravel" class="item-link" target="_blank">TimeTravel</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/timetravel" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/timetravel&text=TimeTravel" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/timetravel" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/timetravel&title=TimeTravel" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/timetravel" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/aurous" class="item-link" target="_blank">Aurous</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/aurous" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/aurous&text=Aurous" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/aurous" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/aurous&title=Aurous" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/aurous" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/foresight-learn" class="item-link" target="_blank">Foresight - Learn</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/foresight-learn" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/foresight-learn&text=Foresight - Learn" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/foresight-learn" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/foresight-learn&title=Foresight - Learn" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/foresight-learn" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/creddon" class="item-link" target="_blank">Creddon</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/creddon" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/creddon&text=Creddon" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/creddon" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/creddon&title=Creddon" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/creddon" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/makerarm-3" class="item-link" target="_blank">Makerarm</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/makerarm-3" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/makerarm-3&text=Makerarm" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/makerarm-3" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/makerarm-3&title=Makerarm" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/makerarm-3" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/apple-magic-accessories" class="item-link" target="_blank">Apple Magic Accessories</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/apple-magic-accessories" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/apple-magic-accessories&text=Apple Magic Accessories" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/apple-magic-accessories" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/apple-magic-accessories&title=Apple Magic Accessories" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/apple-magic-accessories" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/emoji-masks-3" class="item-link" target="_blank">Emoji Masks</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/emoji-masks-3" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/emoji-masks-3&text=Emoji Masks" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/emoji-masks-3" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/emoji-masks-3&title=Emoji Masks" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/emoji-masks-3" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/zero-email-app" class="item-link" target="_blank">Zero Email App</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/zero-email-app" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/zero-email-app&text=Zero Email App" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/zero-email-app" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/zero-email-app&title=Zero Email App" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/zero-email-app" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/smmry" class="item-link" target="_blank">SMMRY</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/smmry" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/smmry&text=SMMRY" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/smmry" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/smmry&title=SMMRY" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/smmry" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/fitspur" class="item-link" target="_blank">Fitspur</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/fitspur" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/fitspur&text=Fitspur" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/fitspur" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/fitspur&title=Fitspur" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/fitspur" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/hoist-3" class="item-link" target="_blank">Hoist</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/hoist-3" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/hoist-3&text=Hoist" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/hoist-3" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/hoist-3&title=Hoist" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/hoist-3" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/when-active" class="item-link" target="_blank">When Active</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/when-active" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/when-active&text=When Active" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/when-active" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/when-active&title=When Active" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/when-active" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/melodics" class="item-link" target="_blank">Melodics</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/melodics" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/melodics&text=Melodics" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/melodics" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/melodics&title=Melodics" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/melodics" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/pinstriped" class="item-link" target="_blank">Pinstriped</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/pinstriped" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/pinstriped&text=Pinstriped" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/pinstriped" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/pinstriped&title=Pinstriped" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/pinstriped" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+			<li class="item">
+			<div class="date hidden">Oct 13</div>
+			<a href="http://www.producthunt.com/tech/arguman" class="item-link" target="_blank">Arguman</a>
+			<div>
+				<a href="http://producthunt.com" class="source" target="_blank">producthunt.com</a>
+			</div>
+			<div class="actions">
+				<a href="http://www.facebook.com/sharer.php?u=http://www.producthunt.com/tech/arguman" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/share?url=http://www.producthunt.com/tech/arguman&text=Arguman" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/share?url=http://www.producthunt.com/tech/arguman" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.linkedin.com/shareArticle?url=http://www.producthunt.com/tech/arguman&title=Arguman" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://getpocket.com/save?url=http://www.producthunt.com/tech/arguman" class="hidden" target="_blank">Pocket</a>
+			</div>
+		</li>
+		</ul>
+</div>
+
+	<div id="app">
+		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
+	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		</a>
+	</div>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.infinitescroll.js"></script>
+	<script src="assets/js/news.js"></script>
+</body>
+</html>
