@@ -151,6 +151,18 @@ a.item-link:visited {
     right: 20px;
 }
 
+.settings {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+}
+
+.mobile-settings {
+    float: right;
+    margin-right: 20px;
+}
+
 @media screen and (max-width: 375px){
    
     h2 {
