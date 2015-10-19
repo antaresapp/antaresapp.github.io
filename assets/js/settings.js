@@ -7,8 +7,8 @@ function setSettings(){
 	  var route = cat['route'];
 	  var enabled = cat['enabled'];
 	  
-	  var sources = cat['sources'];
-	  if(sources.length){
+	  if(cat.hasOwnProperty('sources')){
+	  	var sources = cat['sources'];
 	    for(var y in sources){
 	      var source_route = sources[y]['route'];
 	      var source_enabled = sources[y]['enabled'];
