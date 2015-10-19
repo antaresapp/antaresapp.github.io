@@ -123,11 +123,11 @@
 		Sources: 
 					<a href="http://blog.chrislowis.co.uk/waw.html" target="_blank">Web Audio Weekly</a>
 			</div>
-		<div class="small">Last updated: 2015-10-13 PHT</div>
+		<div class="small">Last updated: 2015-10-18 PHT</div>
 	<div class="clear"></div>
-	<ul id="items">				
+	<ul id="items" class="hidden">				
 			<li class="item">
-			<div class="date ">Oct 13</div>
+			<div class="date ">Oct 18</div>
 			<a href="http://www.findtheinvisiblecow.com/" class="item-link" target="_blank">Find the Invisible Cow</a>
 			<div>
 				<a href="http://findtheinvisiblecow.com" class="source" target="_blank">findtheinvisiblecow.com</a>
@@ -141,7 +141,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="https://sound.io/" class="item-link" target="_blank">sound.io</a>
 			<div>
 				<a href="http://sound.io" class="source" target="_blank">sound.io</a>
@@ -155,7 +155,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="http://www.holovaty.com/writing/ios9-web-audio/" class="item-link" target="_blank">iOS 9 problems with web audio | Holovaty.com</a>
 			<div>
 				<a href="http://holovaty.com" class="source" target="_blank">holovaty.com</a>
@@ -169,7 +169,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="https://github.com/benji6/elemental" class="item-link" target="_blank">benji6/elemental · GitHub</a>
 			<div>
 				<a href="http://github.com" class="source" target="_blank">github.com</a>
@@ -183,7 +183,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="https://github.com/benji6/virtual-audio-graph" class="item-link" target="_blank">benji6/virtual-audio-graph · GitHub</a>
 			<div>
 				<a href="http://github.com" class="source" target="_blank">github.com</a>
@@ -197,7 +197,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="http://billgathen.github.io/pentaphone/" class="item-link" target="_blank">The Pentaphone</a>
 			<div>
 				<a href="http://billgathen.github.io" class="source" target="_blank">billgathen.github.io</a>
@@ -211,7 +211,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="https://github.com/mattdesl/spins" class="item-link" target="_blank">mattdesl/spins · GitHub</a>
 			<div>
 				<a href="http://github.com" class="source" target="_blank">github.com</a>
@@ -225,7 +225,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="http://joesul.li/van/tale-of-no-clocks/" class="item-link" target="_blank">A Tale of No Clocks</a>
 			<div>
 				<a href="http://joesul.li" class="source" target="_blank">joesul.li</a>
@@ -239,7 +239,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="http://nickwritesablog.com/sound-design-in-web-audio-neurofunk-bass-part-2/" class="item-link" target="_blank">Sound Design in Web Audio: NeuroFunk Bass, Part 2</a>
 			<div>
 				<a href="http://nickwritesablog.com" class="source" target="_blank">nickwritesablog.com</a>
@@ -253,7 +253,7 @@
 			</div>
 		</li>
 			<li class="item">
-			<div class="date hidden">Oct 13</div>
+			<div class="date hidden">Oct 18</div>
 			<a href="http://nickwritesablog.com/sound-design-in-web-audio-neurofunk-bass-part-1/" class="item-link" target="_blank">Sound Design in Web Audio: NeuroFunk Bass, Part 1</a>
 			<div>
 				<a href="http://nickwritesablog.com" class="source" target="_blank">nickwritesablog.com</a>
@@ -269,6 +269,31 @@
 		</ul>
 </div>
 
+<script id="categories-template" type="text/x-handlebars-template">
+	{{#each categories}}
+	<li><a href="/{{route}}">{{name}}</a></li>
+	{{/each}}
+</script><script id="categories-mobile-template" type="text/x-handlebars-template">
+	{{#each categories}}
+	<option value="/{{route}}">{{name}}</option>
+	{{/each}}
+</script><script id="items-template" type="text/x-handlebars-template">
+	{{#each items}}
+	<li class="item">
+		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
+		<div>
+			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
+		</div>
+		<div class="actions">
+			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
+		</div>
+	</li>
+	{{/each}}
+</script>
 	<div id="app">
 		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
 	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
@@ -278,6 +303,12 @@
 	</div>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.infinitescroll.js"></script>
-	<script src="assets/js/news.js"></script>
-</body>
+	
+	<script src="assets/js/store.min.js"></script>
+	<script src="assets/js/lodash.min.js"></script>
+	<script src="assets/js/handlebars.min.js"></script>
+
+		<script src="assets/js/news.js"></script>
+	
+	</body>
 </html>

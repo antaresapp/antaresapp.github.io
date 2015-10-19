@@ -126,7 +126,7 @@
 			</div>
 		<div class="small">Last updated: 2015-10-13 PHT</div>
 	<div class="clear"></div>
-	<ul id="items">				
+	<ul id="items" class="hidden">				
 			<li class="item">
 			<div class="date ">Oct 13</div>
 			<a href="http://nbviewer.ipython.org/url/norvig.com/ipython/Probability.ipynb" class="item-link" target="_blank">Probability, Paradox, and the Reasonable Person Principle</a>
@@ -816,6 +816,31 @@
 		</ul>
 </div>
 
+<script id="categories-template" type="text/x-handlebars-template">
+	{{#each categories}}
+	<li><a href="/{{route}}">{{name}}</a></li>
+	{{/each}}
+</script><script id="categories-mobile-template" type="text/x-handlebars-template">
+	{{#each categories}}
+	<option value="/{{route}}">{{name}}</option>
+	{{/each}}
+</script><script id="items-template" type="text/x-handlebars-template">
+	{{#each items}}
+	<li class="item">
+		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
+		<div>
+			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
+		</div>
+		<div class="actions">
+			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
+			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
+		</div>
+	</li>
+	{{/each}}
+</script>
 	<div id="app">
 		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
 	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
@@ -825,6 +850,12 @@
 	</div>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.infinitescroll.js"></script>
-	<script src="assets/js/news.js"></script>
-</body>
+	
+	<script src="assets/js/store.min.js"></script>
+	<script src="assets/js/lodash.min.js"></script>
+	<script src="assets/js/handlebars.min.js"></script>
+
+		<script src="assets/js/news.js"></script>
+	
+	</body>
 </html>

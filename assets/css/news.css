@@ -30,6 +30,19 @@ ul {
     padding: 0;
 }
 
+#settings-ul {
+    color: #1C90F2;
+}
+
+#settings-ul li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+#settings-ul ul {
+    margin-top: 5px;
+}
+
 #wrapper {
     width: 900px;
     margin: 0 auto;

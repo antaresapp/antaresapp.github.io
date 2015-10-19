@@ -1,0 +1,585 @@
+{
+	"sources": [
+	{
+		"name": "JavaScript",
+		"route": "js",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Echo JS",
+				"route": "echojs",
+				"enabled": true
+			},
+			{
+				"name": "JavaScript Weekly",
+				"route": "jsweekly",
+				"enabled": true
+			},
+			{
+				"name": "ES Weekly",
+				"route": "esweekly",
+				"enabled": true
+			},
+			{
+				"name": "Node Weekly",
+				"route": "nodeweekly",
+				"enabled": true				
+			},
+			{
+				"name": "Ember Weekly",
+				"route": "emberweekly",
+				"enabled": false				
+			},
+			{
+				"name": "JavaScript Live",
+				"route": "js-live",
+				"enabled": false				
+			}			
+		]
+	},
+	{
+		"name": "Hacker News",
+		"route": "hn",
+		"enabled": true
+	},
+	{
+		"name": "Github",
+		"route": "github",
+		"enabled": true
+	},
+	{
+		"name": "Medium",
+		"route": "medium",
+		"enabled": true
+	},
+	{
+		"name": "Designer News",
+		"route": "dn",
+		"enabled": true
+	},
+	{
+		"name": "PHP",
+		"route": "php",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "PHP Weekly",
+				"route": "phpweekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "HTML5",
+		"route": "html5",
+		"enabled": true
+	},
+	{
+		"name": "CSS",
+		"route": "css",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "CSS Weekly",
+				"route": "cssweekly",
+				"enabled": true
+			},
+			{
+				"name": "sass news",
+				"route": "sassnews",
+				"enabled": false
+			}			
+		]
+	},
+	{
+		"name": "Game Development",
+		"route": "gamedev",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Gamedev.js Weekly",
+				"route": "gamedev",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Ruby",
+		"route": "ruby",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Ruby Weekly",
+				"route": "rubyweekly",
+				"enabled": true
+			},
+			{
+				"name": "Green Ruby News",
+				"route": "green_ruby_news"
+			}
+		]
+	},
+	{
+		"name": "Database",
+		"route": "db",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "NoSQL Weekly",
+				"route": "nosqlweekly"
+			},
+			{
+				"name": "Database Weekly",
+				"route": "dbweekly",
+				"enabled": true
+			},
+			{
+				"name": "Postgres Weekly",
+				"route": "postgresweekly"
+			},
+			{
+				"name": "Weekly MySQL News",
+				"route": "mysqlnews"
+			},
+			{
+				"name": "Redis Weekly",
+				"route": "redis_weekly"
+			},
+			{
+				"name": "Redis Watch",
+				"route": "redis_watch"
+			},
+			{
+				"name": "Big Data Weekly",
+				"route": "big_data_weekly",
+				"enabled": true	
+			},
+			{
+				"name": "Hadoop Weekly",
+				"route": "hadoop_weekly"
+			}
+		]
+	},
+	{
+		"name": "Programmer",
+		"route": "programmer",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "r/programming",
+				"route": "reddit-programming",
+				"enabled": true
+			},
+			{
+				"name": "Status Code",
+				"route": "statuscode"
+			}
+		]
+	},
+	{
+		"name": "Web Design",
+		"route": "webdesign",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "r/webdesign",
+				"route": "reddit-webdesign",
+				"enabled": true
+			},
+			{
+				"name": "HeyDesigner",
+				"route": "heydesigner"
+			},
+			{
+				"name": "Web Design Weekly",
+				"route": "wdweekly",
+				"enabled": true
+			},
+			{
+				"name": "Sidebar",
+				"route": "sidebario"
+			}
+		]
+	},
+	{
+		"name": "UX Design",
+		"route": "uxdesign",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Hacking UI",
+				"route": "hacking-ui"
+			},
+			{
+				"name": "UX Design Weekly",
+				"route": "uxdesignweekly",
+				"enabled": true
+			},
+			{
+				"name": "UX Weekly",
+				"route": "uxweekly"
+			},
+			{
+				"name": "Product Design Weekly",
+				"route": "productdesignweekly"
+			}				
+
+		]
+	},
+	{
+		"name": "Web Development",
+		"route": "webdev",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "FullWeb Weekly",
+				"route": "fullwebweekly"
+			},
+			{
+				"name": "The Changelog",
+				"route": "the_changelog"
+			},
+			{
+				"name": "Versioning",
+				"route": "versioning",
+				"enabled": true
+			},
+			{
+				"name": "Web Development Reading List",
+				"route": "wdrl",
+				"enabled": true
+			},
+			{
+				"name": "Cancel Bubble",
+				"route": "cancelbubble"
+			},
+			{
+				"name": "r/webdev",
+				"route": "reddit-webdev"
+			},
+			{
+				"name": "Beyond Desktop",
+				"route": "beyonddesktop"
+			}							
+
+		]
+	},
+	{
+		"name": "Mobile",
+		"route": "mobile",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Mobile Web Weekly",
+				"route": "mobilewebweekly",
+				"enabled": true
+			},
+			{
+				"name": "iOS Dev Weekly",
+				"route": "iosdevweekly",
+				"enabled": true
+			},
+			{
+				"name": "Android Weekly",
+				"route": "androidweekly",
+				"enabled": true				
+			}
+		]
+	},
+	{
+		"name": "Tools",
+		"route": "tools",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Web Tools Weekly",
+				"route": "webtoolsweekly",
+				"enabled": true
+			},
+			{
+				"name": "StackShare",
+				"route": "stackshare",
+				"enabled": false
+			}
+		]
+	},
+	{
+		"name": "Python",
+		"route": "python",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Python Weekly",
+				"route": "pythonweekly"
+			},
+			{
+				"name": "Pycoders Weekly",
+				"route": "pycoders",
+				"enabled": true
+			}
+		]
+	},	
+	{
+		"name": "Wordpress",
+		"route": "wordpress",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "wpMail",
+				"route": "wpmailme",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Perl",
+		"route": "perl",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Perl Weekly",
+				"route": "perlweekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "DevOps",
+		"route": "devops",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "DevOps Weekly",
+				"route": "devopsweekly",
+				"enabled": true
+			},
+			{
+				"name": "Web Operations Weekly",
+				"route": "web-operations",
+				"enabled": true
+			},
+			{
+				"name": "Docker Weekly",
+				"route": "dockerweekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Non-Developer",
+		"route": "nondev",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Next Draft",
+				"route": "nondev",
+				"enabled": true
+			},
+			{
+				"name": "Longreads (Tech)",
+				"route": "longreads-tech",
+				"enabled": true
+			},
+			{
+				"name": "Pocket Hits",
+				"route": "pockethits",
+				"enabled": true
+			},
+			{
+				"name": "Upvoted (Science & Technology)",
+				"route": "upvoted-sci-tech",
+				"enabled": true
+			},
+			{
+				"name": "Upvoted (News)",
+				"route": "upvoted-news",
+				"enabled": true
+			},
+			{
+				"name": "Readability",
+				"route": "readability",
+				"enabled": true
+			},
+			{
+				"name": "Slashdot",
+				"route": "slashdot",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Go",
+		"route": "go",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Go Newsletter",
+				"route": "golangweekly",
+				"enabled": true
+			}
+		]
+	},	
+	{
+		"name": "Real-time",
+		"route": "realtime",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "RealTime Weekly",
+				"route": "realtimeweekly",
+				"enabled": true
+			},
+			{
+				"name": "WebRTC Weekly",
+				"route": "webrtcweekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Swift",
+		"route": "swift",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Swift Weekly",
+				"route": "swiftweekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Web Audio",
+		"route": "web-audio",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Web Audio Weekly",
+				"route": "webaudioweekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": ".net",
+		"route": "dotnet",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Dot Net Weekly",
+				"route": "dotnetweekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Scala",
+		"route": "scala",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Scala Times",
+				"route": "scalatimes",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Product",
+		"route": "product",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Makers Weekly",
+				"route": "makersweekly",
+				"enabled": true
+			},
+			{
+				"name": "User Onboarding",
+				"route": "useronboard"
+			},
+			{
+				"name": "Product Hunt",
+				"route": "producthunt",
+				"enabled": true
+			}
+		]			
+	},
+	{
+		"name": "Raspberry Pi",
+		"route": "raspberrypi",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Raspi Weekly",
+				"route": "raspiweekly"					
+			}		
+		]
+	},
+	{
+		"name": "Rust",
+		"route": "rust",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "This Week in Rust",
+				"route": "this_week_in_rust",
+				"enabled": true
+			}				
+		]
+	},
+	{
+		"name": "Clojure",
+		"route": "clojure",
+		"enabled": false,
+		"sources": [
+			{
+				"name": "Clojure Gazette",
+				"route": "clojure_gazette",
+				"enabled": false
+			}				
+		]
+	},	
+	{
+		"name": "Machine Learning",
+		"route": "machine-learning",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Machine Learning Newsletter",
+				"route": "machine_learning_weekly",
+				"enabled": true
+			},
+			{
+				"name": "AI Weekly",
+				"route": "ai_weekly",
+				"enabled": true
+			}				
+		]
+	},
+	{
+		"name": "People",
+		"route": "people",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Software Lead Weekly",
+				"route": "software_lead_weekly",
+				"enabled": true
+			}
+		]
+	},
+	{
+		"name": "Data Science",
+		"route": "data-science",
+		"enabled": true,
+		"sources": [
+			{
+				"name": "Data Science Weekly",
+				"route": "data-science",
+				"enabled": true
+			}
+		]
+	}	
+	]
+}
