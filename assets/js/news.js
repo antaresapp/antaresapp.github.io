@@ -5,7 +5,7 @@ var categories_mobile_template = Handlebars.compile($('#categories-mobile-templa
 var timeout = 100;
 if(!store.get('categories')){
 	timeout = 1000;
-	$.getJSON('/files/settings.json', function(response){
+	$.getJSON('/json/settings.json', function(response){
 		store.set('categories', response.sources);
 	});
 }
