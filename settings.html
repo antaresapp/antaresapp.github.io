@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Wern Ancheta">
+	<meta name="keywords" content="news,web-development,programming,design">
+	<meta name="description" content="Your developer news. All in one place.">
+
+       
+	<meta property="og:title" content="Antares">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="assets/img/icon.png">
+	<meta property="og:url" content="http://antaresapp.github.io">
+	<meta property="og:description" content="Your developer news. All in one place.">
+
+	    
+	<meta name="twitter:card" content="Your developer news. All in one place.">
+	<meta name="twitter:title" content="Antares">
+	<meta name="twitter:description" content="Your developer news. All in one place.">
+	<meta name="twitter:image" content="assets/img/favicons/android-icon-72x72.png">
+
+	<title>Antares</title>
+	<link rel="stylesheet" href="assets/css/news.css">
+	<link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+	<h1>Antares</h1>
+	<span class="sub-text">Your developer news. All in one place.</span>
+</header>
+<div>
+	<ul id="settings-ul">	
+			<li>
+			<label>
+				<input type="checkbox" name="js" data-name="JavaScript" class="category" checked>
+				JavaScript
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="echojs" data-name="Echo JS" class="source" checked>
+										Echo JS
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="jsweekly" data-name="JavaScript Weekly" class="source" checked>
+										JavaScript Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="esweekly" data-name="ES Weekly" class="source" checked>
+										ES Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="nodeweekly" data-name="Node Weekly" class="source" checked>
+										Node Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="emberweekly" data-name="Ember Weekly" class="source">
+										Ember Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="js-live" data-name="JavaScript Live" class="source">
+										JavaScript Live
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="hn" data-name="Hacker News" class="category" checked>
+				Hacker News
+			</label>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="github" data-name="Github" class="category" checked>
+				Github
+			</label>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="medium" data-name="Medium" class="category" checked>
+				Medium
+			</label>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="dn" data-name="Designer News" class="category" checked>
+				Designer News
+			</label>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="php" data-name="PHP" class="category" checked>
+				PHP
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="phpweekly" data-name="PHP Weekly" class="source" checked>
+										PHP Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="html5" data-name="HTML5" class="category" checked>
+				HTML5
+			</label>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="css" data-name="CSS" class="category" checked>
+				CSS
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="cssweekly" data-name="CSS Weekly" class="source" checked>
+										CSS Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="sassnews" data-name="sass news" class="source">
+										sass news
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="gamedev" data-name="Game Development" class="category" checked>
+				Game Development
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="gamedev" data-name="Gamedev.js Weekly" class="source" checked>
+										Gamedev.js Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="ruby" data-name="Ruby" class="category" checked>
+				Ruby
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="rubyweekly" data-name="Ruby Weekly" class="source" checked>
+										Ruby Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="green_ruby_news" data-name="Green Ruby News" class="source">
+										Green Ruby News
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="db" data-name="Database" class="category" checked>
+				Database
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="nosqlweekly" data-name="NoSQL Weekly" class="source">
+										NoSQL Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="dbweekly" data-name="Database Weekly" class="source" checked>
+										Database Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="postgresweekly" data-name="Postgres Weekly" class="source">
+										Postgres Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="mysqlnews" data-name="Weekly MySQL News" class="source">
+										Weekly MySQL News
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="redis_weekly" data-name="Redis Weekly" class="source">
+										Redis Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="redis_watch" data-name="Redis Watch" class="source">
+										Redis Watch
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="big_data_weekly" data-name="Big Data Weekly" class="source" checked>
+										Big Data Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="hadoop_weekly" data-name="Hadoop Weekly" class="source">
+										Hadoop Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="programmer" data-name="Programmer" class="category" checked>
+				Programmer
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="reddit-programming" data-name="r/programming" class="source" checked>
+										r/programming
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="statuscode" data-name="Status Code" class="source">
+										Status Code
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="webdesign" data-name="Web Design" class="category" checked>
+				Web Design
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="reddit-webdesign" data-name="r/webdesign" class="source" checked>
+										r/webdesign
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="heydesigner" data-name="HeyDesigner" class="source">
+										HeyDesigner
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="wdweekly" data-name="Web Design Weekly" class="source" checked>
+										Web Design Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="sidebario" data-name="Sidebar" class="source">
+										Sidebar
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="uxdesign" data-name="UX Design" class="category" checked>
+				UX Design
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="hacking-ui" data-name="Hacking UI" class="source">
+										Hacking UI
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="uxdesignweekly" data-name="UX Design Weekly" class="source" checked>
+										UX Design Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="uxweekly" data-name="UX Weekly" class="source">
+										UX Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="productdesignweekly" data-name="Product Design Weekly" class="source">
+										Product Design Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="webdev" data-name="Web Development" class="category" checked>
+				Web Development
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="fullwebweekly" data-name="FullWeb Weekly" class="source">
+										FullWeb Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="the_changelog" data-name="The Changelog" class="source">
+										The Changelog
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="versioning" data-name="Versioning" class="source" checked>
+										Versioning
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="wdrl" data-name="Web Development Reading List" class="source" checked>
+										Web Development Reading List
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="cancelbubble" data-name="Cancel Bubble" class="source">
+										Cancel Bubble
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="reddit-webdev" data-name="r/webdev" class="source">
+										r/webdev
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="beyonddesktop" data-name="Beyond Desktop" class="source">
+										Beyond Desktop
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="mobile" data-name="Mobile" class="category" checked>
+				Mobile
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="mobilewebweekly" data-name="Mobile Web Weekly" class="source" checked>
+										Mobile Web Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="iosdevweekly" data-name="iOS Dev Weekly" class="source" checked>
+										iOS Dev Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="androidweekly" data-name="Android Weekly" class="source" checked>
+										Android Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="tools" data-name="Tools" class="category" checked>
+				Tools
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="webtoolsweekly" data-name="Web Tools Weekly" class="source" checked>
+										Web Tools Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="stackshare" data-name="StackShare" class="source">
+										StackShare
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="python" data-name="Python" class="category" checked>
+				Python
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="pythonweekly" data-name="Python Weekly" class="source">
+										Python Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="pycoders" data-name="Pycoders Weekly" class="source" checked>
+										Pycoders Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="wordpress" data-name="Wordpress" class="category" checked>
+				Wordpress
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="wpmailme" data-name="wpMail" class="source" checked>
+										wpMail
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="perl" data-name="Perl" class="category" checked>
+				Perl
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="perlweekly" data-name="Perl Weekly" class="source" checked>
+										Perl Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="devops" data-name="DevOps" class="category" checked>
+				DevOps
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="devopsweekly" data-name="DevOps Weekly" class="source" checked>
+										DevOps Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="web-operations" data-name="Web Operations Weekly" class="source" checked>
+										Web Operations Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="dockerweekly" data-name="Docker Weekly" class="source" checked>
+										Docker Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="nondev" data-name="Non-Developer" class="category" checked>
+				Non-Developer
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="nondev" data-name="Next Draft" class="source" checked>
+										Next Draft
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="longreads-tech" data-name="Longreads (Tech)" class="source" checked>
+										Longreads (Tech)
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="pockethits" data-name="Pocket Hits" class="source" checked>
+										Pocket Hits
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="upvoted-sci-tech" data-name="Upvoted (Science & Technology)" class="source" checked>
+										Upvoted (Science & Technology)
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="upvoted-news" data-name="Upvoted (News)" class="source" checked>
+										Upvoted (News)
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="readability" data-name="Readability" class="source" checked>
+										Readability
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="slashdot" data-name="Slashdot" class="source" checked>
+										Slashdot
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="go" data-name="Go" class="category" checked>
+				Go
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="golangweekly" data-name="Go Newsletter" class="source" checked>
+										Go Newsletter
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="realtime" data-name="Real-time" class="category" checked>
+				Real-time
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="realtimeweekly" data-name="RealTime Weekly" class="source" checked>
+										RealTime Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="webrtcweekly" data-name="WebRTC Weekly" class="source" checked>
+										WebRTC Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="swift" data-name="Swift" class="category" checked>
+				Swift
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="swiftweekly" data-name="Swift Weekly" class="source" checked>
+										Swift Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="web-audio" data-name="Web Audio" class="category" checked>
+				Web Audio
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="webaudioweekly" data-name="Web Audio Weekly" class="source" checked>
+										Web Audio Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="dotnet" data-name=".net" class="category" checked>
+				.net
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="dotnetweekly" data-name="Dot Net Weekly" class="source" checked>
+										Dot Net Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="scala" data-name="Scala" class="category" checked>
+				Scala
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="scalatimes" data-name="Scala Times" class="source" checked>
+										Scala Times
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="product" data-name="Product" class="category" checked>
+				Product
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="makersweekly" data-name="Makers Weekly" class="source" checked>
+										Makers Weekly
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="useronboard" data-name="User Onboarding" class="source">
+										User Onboarding
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="producthunt" data-name="Product Hunt" class="source" checked>
+										Product Hunt
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="raspberrypi" data-name="Raspberry Pi" class="category" checked>
+				Raspberry Pi
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="raspiweekly" data-name="Raspi Weekly" class="source">
+										Raspi Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="rust" data-name="Rust" class="category" checked>
+				Rust
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="this_week_in_rust" data-name="This Week in Rust" class="source" checked>
+										This Week in Rust
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="clojure" data-name="Clojure" class="category" >
+				Clojure
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="clojure_gazette" data-name="Clojure Gazette" class="source">
+										Clojure Gazette
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="machine-learning" data-name="Machine Learning" class="category" checked>
+				Machine Learning
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="machine_learning_weekly" data-name="Machine Learning Newsletter" class="source" checked>
+										Machine Learning Newsletter
+				</label>
+			</li>
+						<li>
+				<label>
+										<input type="checkbox" name="ai_weekly" data-name="AI Weekly" class="source" checked>
+										AI Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="people" data-name="People" class="category" checked>
+				People
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="software_lead_weekly" data-name="Software Lead Weekly" class="source" checked>
+										Software Lead Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+			<li>
+			<label>
+				<input type="checkbox" name="data-science" data-name="Data Science" class="category" checked>
+				Data Science
+			</label>
+				<ul class="sources">
+						<li>
+				<label>
+										<input type="checkbox" name="data-science" data-name="Data Science Weekly" class="source" checked>
+										Data Science Weekly
+				</label>
+			</li>
+					</ul>
+				</li>
+		</ul>
+</div>
+
+	<div id="app">
+		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
+	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		</a>
+	</div>
+
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.infinitescroll.js"></script>
+	
+	<script src="assets/js/store.min.js"></script>
+	<script src="assets/js/lodash.min.js"></script>
+	<script src="assets/js/handlebars.min.js"></script>
+
+	
+		<script src="assets/js/settings.js"></script>
+	</body>
+</html>
