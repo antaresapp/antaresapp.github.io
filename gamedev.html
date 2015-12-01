@@ -32,357 +32,275 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" selected>Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" selected>Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>gamedev</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>gamedev</h2>
-		Sources: 
-					<a href="http://gamedevjsweekly.com/" target="_blank">Gamedev.js Weekly</a>
-			</div>
-		<div class="small">Last updated: 2015-11-28 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 28</div>
-			<a href="https://github.com/ncsoft/Unreal.js?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Unreal.js - Javascript runtime built for UnrealEngine 4</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/ncsoft/Unreal.js?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/ncsoft/Unreal.js?utm_source=gamedevjsweekly&utm_medium=email&text=Unreal.js - Javascript runtime built for UnrealEngine 4" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/ncsoft/Unreal.js?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/ncsoft/Unreal.js?utm_source=gamedevjsweekly&utm_medium=email&title=Unreal.js - Javascript runtime built for UnrealEngine 4" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/ncsoft/Unreal.js?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://github.com/ncsoft/Unreal.js?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Unreal.js - Javascript runtime built for UnrealEngine 4</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://gamecareerguide.com/features/1455/21_free_learning_resources_for_.php?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">21 free learning resources for game developers</a>
-			<div>
-				<a href="http://gamecareerguide.com" class="source" target="_blank">gamecareerguide.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://gamecareerguide.com/features/1455/21_free_learning_resources_for_.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://gamecareerguide.com/features/1455/21_free_learning_resources_for_.php?utm_source=gamedevjsweekly&utm_medium=email&text=21 free learning resources for game developers" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://gamecareerguide.com/features/1455/21_free_learning_resources_for_.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://gamecareerguide.com/features/1455/21_free_learning_resources_for_.php?utm_source=gamedevjsweekly&utm_medium=email&title=21 free learning resources for game developers" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://gamecareerguide.com/features/1455/21_free_learning_resources_for_.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://gamecareerguide.com/features/1455/21_free_learning_resources_for_.php?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">21 free learning resources for game developers</span>
+				<span class="item-info">gamecareerguide.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://codek.tv/383?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Developing 2D games with HTML5</a>
-			<div>
-				<a href="http://codek.tv" class="source" target="_blank">codek.tv</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://codek.tv/383?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://codek.tv/383?utm_source=gamedevjsweekly&utm_medium=email&text=Developing 2D games with HTML5" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://codek.tv/383?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://codek.tv/383?utm_source=gamedevjsweekly&utm_medium=email&title=Developing 2D games with HTML5" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://codek.tv/383?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://codek.tv/383?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Developing 2D games with HTML5</span>
+				<span class="item-info">codek.tv</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://ctrl500.com/business/you-stand-no-chance-says-vlambeers-rami-ismail/?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">“You stand no chance”, says Vlambeer’s Rami Ismail</a>
-			<div>
-				<a href="http://ctrl500.com" class="source" target="_blank">ctrl500.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://ctrl500.com/business/you-stand-no-chance-says-vlambeers-rami-ismail/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://ctrl500.com/business/you-stand-no-chance-says-vlambeers-rami-ismail/?utm_source=gamedevjsweekly&utm_medium=email&text=“You stand no chance”, says Vlambeer’s Rami Ismail" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://ctrl500.com/business/you-stand-no-chance-says-vlambeers-rami-ismail/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://ctrl500.com/business/you-stand-no-chance-says-vlambeers-rami-ismail/?utm_source=gamedevjsweekly&utm_medium=email&title=“You stand no chance”, says Vlambeer’s Rami Ismail" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://ctrl500.com/business/you-stand-no-chance-says-vlambeers-rami-ismail/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://ctrl500.com/business/you-stand-no-chance-says-vlambeers-rami-ismail/?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">“You stand no chance”, says Vlambeer’s Rami Ismail</span>
+				<span class="item-info">ctrl500.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.kongregate.com/games/CrankGoblin/mooch-the-escape?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Mooch The Escape on Kongregate</a>
-			<div>
-				<a href="http://kongregate.com" class="source" target="_blank">kongregate.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.kongregate.com/games/CrankGoblin/mooch-the-escape?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.kongregate.com/games/CrankGoblin/mooch-the-escape?utm_source=gamedevjsweekly&utm_medium=email&text=Mooch The Escape on Kongregate" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.kongregate.com/games/CrankGoblin/mooch-the-escape?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.kongregate.com/games/CrankGoblin/mooch-the-escape?utm_source=gamedevjsweekly&utm_medium=email&title=Mooch The Escape on Kongregate" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.kongregate.com/games/CrankGoblin/mooch-the-escape?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.kongregate.com/games/CrankGoblin/mooch-the-escape?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Mooch The Escape on Kongregate</span>
+				<span class="item-info">kongregate.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.spilgames.com/unsung-heroes-the-story-so-far/?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Unsung Heroes: the story so far</a>
-			<div>
-				<a href="http://spilgames.com" class="source" target="_blank">spilgames.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.spilgames.com/unsung-heroes-the-story-so-far/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.spilgames.com/unsung-heroes-the-story-so-far/?utm_source=gamedevjsweekly&utm_medium=email&text=Unsung Heroes: the story so far" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.spilgames.com/unsung-heroes-the-story-so-far/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.spilgames.com/unsung-heroes-the-story-so-far/?utm_source=gamedevjsweekly&utm_medium=email&title=Unsung Heroes: the story so far" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.spilgames.com/unsung-heroes-the-story-so-far/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.spilgames.com/unsung-heroes-the-story-so-far/?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Unsung Heroes: the story so far</span>
+				<span class="item-info">spilgames.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://techcrunch.com/2015/11/24/the-making-of-elevrs-virtual-reality-puzzle-game-float-is-fascinating/?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">The making of eleVR’s virtual reality puzzle game “Float” is fascinating</a>
-			<div>
-				<a href="http://techcrunch.com" class="source" target="_blank">techcrunch.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://techcrunch.com/2015/11/24/the-making-of-elevrs-virtual-reality-puzzle-game-float-is-fascinating/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://techcrunch.com/2015/11/24/the-making-of-elevrs-virtual-reality-puzzle-game-float-is-fascinating/?utm_source=gamedevjsweekly&utm_medium=email&text=The making of eleVR’s virtual reality puzzle game “Float” is fascinating" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://techcrunch.com/2015/11/24/the-making-of-elevrs-virtual-reality-puzzle-game-float-is-fascinating/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://techcrunch.com/2015/11/24/the-making-of-elevrs-virtual-reality-puzzle-game-float-is-fascinating/?utm_source=gamedevjsweekly&utm_medium=email&title=The making of eleVR’s virtual reality puzzle game “Float” is fascinating" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://techcrunch.com/2015/11/24/the-making-of-elevrs-virtual-reality-puzzle-game-float-is-fascinating/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://techcrunch.com/2015/11/24/the-making-of-elevrs-virtual-reality-puzzle-game-float-is-fascinating/?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">The making of eleVR’s virtual reality puzzle game “Float” is fascinating</span>
+				<span class="item-info">techcrunch.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://gamasutra.com/view/news/260366/On_Thanksgiving_what_are_game_devs_thankful_for.php?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">On Thanksgiving, what are game devs thankful for?</a>
-			<div>
-				<a href="http://gamasutra.com" class="source" target="_blank">gamasutra.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://gamasutra.com/view/news/260366/On_Thanksgiving_what_are_game_devs_thankful_for.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://gamasutra.com/view/news/260366/On_Thanksgiving_what_are_game_devs_thankful_for.php?utm_source=gamedevjsweekly&utm_medium=email&text=On Thanksgiving, what are game devs thankful for?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://gamasutra.com/view/news/260366/On_Thanksgiving_what_are_game_devs_thankful_for.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://gamasutra.com/view/news/260366/On_Thanksgiving_what_are_game_devs_thankful_for.php?utm_source=gamedevjsweekly&utm_medium=email&title=On Thanksgiving, what are game devs thankful for?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://gamasutra.com/view/news/260366/On_Thanksgiving_what_are_game_devs_thankful_for.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://gamasutra.com/view/news/260366/On_Thanksgiving_what_are_game_devs_thankful_for.php?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">On Thanksgiving, what are game devs thankful for?</span>
+				<span class="item-info">gamasutra.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.develop-online.net/interview/full-circle-what-players-want-to-know-from-devs/0213920?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Full Circle: what players want to know from devs</a>
-			<div>
-				<a href="http://develop-online.net" class="source" target="_blank">develop-online.net</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.develop-online.net/interview/full-circle-what-players-want-to-know-from-devs/0213920?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.develop-online.net/interview/full-circle-what-players-want-to-know-from-devs/0213920?utm_source=gamedevjsweekly&utm_medium=email&text=Full Circle: what players want to know from devs" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.develop-online.net/interview/full-circle-what-players-want-to-know-from-devs/0213920?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.develop-online.net/interview/full-circle-what-players-want-to-know-from-devs/0213920?utm_source=gamedevjsweekly&utm_medium=email&title=Full Circle: what players want to know from devs" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.develop-online.net/interview/full-circle-what-players-want-to-know-from-devs/0213920?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.develop-online.net/interview/full-circle-what-players-want-to-know-from-devs/0213920?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Full Circle: what players want to know from devs</span>
+				<span class="item-info">develop-online.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://gamedevacademy.org/how-to-make-a-bomberman-game-in-phaser-part-2/?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">How to make a Bomberman game in Phaser – part 2</a>
-			<div>
-				<a href="http://gamedevacademy.org" class="source" target="_blank">gamedevacademy.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://gamedevacademy.org/how-to-make-a-bomberman-game-in-phaser-part-2/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://gamedevacademy.org/how-to-make-a-bomberman-game-in-phaser-part-2/?utm_source=gamedevjsweekly&utm_medium=email&text=How to make a Bomberman game in Phaser – part 2" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://gamedevacademy.org/how-to-make-a-bomberman-game-in-phaser-part-2/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://gamedevacademy.org/how-to-make-a-bomberman-game-in-phaser-part-2/?utm_source=gamedevjsweekly&utm_medium=email&title=How to make a Bomberman game in Phaser – part 2" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://gamedevacademy.org/how-to-make-a-bomberman-game-in-phaser-part-2/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://gamedevacademy.org/how-to-make-a-bomberman-game-in-phaser-part-2/?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">How to make a Bomberman game in Phaser – part 2</span>
+				<span class="item-info">gamedevacademy.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.emanueleferonato.com/2015/11/25/creation-of-an-html5-game-like-radical-using-phaser-and-arcade-physics-step-2/?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Creation of an HTML5 game like Radical using Phaser and Arcade Physics – step 2</a>
-			<div>
-				<a href="http://emanueleferonato.com" class="source" target="_blank">emanueleferonato.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.emanueleferonato.com/2015/11/25/creation-of-an-html5-game-like-radical-using-phaser-and-arcade-physics-step-2/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.emanueleferonato.com/2015/11/25/creation-of-an-html5-game-like-radical-using-phaser-and-arcade-physics-step-2/?utm_source=gamedevjsweekly&utm_medium=email&text=Creation of an HTML5 game like Radical using Phaser and Arcade Physics – step 2" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.emanueleferonato.com/2015/11/25/creation-of-an-html5-game-like-radical-using-phaser-and-arcade-physics-step-2/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.emanueleferonato.com/2015/11/25/creation-of-an-html5-game-like-radical-using-phaser-and-arcade-physics-step-2/?utm_source=gamedevjsweekly&utm_medium=email&title=Creation of an HTML5 game like Radical using Phaser and Arcade Physics – step 2" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.emanueleferonato.com/2015/11/25/creation-of-an-html5-game-like-radical-using-phaser-and-arcade-physics-step-2/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.emanueleferonato.com/2015/11/25/creation-of-an-html5-game-like-radical-using-phaser-and-arcade-physics-step-2/?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Creation of an HTML5 game like Radical using Phaser and Arcade Physics – step 2</span>
+				<span class="item-info">emanueleferonato.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://academy.zenva.com/product/meteorjs-online-course/?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">The complete web application development course with Meteor.js and Phaser</a>
-			<div>
-				<a href="http://zenva.com" class="source" target="_blank">zenva.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://academy.zenva.com/product/meteorjs-online-course/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://academy.zenva.com/product/meteorjs-online-course/?utm_source=gamedevjsweekly&utm_medium=email&text=The complete web application development course with Meteor.js and Phaser" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://academy.zenva.com/product/meteorjs-online-course/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://academy.zenva.com/product/meteorjs-online-course/?utm_source=gamedevjsweekly&utm_medium=email&title=The complete web application development course with Meteor.js and Phaser" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://academy.zenva.com/product/meteorjs-online-course/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://academy.zenva.com/product/meteorjs-online-course/?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">The complete web application development course with Meteor.js and Phaser</span>
+				<span class="item-info">zenva.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Game promotion</a>
-			<div>
-				<a href="http://mozilla.org" class="source" target="_blank">mozilla.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion?utm_source=gamedevjsweekly&utm_medium=email&text=Game promotion" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion?utm_source=gamedevjsweekly&utm_medium=email&title=Game promotion" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Game promotion</span>
+				<span class="item-info">mozilla.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.eventbrite.de/e/mobile-monday-nexxt-embracing-the-next-generation-of-mobile-technologies-tickets-19680999399?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Mobile Monday Nexxt in Berlin: Embracing the next generation of mobile technologies</a>
-			<div>
-				<a href="http://eventbrite.de" class="source" target="_blank">eventbrite.de</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.eventbrite.de/e/mobile-monday-nexxt-embracing-the-next-generation-of-mobile-technologies-tickets-19680999399?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.eventbrite.de/e/mobile-monday-nexxt-embracing-the-next-generation-of-mobile-technologies-tickets-19680999399?utm_source=gamedevjsweekly&utm_medium=email&text=Mobile Monday Nexxt in Berlin: Embracing the next generation of mobile technologies" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.eventbrite.de/e/mobile-monday-nexxt-embracing-the-next-generation-of-mobile-technologies-tickets-19680999399?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.eventbrite.de/e/mobile-monday-nexxt-embracing-the-next-generation-of-mobile-technologies-tickets-19680999399?utm_source=gamedevjsweekly&utm_medium=email&title=Mobile Monday Nexxt in Berlin: Embracing the next generation of mobile technologies" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.eventbrite.de/e/mobile-monday-nexxt-embracing-the-next-generation-of-mobile-technologies-tickets-19680999399?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.eventbrite.de/e/mobile-monday-nexxt-embracing-the-next-generation-of-mobile-technologies-tickets-19680999399?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Mobile Monday Nexxt in Berlin: Embracing the next generation of mobile technologies</span>
+				<span class="item-info">eventbrite.de</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.paypal.me/end3r/" class="item-link" target="_blank">sending a donation</a>
-			<div>
-				<a href="http://paypal.me" class="source" target="_blank">paypal.me</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.paypal.me/end3r/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.paypal.me/end3r/&text=sending a donation" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.paypal.me/end3r/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.paypal.me/end3r/&title=sending a donation" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.paypal.me/end3r/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.paypal.me/end3r/">
+				<span class="item-title">sending a donation</span>
+				<span class="item-info">paypal.me</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://indexventures.com/news-room/blog/hunting-godzilla-why-games-is-the-most-misunderstood-sector-in-tech?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Hunting Godzilla and why games is the most misunderstood sector in tech</a>
-			<div>
-				<a href="http://indexventures.com" class="source" target="_blank">indexventures.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://indexventures.com/news-room/blog/hunting-godzilla-why-games-is-the-most-misunderstood-sector-in-tech?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://indexventures.com/news-room/blog/hunting-godzilla-why-games-is-the-most-misunderstood-sector-in-tech?utm_source=gamedevjsweekly&utm_medium=email&text=Hunting Godzilla and why games is the most misunderstood sector in tech" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://indexventures.com/news-room/blog/hunting-godzilla-why-games-is-the-most-misunderstood-sector-in-tech?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://indexventures.com/news-room/blog/hunting-godzilla-why-games-is-the-most-misunderstood-sector-in-tech?utm_source=gamedevjsweekly&utm_medium=email&title=Hunting Godzilla and why games is the most misunderstood sector in tech" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://indexventures.com/news-room/blog/hunting-godzilla-why-games-is-the-most-misunderstood-sector-in-tech?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://indexventures.com/news-room/blog/hunting-godzilla-why-games-is-the-most-misunderstood-sector-in-tech?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Hunting Godzilla and why games is the most misunderstood sector in tech</span>
+				<span class="item-info">indexventures.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.gamasutra.com/blogs/JoshBycer/20151104/258331/Lessons_of_Game_Design_learned_from_Super_Mario_Maker.php?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Lessons of game design learned from Super Mario Maker</a>
-			<div>
-				<a href="http://gamasutra.com" class="source" target="_blank">gamasutra.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.gamasutra.com/blogs/JoshBycer/20151104/258331/Lessons_of_Game_Design_learned_from_Super_Mario_Maker.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.gamasutra.com/blogs/JoshBycer/20151104/258331/Lessons_of_Game_Design_learned_from_Super_Mario_Maker.php?utm_source=gamedevjsweekly&utm_medium=email&text=Lessons of game design learned from Super Mario Maker" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.gamasutra.com/blogs/JoshBycer/20151104/258331/Lessons_of_Game_Design_learned_from_Super_Mario_Maker.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.gamasutra.com/blogs/JoshBycer/20151104/258331/Lessons_of_Game_Design_learned_from_Super_Mario_Maker.php?utm_source=gamedevjsweekly&utm_medium=email&title=Lessons of game design learned from Super Mario Maker" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.gamasutra.com/blogs/JoshBycer/20151104/258331/Lessons_of_Game_Design_learned_from_Super_Mario_Maker.php?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.gamasutra.com/blogs/JoshBycer/20151104/258331/Lessons_of_Game_Design_learned_from_Super_Mario_Maker.php?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Lessons of game design learned from Super Mario Maker</span>
+				<span class="item-info">gamasutra.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://shmuplations.com/xevious/?utm_source=gamedevjsweekly&utm_medium=email" class="item-link" target="_blank">Xevious – developer interview collection with designer Masanobu Endou</a>
-			<div>
-				<a href="http://shmuplations.com" class="source" target="_blank">shmuplations.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://shmuplations.com/xevious/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://shmuplations.com/xevious/?utm_source=gamedevjsweekly&utm_medium=email&text=Xevious – developer interview collection with designer Masanobu Endou" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://shmuplations.com/xevious/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://shmuplations.com/xevious/?utm_source=gamedevjsweekly&utm_medium=email&title=Xevious – developer interview collection with designer Masanobu Endou" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://shmuplations.com/xevious/?utm_source=gamedevjsweekly&utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://shmuplations.com/xevious/?utm_source=gamedevjsweekly&utm_medium=email">
+				<span class="item-title">Xevious – developer interview collection with designer Masanobu Endou</span>
+				<span class="item-info">shmuplations.com</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -395,33 +313,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

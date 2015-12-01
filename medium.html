@@ -32,385 +32,407 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" selected>Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" selected>Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>medium</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>medium</h2>
-		Sources: 
-					<a href="https://medium.com/" target="_blank">Medium</a>
-			</div>
-		<div class="small">Last updated: 2015-11-30 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 30</div>
-			<a href="https://medium.com/@mitchellharper/don-t-spend-anything-on-marketing-until-you-ve-read-this-64dc360ca8f6?source=top_stories---------15" class="item-link" target="_blank">Don’t spend anything on marketing until you’ve read this</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@mitchellharper/don-t-spend-anything-on-marketing-until-you-ve-read-this-64dc360ca8f6?source=top_stories---------15" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@mitchellharper/don-t-spend-anything-on-marketing-until-you-ve-read-this-64dc360ca8f6?source=top_stories---------15&text=Don’t spend anything on marketing until you’ve read this" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@mitchellharper/don-t-spend-anything-on-marketing-until-you-ve-read-this-64dc360ca8f6?source=top_stories---------15" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@mitchellharper/don-t-spend-anything-on-marketing-until-you-ve-read-this-64dc360ca8f6?source=top_stories---------15&title=Don’t spend anything on marketing until you’ve read this" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@mitchellharper/don-t-spend-anything-on-marketing-until-you-ve-read-this-64dc360ca8f6?source=top_stories---------15" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://medium.com/life-learning/19-things-you-can-do-now-that-will-still-help-you-in-the-future-5e802d47021c?source=top_stories---------19">
+				<span class="item-title">19 Things You Can Do Now That Will Still Help You in the Future</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@micah/10-000-1-000-000-ff2df2b009b6?source=top_stories---------16" class="item-link" target="_blank">10,000 > 1,000,000</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@micah/10-000-1-000-000-ff2df2b009b6?source=top_stories---------16" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@micah/10-000-1-000-000-ff2df2b009b6?source=top_stories---------16&text=10,000 > 1,000,000" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@micah/10-000-1-000-000-ff2df2b009b6?source=top_stories---------16" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@micah/10-000-1-000-000-ff2df2b009b6?source=top_stories---------16&title=10,000 > 1,000,000" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@micah/10-000-1-000-000-ff2df2b009b6?source=top_stories---------16" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@rands/the-wolf-6761b834266a?source=top_stories---------20">
+				<span class="item-title">The Wolf</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@kittystryker/when-feminism-is-a-brand-cde634625357?source=top_stories---------17" class="item-link" target="_blank">When Feminism Is a Brand</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@kittystryker/when-feminism-is-a-brand-cde634625357?source=top_stories---------17" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@kittystryker/when-feminism-is-a-brand-cde634625357?source=top_stories---------17&text=When Feminism Is a Brand" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@kittystryker/when-feminism-is-a-brand-cde634625357?source=top_stories---------17" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@kittystryker/when-feminism-is-a-brand-cde634625357?source=top_stories---------17&title=When Feminism Is a Brand" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@kittystryker/when-feminism-is-a-brand-cde634625357?source=top_stories---------17" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------11">
+				<span class="item-title">The Utopian UI Architect</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@nselby/los-angeles-just-proposed-the-worst-use-of-license-plate-reader-data-in-history-702c35733b50?source=top_stories---------18" class="item-link" target="_blank">Los Angeles Just Proposed the Worst Use of License Plate Reader Data in History.</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@nselby/los-angeles-just-proposed-the-worst-use-of-license-plate-reader-data-in-history-702c35733b50?source=top_stories---------18" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@nselby/los-angeles-just-proposed-the-worst-use-of-license-plate-reader-data-in-history-702c35733b50?source=top_stories---------18&text=Los Angeles Just Proposed the Worst Use of License Plate Reader Data in History." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@nselby/los-angeles-just-proposed-the-worst-use-of-license-plate-reader-data-in-history-702c35733b50?source=top_stories---------18" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@nselby/los-angeles-just-proposed-the-worst-use-of-license-plate-reader-data-in-history-702c35733b50?source=top_stories---------18&title=Los Angeles Just Proposed the Worst Use of License Plate Reader Data in History." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@nselby/los-angeles-just-proposed-the-worst-use-of-license-plate-reader-data-in-history-702c35733b50?source=top_stories---------18" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------12">
+				<span class="item-title">A Manager's Manifesto</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/life-learning/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d?source=top_stories---------19" class="item-link" target="_blank">8 Things Every Person Should Do Before 8 A.M.</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/life-learning/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d?source=top_stories---------19" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/life-learning/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d?source=top_stories---------19&text=8 Things Every Person Should Do Before 8 A.M." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/life-learning/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d?source=top_stories---------19" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/life-learning/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d?source=top_stories---------19&title=8 Things Every Person Should Do Before 8 A.M." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/life-learning/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d?source=top_stories---------19" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@vertigens/sobre-o-fen%C3%B4meno-dos-trabalhos-de-merda-3dc505ef1d01?source=top_stories---------13">
+				<span class="item-title">SOBRE O FENÔMENO DOS TRABALHOS DE MERDA</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/brains-are-fun/secrets-of-star-wars-and-the-end-of-everything-16278a13a926?source=top_stories---------20" class="item-link" target="_blank">Secrets of Star Wars and the End of Everything</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/brains-are-fun/secrets-of-star-wars-and-the-end-of-everything-16278a13a926?source=top_stories---------20" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/brains-are-fun/secrets-of-star-wars-and-the-end-of-everything-16278a13a926?source=top_stories---------20&text=Secrets of Star Wars and the End of Everything" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/brains-are-fun/secrets-of-star-wars-and-the-end-of-everything-16278a13a926?source=top_stories---------20" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/brains-are-fun/secrets-of-star-wars-and-the-end-of-everything-16278a13a926?source=top_stories---------20&title=Secrets of Star Wars and the End of Everything" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/brains-are-fun/secrets-of-star-wars-and-the-end-of-everything-16278a13a926?source=top_stories---------20" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/the-coffeelicious/chronicling-depression-with-photography-cedbeffa79ee?source=top_stories---------14">
+				<span class="item-title">Chronicling Depression, with Photography</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@wilderness/america-s-20-prettiest-national-parks-in-winter-2c2b2aea9a7b?source=top_stories---------7" class="item-link" target="_blank">America’s 20 prettiest national parks in winter</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@wilderness/america-s-20-prettiest-national-parks-in-winter-2c2b2aea9a7b?source=top_stories---------7" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@wilderness/america-s-20-prettiest-national-parks-in-winter-2c2b2aea9a7b?source=top_stories---------7&text=America’s 20 prettiest national parks in winter" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@wilderness/america-s-20-prettiest-national-parks-in-winter-2c2b2aea9a7b?source=top_stories---------7" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@wilderness/america-s-20-prettiest-national-parks-in-winter-2c2b2aea9a7b?source=top_stories---------7&title=America’s 20 prettiest national parks in winter" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@wilderness/america-s-20-prettiest-national-parks-in-winter-2c2b2aea9a7b?source=top_stories---------7" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/starts-with-a-bang/no-iss-astronaut-scott-kelly-did-not-take-a-picture-of-a-ufo-9664858e5b0a?source=top_stories---------15">
+				<span class="item-title">No, ISS Astronaut Scott Kelly Did Not Take A Picture Of A UFO</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------8" class="item-link" target="_blank">Funniest animated GIFs from 2015</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------8" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------8&text=Funniest animated GIFs from 2015" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------8" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------8&title=Funniest animated GIFs from 2015" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------8" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@wilw/life-reboot-a-month-later-how-are-we-doing-cea3d21dd844?source=top_stories---------16">
+				<span class="item-title">Life reboot a month later: how are we doing?</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------9" class="item-link" target="_blank">I sat down with a millionaire who operates 10 businesses while sailing around the world with his family</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------9" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------9&text=I sat down with a millionaire who operates 10 businesses while sailing around the world with his family" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------9" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------9&title=I sat down with a millionaire who operates 10 businesses while sailing around the world with his family" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------9" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/habit-of-introspection/ruthlessly-prioritize-237385d7d127?source=top_stories---------17">
+				<span class="item-title">Ruthlessly Prioritize</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------10" class="item-link" target="_blank">The 37 Best Websites To Learn Something New</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------10" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------10&text=The 37 Best Websites To Learn Something New" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------10" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------10&title=The 37 Best Websites To Learn Something New" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------10" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@ianlynam/why-we-should-really-be-concerned-about-the-visual-identity-for-the-tokyo-olympics-969830d0e819?source=top_stories---------18">
+				<span class="item-title">Ruthlessly Prioritize</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925?source=top_stories---------11" class="item-link" target="_blank">Must See JavaScript Dev Tools That Put Other Dev Tools to Shame</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925?source=top_stories---------11" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925?source=top_stories---------11&text=Must See JavaScript Dev Tools That Put Other Dev Tools to Shame" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925?source=top_stories---------11" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925?source=top_stories---------11&title=Must See JavaScript Dev Tools That Put Other Dev Tools to Shame" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925?source=top_stories---------11" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------3">
+				<span class="item-title">These photos are why I’m trapped in Tokyo forever now</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/the-macroscope/sometimes-a-whale-dies-689720e3e456?source=top_stories---------12" class="item-link" target="_blank">Sometimes, a Whale Dies</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/the-macroscope/sometimes-a-whale-dies-689720e3e456?source=top_stories---------12" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/the-macroscope/sometimes-a-whale-dies-689720e3e456?source=top_stories---------12&text=Sometimes, a Whale Dies" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/the-macroscope/sometimes-a-whale-dies-689720e3e456?source=top_stories---------12" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/the-macroscope/sometimes-a-whale-dies-689720e3e456?source=top_stories---------12&title=Sometimes, a Whale Dies" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/the-macroscope/sometimes-a-whale-dies-689720e3e456?source=top_stories---------12" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/life-learning/why-knowing-stuff-doesn-t-really-matter-f06a5536ab59?source=top_stories---------4">
+				<span class="item-title">Why Knowing Stuff Doesn’t Really Matter</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@kathrynmargaretrose/stream-of-consciousness-of-a-woman-while-jeans-shopping-f13f34b05234?source=top_stories---------13" class="item-link" target="_blank">Stream of Consciousness of a Woman While Jeans Shopping</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@kathrynmargaretrose/stream-of-consciousness-of-a-woman-while-jeans-shopping-f13f34b05234?source=top_stories---------13" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@kathrynmargaretrose/stream-of-consciousness-of-a-woman-while-jeans-shopping-f13f34b05234?source=top_stories---------13&text=Stream of Consciousness of a Woman While Jeans Shopping" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@kathrynmargaretrose/stream-of-consciousness-of-a-woman-while-jeans-shopping-f13f34b05234?source=top_stories---------13" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@kathrynmargaretrose/stream-of-consciousness-of-a-woman-while-jeans-shopping-f13f34b05234?source=top_stories---------13&title=Stream of Consciousness of a Woman While Jeans Shopping" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@kathrynmargaretrose/stream-of-consciousness-of-a-woman-while-jeans-shopping-f13f34b05234?source=top_stories---------13" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------5">
+				<span class="item-title">The day I became a millionaire</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------14" class="item-link" target="_blank">A Manager's Manifesto</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------14" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------14&text=A Manager's Manifesto" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------14" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------14&title=A Manager's Manifesto" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------14" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------6">
+				<span class="item-title">Coding is boring, unless…</span>
+				<span class="item-info">enki.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------1" class="item-link" target="_blank">These photos are why I’m trapped in Tokyo forever now</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------1" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------1&text=These photos are why I’m trapped in Tokyo forever now" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------1" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------1&title=These photos are why I’m trapped in Tokyo forever now" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------1" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------8">
+				<span class="item-title">The right way to start a company</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------2" class="item-link" target="_blank">The day I became a millionaire</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------2" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------2&text=The day I became a millionaire" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------2" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------2&title=The day I became a millionaire" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------2" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://human.parts/the-secret-to-a-good-night-s-sleep-e5c0864f7675?source=top_stories---------9">
+				<span class="item-title">The Secret to a Good Night’s Sleep</span>
+				<span class="item-info">human.parts</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------3" class="item-link" target="_blank">Coding is boring, unless…</a>
-			<div>
-				<a href="http://enki.com" class="source" target="_blank">enki.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------3" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------3&text=Coding is boring, unless…" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------3" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------3&title=Coding is boring, unless…" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------3" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------10">
+				<span class="item-title">Funniest animated GIFs from 2015</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------4" class="item-link" target="_blank">The Utopian UI Architect</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------4" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------4&text=The Utopian UI Architect" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------4" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------4&title=The Utopian UI Architect" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------4" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------7">
+				<span class="item-title">The 37 Best Websites To Learn Something New</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------5" class="item-link" target="_blank">The right way to start a company</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------5" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------5&text=The right way to start a company" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------5" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------5&title=The right way to start a company" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------5" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------2">
+				<span class="item-title">I sat down with a millionaire who operates 10 businesses while sailing around the world with his family</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@tgeorgakopoulos/the-most-beautiful-bookstore-on-earth-cdb6932b3938?source=top_stories---------6" class="item-link" target="_blank">The Most Beautiful Bookstore On Earth</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@tgeorgakopoulos/the-most-beautiful-bookstore-on-earth-cdb6932b3938?source=top_stories---------6" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@tgeorgakopoulos/the-most-beautiful-bookstore-on-earth-cdb6932b3938?source=top_stories---------6&text=The Most Beautiful Bookstore On Earth" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@tgeorgakopoulos/the-most-beautiful-bookstore-on-earth-cdb6932b3938?source=top_stories---------6" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@tgeorgakopoulos/the-most-beautiful-bookstore-on-earth-cdb6932b3938?source=top_stories---------6&title=The Most Beautiful Bookstore On Earth" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@tgeorgakopoulos/the-most-beautiful-bookstore-on-earth-cdb6932b3938?source=top_stories---------6" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@katenorquay/what-i-learned-from-4-years-working-at-mcdonalds-f278ad27faee?source=top_stories---------1">
+				<span class="item-title">What I Learned from Four Years Working at McDonalds</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-		</ul>
+				<li class="item">
+			<a href="https://medium.com/@mitchellharper/don-t-spend-anything-on-marketing-until-you-ve-read-this-64dc360ca8f6?source=top_stories---------15">
+				<span class="item-title">Don’t spend anything on marketing until you’ve read this</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@micah/10-000-1-000-000-ff2df2b009b6?source=top_stories---------16">
+				<span class="item-title">10,000 > 1,000,000</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@kittystryker/when-feminism-is-a-brand-cde634625357?source=top_stories---------17">
+				<span class="item-title">When Feminism Is a Brand</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@nselby/los-angeles-just-proposed-the-worst-use-of-license-plate-reader-data-in-history-702c35733b50?source=top_stories---------18">
+				<span class="item-title">Los Angeles Just Proposed the Worst Use of License Plate Reader Data in History.</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/life-learning/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d?source=top_stories---------19">
+				<span class="item-title">8 Things Every Person Should Do Before 8 A.M.</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/brains-are-fun/secrets-of-star-wars-and-the-end-of-everything-16278a13a926?source=top_stories---------20">
+				<span class="item-title">Secrets of Star Wars and the End of Everything</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@wilderness/america-s-20-prettiest-national-parks-in-winter-2c2b2aea9a7b?source=top_stories---------7">
+				<span class="item-title">America’s 20 prettiest national parks in winter</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/muzli-design-inspiration/funniest-animated-gifs-from-2015-39a81ea278f1?source=top_stories---------8">
+				<span class="item-title">Funniest animated GIFs from 2015</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/entrepreneur-s-handbook/i-sat-down-with-a-millionaire-who-operates-10-businesses-while-sailing-around-the-world-with-his-338929c4e8c9?source=top_stories---------9">
+				<span class="item-title">I sat down with a millionaire who operates 10 businesses while sailing around the world with his family</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/life-learning/the-37-best-websites-to-learn-something-new-895e2cb0cad4?source=top_stories---------10">
+				<span class="item-title">The 37 Best Websites To Learn Something New</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925?source=top_stories---------11">
+				<span class="item-title">Must See JavaScript Dev Tools That Put Other Dev Tools to Shame</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/the-macroscope/sometimes-a-whale-dies-689720e3e456?source=top_stories---------12">
+				<span class="item-title">Sometimes, a Whale Dies</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@kathrynmargaretrose/stream-of-consciousness-of-a-woman-while-jeans-shopping-f13f34b05234?source=top_stories---------13">
+				<span class="item-title">Stream of Consciousness of a Woman While Jeans Shopping</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/the-year-of-the-looking-glass/a-managers-manifesto-be5f6b118084?source=top_stories---------14">
+				<span class="item-title">A Manager's Manifesto</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@damjancvetkovdimitrov/these-photos-are-why-i-m-trapped-in-tokyo-forever-now-1a0ea980bcc5?source=top_stories---------1">
+				<span class="item-title">These photos are why I’m trapped in Tokyo forever now</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@dhh/the-day-i-became-a-millionaire-55d7dc4d8293?source=top_stories---------2">
+				<span class="item-title">The day I became a millionaire</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://blog.enki.com/coding-is-boring-unless-4e496720d664?source=top_stories---------3">
+				<span class="item-title">Coding is boring, unless…</span>
+				<span class="item-info">enki.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/re-form/the-utopian-ui-architect-34dead42a28?source=top_stories---------4">
+				<span class="item-title">The Utopian UI Architect</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@gerstenzang/the-right-way-to-start-a-company-8fe4932b59d0?source=top_stories---------5">
+				<span class="item-title">The right way to start a company</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@tgeorgakopoulos/the-most-beautiful-bookstore-on-earth-cdb6932b3938?source=top_stories---------6">
+				<span class="item-title">The Most Beautiful Bookstore On Earth</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -423,33 +445,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

@@ -32,486 +32,383 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" selected>Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" selected>Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>webdesign</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>webdesign</h2>
-		Sources: 
-					<a href="http://sidebar.io/" target="_blank">Sidebar</a>
-					<a href="https://web-design-weekly.com/" target="_blank">Web Design Weekly</a>
-					<a href="http://heydesigner.com/" target="_blank">Hey Designer</a>
-					<a href="https://www.reddit.com/r/web_design/top/?sort=top&t=week" target="_blank">Reddit Web Design</a>
-			</div>
-		<div class="small">Last updated: 2015-11-30 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 30</div>
-			<a href="https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41" class="item-link" target="_blank">The new Google Material icons could use some work</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41&text=The new Google Material icons could use some work" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41&title=The new Google Material icons could use some work" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41">
+				<span class="item-title">The new Google Material icons could use some work</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.imcreator.com/offthegrid" class="item-link" target="_blank">A New solution for all thegrid.io frustrated founders</a>
-			<div>
-				<a href="http://imcreator.com" class="source" target="_blank">imcreator.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.imcreator.com/offthegrid" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.imcreator.com/offthegrid&text=A New solution for all thegrid.io frustrated founders" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.imcreator.com/offthegrid" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.imcreator.com/offthegrid&title=A New solution for all thegrid.io frustrated founders" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.imcreator.com/offthegrid" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://fontawesome.io/icon/reddit-alien/">
+				<span class="item-title">Reddit Alien, one of 20 new icons in Font Awesome 4.5.0</span>
+				<span class="item-info">fontawesome.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://casestudy.club" class="item-link" target="_blank">Case Study Club: A Collection of Inspiring Case Studies</a>
-			<div>
-				<a href="http://casestudy.club" class="source" target="_blank">casestudy.club</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://casestudy.club" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://casestudy.club&text=Case Study Club: A Collection of Inspiring Case Studies" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://casestudy.club" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://casestudy.club&title=Case Study Club: A Collection of Inspiring Case Studies" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://casestudy.club" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/intercom-inside/what-we-learned-from-scaling-a-product-team-12e9d2e028b1#.e6654lxp8">
+				<span class="item-title">How to build a product design team</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://fontawesome.io/icon/reddit-alien/" class="item-link" target="_blank">Reddit Alien, one of 20 new icons in Font Awesome 4.5.0</a>
-			<div>
-				<a href="http://fontawesome.io" class="source" target="_blank">fontawesome.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://fontawesome.io/icon/reddit-alien/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://fontawesome.io/icon/reddit-alien/&text=Reddit Alien, one of 20 new icons in Font Awesome 4.5.0" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://fontawesome.io/icon/reddit-alien/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://fontawesome.io/icon/reddit-alien/&title=Reddit Alien, one of 20 new icons in Font Awesome 4.5.0" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://fontawesome.io/icon/reddit-alien/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://casestudy.club">
+				<span class="item-title">Case Study Club: A Collection of Inspiring Case Studies</span>
+				<span class="item-info">casestudy.club</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://sarasoueidan.com/blog/svg-vs-gif/?ref=frontendfront.com" class="item-link" target="_blank">Animated SVG vs. GIF</a>
-			<div>
-				<a href="http://sarasoueidan.com" class="source" target="_blank">sarasoueidan.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://sarasoueidan.com/blog/svg-vs-gif/?ref=frontendfront.com" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://sarasoueidan.com/blog/svg-vs-gif/?ref=frontendfront.com&text=Animated SVG vs. GIF" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://sarasoueidan.com/blog/svg-vs-gif/?ref=frontendfront.com" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://sarasoueidan.com/blog/svg-vs-gif/?ref=frontendfront.com&title=Animated SVG vs. GIF" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://sarasoueidan.com/blog/svg-vs-gif/?ref=frontendfront.com" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://100daysui.com/#">
+				<span class="item-title">100 Days UI Challenge - FREE (all PSD resources and a few HTML-based version of them are FREE to download)</span>
+				<span class="item-info">100daysui.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.designbreak.io/" class="item-link" target="_blank">Need a break? Find funny games, videos and inspiration…</a>
-			<div>
-				<a href="http://designbreak.io" class="source" target="_blank">designbreak.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.designbreak.io/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.designbreak.io/&text=Need a break? Find funny games, videos and inspiration…" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.designbreak.io/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.designbreak.io/&title=Need a break? Find funny games, videos and inspiration…" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.designbreak.io/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=ROISt8oAWoQ">
+				<span class="item-title">How I Manage My Website With Jekyll and Git</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://techcrunch.com/2015/11/22/the-most-overlooked-aspect-of-ux-design-could-be-the-most-important/" class="item-link" target="_blank">Great article about the design of 'empty states'</a>
-			<div>
-				<a href="http://techcrunch.com" class="source" target="_blank">techcrunch.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://techcrunch.com/2015/11/22/the-most-overlooked-aspect-of-ux-design-could-be-the-most-important/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://techcrunch.com/2015/11/22/the-most-overlooked-aspect-of-ux-design-could-be-the-most-important/&text=Great article about the design of 'empty states'" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://techcrunch.com/2015/11/22/the-most-overlooked-aspect-of-ux-design-could-be-the-most-important/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://techcrunch.com/2015/11/22/the-most-overlooked-aspect-of-ux-design-could-be-the-most-important/&title=Great article about the design of 'empty states'" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://techcrunch.com/2015/11/22/the-most-overlooked-aspect-of-ux-design-could-be-the-most-important/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/NickGeek/Fancy">
+				<span class="item-title">I was getting frustrated that I had to either use a full CMS or get my clients to update their websites in code, so I made a web framework called Fancy</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://codepen.io/mladen___/pen/JYqQpz" class="item-link" target="_blank">Flying letters</a>
-			<div>
-				<a href="http://codepen.io" class="source" target="_blank">codepen.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://codepen.io/mladen___/pen/JYqQpz" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://codepen.io/mladen___/pen/JYqQpz&text=Flying letters" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://codepen.io/mladen___/pen/JYqQpz" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://codepen.io/mladen___/pen/JYqQpz&title=Flying letters" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://codepen.io/mladen___/pen/JYqQpz" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://tinaipsum.rocks/">
+				<span class="item-title">Need an alternative to Lorem Ipsum? Try Tina Ipsum, filler text filled with quotes of everyone's favorite Belcher kid</span>
+				<span class="item-info">tinaipsum.rocks</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://chartico.com" class="item-link" target="_blank">Create Beautiful Bar Charts</a>
-			<div>
-				<a href="http://chartico.com" class="source" target="_blank">chartico.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://chartico.com" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://chartico.com&text=Create Beautiful Bar Charts" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://chartico.com" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://chartico.com&title=Create Beautiful Bar Charts" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://chartico.com" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://sarasoueidan.com/blog/svg-vs-gif/?ref=frontendfront.com">
+				<span class="item-title">Animated SVG vs. GIF</span>
+				<span class="item-info">sarasoueidan.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://littlesnippets.net/some-inspiration-for-menus-using-animated-lines/" class="item-link" target="_blank">Some CSS Menu Inspiration using Animated Lines</a>
-			<div>
-				<a href="http://littlesnippets.net" class="source" target="_blank">littlesnippets.net</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://littlesnippets.net/some-inspiration-for-menus-using-animated-lines/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://littlesnippets.net/some-inspiration-for-menus-using-animated-lines/&text=Some CSS Menu Inspiration using Animated Lines" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://littlesnippets.net/some-inspiration-for-menus-using-animated-lines/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://littlesnippets.net/some-inspiration-for-menus-using-animated-lines/&title=Some CSS Menu Inspiration using Animated Lines" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://littlesnippets.net/some-inspiration-for-menus-using-animated-lines/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://codepen.io/mladen___/pen/JYqQpz">
+				<span class="item-title">Flying letters</span>
+				<span class="item-info">codepen.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.pexels.com/" class="item-link" target="_blank">Free stock photos · Pexels</a>
-			<div>
-				<a href="http://pexels.com" class="source" target="_blank">pexels.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.pexels.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.pexels.com/&text=Free stock photos · Pexels" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.pexels.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.pexels.com/&title=Free stock photos · Pexels" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.pexels.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://littlesnippets.net/some-inspiration-for-menus-using-animated-lines/">
+				<span class="item-title">Some CSS Menu Inspiration using Animated Lines</span>
+				<span class="item-info">littlesnippets.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/NickGeek/Fancy" class="item-link" target="_blank">I was getting frustrated that I had to either use a full CMS or get my clients to update their websites in code, so I made a web framework called Fancy</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/NickGeek/Fancy" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/NickGeek/Fancy&text=I was getting frustrated that I had to either use a full CMS or get my clients to update their websites in code, so I made a web framework called Fancy" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/NickGeek/Fancy" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/NickGeek/Fancy&title=I was getting frustrated that I had to either use a full CMS or get my clients to update their websites in code, so I made a web framework called Fancy" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/NickGeek/Fancy" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.pexels.com/">
+				<span class="item-title">Free stock photos · Pexels</span>
+				<span class="item-info">pexels.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://tinaipsum.rocks/" class="item-link" target="_blank">Need an alternative to Lorem Ipsum? Try Tina Ipsum, filler text filled with quotes of everyone's favorite Belcher kid</a>
-			<div>
-				<a href="http://tinaipsum.rocks" class="source" target="_blank">tinaipsum.rocks</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://tinaipsum.rocks/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://tinaipsum.rocks/&text=Need an alternative to Lorem Ipsum? Try Tina Ipsum, filler text filled with quotes of everyone's favorite Belcher kid" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://tinaipsum.rocks/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://tinaipsum.rocks/&title=Need an alternative to Lorem Ipsum? Try Tina Ipsum, filler text filled with quotes of everyone's favorite Belcher kid" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://tinaipsum.rocks/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://pixabay.com/">
+				<span class="item-title">Over 500k (CC0) Free Images - Pixabay</span>
+				<span class="item-info">pixabay.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://pixabay.com/" class="item-link" target="_blank">Over 500k (CC0) Free Images - Pixabay</a>
-			<div>
-				<a href="http://pixabay.com" class="source" target="_blank">pixabay.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://pixabay.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://pixabay.com/&text=Over 500k (CC0) Free Images - Pixabay" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://pixabay.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://pixabay.com/&title=Over 500k (CC0) Free Images - Pixabay" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://pixabay.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://tobiasahlin.com/blog/how-to-animate-box-shadow/">
+				<span class="item-title">How to animate "box-shadow" with silky smooth performance</span>
+				<span class="item-info">tobiasahlin.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://tobiasahlin.com/blog/how-to-animate-box-shadow/" class="item-link" target="_blank">How to animate "box-shadow" with silky smooth performance</a>
-			<div>
-				<a href="http://tobiasahlin.com" class="source" target="_blank">tobiasahlin.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://tobiasahlin.com/blog/how-to-animate-box-shadow/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://tobiasahlin.com/blog/how-to-animate-box-shadow/&text=How to animate "box-shadow" with silky smooth performance" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://tobiasahlin.com/blog/how-to-animate-box-shadow/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://tobiasahlin.com/blog/how-to-animate-box-shadow/&title=How to animate "box-shadow" with silky smooth performance" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://tobiasahlin.com/blog/how-to-animate-box-shadow/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=uRGljemfwUE">
+				<span class="item-title">The Website is Down #1: Sales Guy vs. Web Dude (x-post from r/videos)</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.youtube.com/watch?v=uRGljemfwUE" class="item-link" target="_blank">The Website is Down #1: Sales Guy vs. Web Dude (x-post from r/videos)</a>
-			<div>
-				<a href="http://youtube.com" class="source" target="_blank">youtube.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.youtube.com/watch?v=uRGljemfwUE" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.youtube.com/watch?v=uRGljemfwUE&text=The Website is Down #1: Sales Guy vs. Web Dude (x-post from r/videos)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.youtube.com/watch?v=uRGljemfwUE" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.youtube.com/watch?v=uRGljemfwUE&title=The Website is Down #1: Sales Guy vs. Web Dude (x-post from r/videos)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.youtube.com/watch?v=uRGljemfwUE" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://designcode.io/sketch-mastering">
+				<span class="item-title">Mastering Sketch 3</span>
+				<span class="item-info">designcode.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://talks.ui-patterns.com/videos/designing-happiness-pamela-pavliscak" class="item-link" target="_blank">Designing Happiness</a>
-			<div>
-				<a href="http://ui-patterns.com" class="source" target="_blank">ui-patterns.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://talks.ui-patterns.com/videos/designing-happiness-pamela-pavliscak" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://talks.ui-patterns.com/videos/designing-happiness-pamela-pavliscak&text=Designing Happiness" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://talks.ui-patterns.com/videos/designing-happiness-pamela-pavliscak" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://talks.ui-patterns.com/videos/designing-happiness-pamela-pavliscak&title=Designing Happiness" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://talks.ui-patterns.com/videos/designing-happiness-pamela-pavliscak" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://css-tricks.com/keeping-breakpoints-dry/">
+				<span class="item-title">On Keeping Breakpoints DRY</span>
+				<span class="item-info">css-tricks.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://blog.sketchapp.com/post/133932511180/colors-in-sketch" class="item-link" target="_blank">Colors in Sketch</a>
-			<div>
-				<a href="http://sketchapp.com" class="source" target="_blank">sketchapp.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.sketchapp.com/post/133932511180/colors-in-sketch" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.sketchapp.com/post/133932511180/colors-in-sketch&text=Colors in Sketch" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.sketchapp.com/post/133932511180/colors-in-sketch" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.sketchapp.com/post/133932511180/colors-in-sketch&title=Colors in Sketch" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.sketchapp.com/post/133932511180/colors-in-sketch" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://gridlex.devlint.fr">
+				<span class="item-title">Gridlex – Just a Flexbox Grid System</span>
+				<span class="item-info">devlint.fr</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://blog.atomic.io/design/prototyping-isn-t-about-hitting-home-runs/" class="item-link" target="_blank">Prototyping Isn’t About Hitting Home Runs</a>
-			<div>
-				<a href="http://atomic.io" class="source" target="_blank">atomic.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.atomic.io/design/prototyping-isn-t-about-hitting-home-runs/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.atomic.io/design/prototyping-isn-t-about-hitting-home-runs/&text=Prototyping Isn’t About Hitting Home Runs" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.atomic.io/design/prototyping-isn-t-about-hitting-home-runs/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.atomic.io/design/prototyping-isn-t-about-hitting-home-runs/&title=Prototyping Isn’t About Hitting Home Runs" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.atomic.io/design/prototyping-isn-t-about-hitting-home-runs/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@_mikehlee/designing-for-various-states-823816e49c8d">
+				<span class="item-title">Designing for Various UI States</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://teamgaslight.com/blog/what-is-a-living-style-guide" class="item-link" target="_blank">What Is a Living Style Guide?</a>
-			<div>
-				<a href="http://teamgaslight.com" class="source" target="_blank">teamgaslight.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://teamgaslight.com/blog/what-is-a-living-style-guide" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://teamgaslight.com/blog/what-is-a-living-style-guide&text=What Is a Living Style Guide?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://teamgaslight.com/blog/what-is-a-living-style-guide" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://teamgaslight.com/blog/what-is-a-living-style-guide&title=What Is a Living Style Guide?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://teamgaslight.com/blog/what-is-a-living-style-guide" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://codyhouse.co/gem/horizontal-timeline/">
+				<span class="item-title">Horizontal Timeline</span>
+				<span class="item-info">codyhouse.co</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://blog.intercom.io/design-is-a-conversation/" class="item-link" target="_blank">Design is a conversation</a>
-			<div>
-				<a href="http://intercom.io" class="source" target="_blank">intercom.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://blog.intercom.io/design-is-a-conversation/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://blog.intercom.io/design-is-a-conversation/&text=Design is a conversation" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://blog.intercom.io/design-is-a-conversation/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://blog.intercom.io/design-is-a-conversation/&title=Design is a conversation" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://blog.intercom.io/design-is-a-conversation/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://ui8.net/?rel=heydesigner">
+				<span class="item-title">UI Kits, Wireframes, Icons, Fonts and more</span>
+				<span class="item-info">ui8.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@dorsha/implement-login-modal-with-redux-reselect-and-reactjs-668c468bcbe3" class="item-link" target="_blank">Implementing a Smart Login Modal With Redux, Reselect and ReactJS</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@dorsha/implement-login-modal-with-redux-reselect-and-reactjs-668c468bcbe3" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@dorsha/implement-login-modal-with-redux-reselect-and-reactjs-668c468bcbe3&text=Implementing a Smart Login Modal With Redux, Reselect and ReactJS" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@dorsha/implement-login-modal-with-redux-reselect-and-reactjs-668c468bcbe3" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@dorsha/implement-login-modal-with-redux-reselect-and-reactjs-668c468bcbe3&title=Implementing a Smart Login Modal With Redux, Reselect and ReactJS" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@dorsha/implement-login-modal-with-redux-reselect-and-reactjs-668c468bcbe3" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@mjtweaver/css-product-magnification-without-javascript-497ab5932419">
+				<span class="item-title">CSS Product Magnification – without JavaScript</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/framer-prototyping/working-with-svg-paths-in-framer-43d3c2d08adc" class="item-link" target="_blank">Working with SVG Paths in Framer</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/framer-prototyping/working-with-svg-paths-in-framer-43d3c2d08adc" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/framer-prototyping/working-with-svg-paths-in-framer-43d3c2d08adc&text=Working with SVG Paths in Framer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/framer-prototyping/working-with-svg-paths-in-framer-43d3c2d08adc" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/framer-prototyping/working-with-svg-paths-in-framer-43d3c2d08adc&title=Working with SVG Paths in Framer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/framer-prototyping/working-with-svg-paths-in-framer-43d3c2d08adc" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.invisionapp.com/designers-favorite-typefaces/">
+				<span class="item-title">Designers’ Favorite Typefaces</span>
+				<span class="item-info">invisionapp.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://designcode.io/sketch-mastering" class="item-link" target="_blank">Mastering Sketch 3</a>
-			<div>
-				<a href="http://designcode.io" class="source" target="_blank">designcode.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://designcode.io/sketch-mastering" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://designcode.io/sketch-mastering&text=Mastering Sketch 3" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://designcode.io/sketch-mastering" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://designcode.io/sketch-mastering&title=Mastering Sketch 3" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://designcode.io/sketch-mastering" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.imcreator.com/offthegrid">
+				<span class="item-title">A New solution for all thegrid.io frustrated founders</span>
+				<span class="item-info">imcreator.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://css-tricks.com/keeping-breakpoints-dry/" class="item-link" target="_blank">On Keeping Breakpoints DRY</a>
-			<div>
-				<a href="http://css-tricks.com" class="source" target="_blank">css-tricks.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://css-tricks.com/keeping-breakpoints-dry/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://css-tricks.com/keeping-breakpoints-dry/&text=On Keeping Breakpoints DRY" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://css-tricks.com/keeping-breakpoints-dry/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://css-tricks.com/keeping-breakpoints-dry/&title=On Keeping Breakpoints DRY" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://css-tricks.com/keeping-breakpoints-dry/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.designbreak.io/">
+				<span class="item-title">Need a break? Find funny games, videos and inspiration…</span>
+				<span class="item-info">designbreak.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://wesbos.com/modern-javascript-workflow-tooling/" class="item-link" target="_blank">Modern Workflow & Tooling Talk</a>
-			<div>
-				<a href="http://wesbos.com" class="source" target="_blank">wesbos.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://wesbos.com/modern-javascript-workflow-tooling/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://wesbos.com/modern-javascript-workflow-tooling/&text=Modern Workflow & Tooling Talk" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://wesbos.com/modern-javascript-workflow-tooling/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://wesbos.com/modern-javascript-workflow-tooling/&title=Modern Workflow & Tooling Talk" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://wesbos.com/modern-javascript-workflow-tooling/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://techcrunch.com/2015/11/22/the-most-overlooked-aspect-of-ux-design-could-be-the-most-important/">
+				<span class="item-title">Great article about the design of 'empty states'</span>
+				<span class="item-info">techcrunch.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://heydesigner.net/udemybf" class="item-link" target="_blank">Udemy Black Friday Blowout</a>
-			<div>
-				<a href="http://heydesigner.net" class="source" target="_blank">heydesigner.net</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://heydesigner.net/udemybf" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://heydesigner.net/udemybf&text=Udemy Black Friday Blowout" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://heydesigner.net/udemybf" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://heydesigner.net/udemybf&title=Udemy Black Friday Blowout" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://heydesigner.net/udemybf" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://chartico.com">
+				<span class="item-title">Create Beautiful Bar Charts</span>
+				<span class="item-info">chartico.com</span>
+			</a>
 		</li>
-		</ul>
+				<li class="item">
+			<a href="http://talks.ui-patterns.com/videos/designing-happiness-pamela-pavliscak">
+				<span class="item-title">Designing Happiness</span>
+				<span class="item-info">ui-patterns.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://blog.sketchapp.com/post/133932511180/colors-in-sketch">
+				<span class="item-title">Colors in Sketch</span>
+				<span class="item-info">sketchapp.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://blog.atomic.io/design/prototyping-isn-t-about-hitting-home-runs/">
+				<span class="item-title">Prototyping Isn’t About Hitting Home Runs</span>
+				<span class="item-info">atomic.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://teamgaslight.com/blog/what-is-a-living-style-guide">
+				<span class="item-title">What Is a Living Style Guide?</span>
+				<span class="item-info">teamgaslight.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://blog.intercom.io/design-is-a-conversation/">
+				<span class="item-title">Design is a conversation</span>
+				<span class="item-info">intercom.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@dorsha/implement-login-modal-with-redux-reselect-and-reactjs-668c468bcbe3">
+				<span class="item-title">Implementing a Smart Login Modal With Redux, Reselect and ReactJS</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/framer-prototyping/working-with-svg-paths-in-framer-43d3c2d08adc">
+				<span class="item-title">Working with SVG Paths in Framer</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://wesbos.com/modern-javascript-workflow-tooling/">
+				<span class="item-title">Modern Workflow & Tooling Talk</span>
+				<span class="item-info">wesbos.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://heydesigner.net/udemybf">
+				<span class="item-title">Udemy Black Friday Blowout</span>
+				<span class="item-info">heydesigner.net</span>
+			</a>
+		</li>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -524,33 +421,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

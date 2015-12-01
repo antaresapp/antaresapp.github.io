@@ -32,273 +32,239 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" selected>Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" selected>Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>scala</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>scala</h2>
-		Sources: 
-					<a href="http://www.scalatimes.com/" target="_blank">Scala Times</a>
-			</div>
-		<div class="small">Last updated: 2015-11-27 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 27</div>
-			<a href="https://github.com/scala/slip/issues/31" class="item-link" target="_blank">What should go into the Scala Standard Library</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/scala/slip/issues/31" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/scala/slip/issues/31&text=What should go into the Scala Standard Library" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/scala/slip/issues/31" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/scala/slip/issues/31&title=What should go into the Scala Standard Library" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/scala/slip/issues/31" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://github.com/scala/slip/issues/31">
+				<span class="item-title">What should go into the Scala Standard Library</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://inoio.de/blog/2015/11/18/reactive-systems-akka-persistence-and-eventuate/" class="item-link" target="_blank">Event Sourcing/CQRS with Akka Persistence and Eventuate</a>
-			<div>
-				<a href="http://inoio.de" class="source" target="_blank">inoio.de</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://inoio.de/blog/2015/11/18/reactive-systems-akka-persistence-and-eventuate/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://inoio.de/blog/2015/11/18/reactive-systems-akka-persistence-and-eventuate/&text=Event Sourcing/CQRS with Akka Persistence and Eventuate" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://inoio.de/blog/2015/11/18/reactive-systems-akka-persistence-and-eventuate/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://inoio.de/blog/2015/11/18/reactive-systems-akka-persistence-and-eventuate/&title=Event Sourcing/CQRS with Akka Persistence and Eventuate" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://inoio.de/blog/2015/11/18/reactive-systems-akka-persistence-and-eventuate/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://inoio.de/blog/2015/11/18/reactive-systems-akka-persistence-and-eventuate/">
+				<span class="item-title">Event Sourcing/CQRS with Akka Persistence and Eventuate</span>
+				<span class="item-info">inoio.de</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://julien-truffaut.github.io/Monocle//release_note.html" class="item-link" target="_blank">Monocle 1.2.0-M2</a>
-			<div>
-				<a href="http://julien-truffaut.github.io" class="source" target="_blank">julien-truffaut.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://julien-truffaut.github.io/Monocle//release_note.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://julien-truffaut.github.io/Monocle//release_note.html&text=Monocle 1.2.0-M2" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://julien-truffaut.github.io/Monocle//release_note.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://julien-truffaut.github.io/Monocle//release_note.html&title=Monocle 1.2.0-M2" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://julien-truffaut.github.io/Monocle//release_note.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://julien-truffaut.github.io/Monocle//release_note.html">
+				<span class="item-title">Monocle 1.2.0-M2</span>
+				<span class="item-info">julien-truffaut.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://lihaoyi.github.io/Ammonite/#Undo" class="item-link" target="_blank">Ammonite 0.5.0</a>
-			<div>
-				<a href="http://lihaoyi.github.io" class="source" target="_blank">lihaoyi.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://lihaoyi.github.io/Ammonite/#Undo" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://lihaoyi.github.io/Ammonite/#Undo&text=Ammonite 0.5.0" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://lihaoyi.github.io/Ammonite/#Undo" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://lihaoyi.github.io/Ammonite/#Undo&title=Ammonite 0.5.0" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://lihaoyi.github.io/Ammonite/#Undo" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://lihaoyi.github.io/Ammonite/#Undo">
+				<span class="item-title">Ammonite 0.5.0</span>
+				<span class="item-info">lihaoyi.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://docs.google.com/forms/d/1UR1trNJ9Mt49KSh9-3p1ngirVs6wtyzKuW0ZH_VjTIM/viewform" class="item-link" target="_blank">Scalar 2016: Call For Proposals</a>
-			<div>
-				<a href="http://google.com" class="source" target="_blank">google.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://docs.google.com/forms/d/1UR1trNJ9Mt49KSh9-3p1ngirVs6wtyzKuW0ZH_VjTIM/viewform" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://docs.google.com/forms/d/1UR1trNJ9Mt49KSh9-3p1ngirVs6wtyzKuW0ZH_VjTIM/viewform&text=Scalar 2016: Call For Proposals" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://docs.google.com/forms/d/1UR1trNJ9Mt49KSh9-3p1ngirVs6wtyzKuW0ZH_VjTIM/viewform" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://docs.google.com/forms/d/1UR1trNJ9Mt49KSh9-3p1ngirVs6wtyzKuW0ZH_VjTIM/viewform&title=Scalar 2016: Call For Proposals" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://docs.google.com/forms/d/1UR1trNJ9Mt49KSh9-3p1ngirVs6wtyzKuW0ZH_VjTIM/viewform" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://docs.google.com/forms/d/1UR1trNJ9Mt49KSh9-3p1ngirVs6wtyzKuW0ZH_VjTIM/viewform">
+				<span class="item-title">Scalar 2016: Call For Proposals</span>
+				<span class="item-info">google.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://scalamacros.org/news/2015/11/19/macro-paradise-2.1.0-final.html" class="item-link" target="_blank">Macro paradise 2.1.0-final</a>
-			<div>
-				<a href="http://scalamacros.org" class="source" target="_blank">scalamacros.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://scalamacros.org/news/2015/11/19/macro-paradise-2.1.0-final.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://scalamacros.org/news/2015/11/19/macro-paradise-2.1.0-final.html&text=Macro paradise 2.1.0-final" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://scalamacros.org/news/2015/11/19/macro-paradise-2.1.0-final.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://scalamacros.org/news/2015/11/19/macro-paradise-2.1.0-final.html&title=Macro paradise 2.1.0-final" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://scalamacros.org/news/2015/11/19/macro-paradise-2.1.0-final.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://scalamacros.org/news/2015/11/19/macro-paradise-2.1.0-final.html">
+				<span class="item-title">Macro paradise 2.1.0-final</span>
+				<span class="item-info">scalamacros.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://blog.bruchez.name/2015/11/generalized-type-constraints-in-scala.html" class="item-link" target="_blank">Generalized type constraints in Scala (without a PhD)</a>
-			<div>
-				<a href="http://bruchez.name" class="source" target="_blank">bruchez.name</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.bruchez.name/2015/11/generalized-type-constraints-in-scala.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.bruchez.name/2015/11/generalized-type-constraints-in-scala.html&text=Generalized type constraints in Scala (without a PhD)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.bruchez.name/2015/11/generalized-type-constraints-in-scala.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.bruchez.name/2015/11/generalized-type-constraints-in-scala.html&title=Generalized type constraints in Scala (without a PhD)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.bruchez.name/2015/11/generalized-type-constraints-in-scala.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.bruchez.name/2015/11/generalized-type-constraints-in-scala.html">
+				<span class="item-title">Generalized type constraints in Scala (without a PhD)</span>
+				<span class="item-info">bruchez.name</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://virtuslab.com/blog/arrows-monads-and-kleisli-part-ii/" class="item-link" target="_blank">Arrows, Monads and Kleisli - part II</a>
-			<div>
-				<a href="http://virtuslab.com" class="source" target="_blank">virtuslab.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://virtuslab.com/blog/arrows-monads-and-kleisli-part-ii/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://virtuslab.com/blog/arrows-monads-and-kleisli-part-ii/&text=Arrows, Monads and Kleisli - part II" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://virtuslab.com/blog/arrows-monads-and-kleisli-part-ii/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://virtuslab.com/blog/arrows-monads-and-kleisli-part-ii/&title=Arrows, Monads and Kleisli - part II" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://virtuslab.com/blog/arrows-monads-and-kleisli-part-ii/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://virtuslab.com/blog/arrows-monads-and-kleisli-part-ii/">
+				<span class="item-title">Arrows, Monads and Kleisli - part II</span>
+				<span class="item-info">virtuslab.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://blog.jetbrains.com/scala/2015/11/19/scala-plugin-eap-speeds-up-coding-assistance/?utm_source=hootsuite" class="item-link" target="_blank">Scala Plugin EAP Speeds Up Coding Assistance</a>
-			<div>
-				<a href="http://jetbrains.com" class="source" target="_blank">jetbrains.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.jetbrains.com/scala/2015/11/19/scala-plugin-eap-speeds-up-coding-assistance/?utm_source=hootsuite" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.jetbrains.com/scala/2015/11/19/scala-plugin-eap-speeds-up-coding-assistance/?utm_source=hootsuite&text=Scala Plugin EAP Speeds Up Coding Assistance" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.jetbrains.com/scala/2015/11/19/scala-plugin-eap-speeds-up-coding-assistance/?utm_source=hootsuite" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.jetbrains.com/scala/2015/11/19/scala-plugin-eap-speeds-up-coding-assistance/?utm_source=hootsuite&title=Scala Plugin EAP Speeds Up Coding Assistance" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.jetbrains.com/scala/2015/11/19/scala-plugin-eap-speeds-up-coding-assistance/?utm_source=hootsuite" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.jetbrains.com/scala/2015/11/19/scala-plugin-eap-speeds-up-coding-assistance/?utm_source=hootsuite">
+				<span class="item-title">Scala Plugin EAP Speeds Up Coding Assistance</span>
+				<span class="item-info">jetbrains.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/" class="item-link" target="_blank">5 Scala Puzzlers That Will Make Your Brain Hurt</a>
-			<div>
-				<a href="http://takipi.com" class="source" target="_blank">takipi.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/&text=5 Scala Puzzlers That Will Make Your Brain Hurt" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/&title=5 Scala Puzzlers That Will Make Your Brain Hurt" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/">
+				<span class="item-title">5 Scala Puzzlers That Will Make Your Brain Hurt</span>
+				<span class="item-info">takipi.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.scala-lang.org/blog/2015/11/16/minutes-from-nov-2015.html" class="item-link" target="_blank">Minutes from Nov 2015 SIP/SLIP Meeting</a>
-			<div>
-				<a href="http://scala-lang.org" class="source" target="_blank">scala-lang.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.scala-lang.org/blog/2015/11/16/minutes-from-nov-2015.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.scala-lang.org/blog/2015/11/16/minutes-from-nov-2015.html&text=Minutes from Nov 2015 SIP/SLIP Meeting" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.scala-lang.org/blog/2015/11/16/minutes-from-nov-2015.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.scala-lang.org/blog/2015/11/16/minutes-from-nov-2015.html&title=Minutes from Nov 2015 SIP/SLIP Meeting" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.scala-lang.org/blog/2015/11/16/minutes-from-nov-2015.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.scala-lang.org/blog/2015/11/16/minutes-from-nov-2015.html">
+				<span class="item-title">Minutes from Nov 2015 SIP/SLIP Meeting</span>
+				<span class="item-info">scala-lang.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://hasumedic.com/blog/collections-sliding/" class="item-link" target="_blank">Sliding through collections</a>
-			<div>
-				<a href="http://hasumedic.com" class="source" target="_blank">hasumedic.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://hasumedic.com/blog/collections-sliding/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://hasumedic.com/blog/collections-sliding/&text=Sliding through collections" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://hasumedic.com/blog/collections-sliding/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://hasumedic.com/blog/collections-sliding/&title=Sliding through collections" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://hasumedic.com/blog/collections-sliding/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://hasumedic.com/blog/collections-sliding/">
+				<span class="item-title">Sliding through collections</span>
+				<span class="item-info">hasumedic.com</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -311,33 +277,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

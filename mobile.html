@@ -32,443 +32,311 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" selected>Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" selected>Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>mobile</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>mobile</h2>
-		Sources: 
-					<a href="http://mobilewebweekly.co/" target="_blank">Mobile Web Weekly</a>
-					<a href="https://iosdevweekly.com/" target="_blank">IOS Dev Weekly</a>
-					<a href="http://androidweekly.net/" target="_blank">Android Weekly</a>
-			</div>
-		<div class="small">Last updated: 2015-11-30 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 30</div>
-			<a href="https://github.com/lyft/scissors" class="item-link" target="_blank">Scissors</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/lyft/scissors" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/lyft/scissors&text=Scissors" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/lyft/scissors" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/lyft/scissors&title=Scissors" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/lyft/scissors" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://github.com/lyft/scissors">
+				<span class="item-title">Scissors</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/vikramkakkar/SublimePicker" class="item-link" target="_blank">SublimePicker</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/vikramkakkar/SublimePicker" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/vikramkakkar/SublimePicker&text=SublimePicker" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/vikramkakkar/SublimePicker" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/vikramkakkar/SublimePicker&title=SublimePicker" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/vikramkakkar/SublimePicker" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/vikramkakkar/SublimePicker">
+				<span class="item-title">SublimePicker</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/googlesamples/android-classyshark" class="item-link" target="_blank">Android Classyshark</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/googlesamples/android-classyshark" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/googlesamples/android-classyshark&text=Android Classyshark" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/googlesamples/android-classyshark" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/googlesamples/android-classyshark&title=Android Classyshark" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/googlesamples/android-classyshark" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/googlesamples/android-classyshark">
+				<span class="item-title">Android Classyshark</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/michelelacorte/RetractableToolbar" class="item-link" target="_blank">RetractableToolbar</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/michelelacorte/RetractableToolbar" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/michelelacorte/RetractableToolbar&text=RetractableToolbar" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/michelelacorte/RetractableToolbar" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/michelelacorte/RetractableToolbar&title=RetractableToolbar" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/michelelacorte/RetractableToolbar" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/michelelacorte/RetractableToolbar">
+				<span class="item-title">RetractableToolbar</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/tmiyamon/gradle-config" class="item-link" target="_blank">Gradle Config Plugin</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/tmiyamon/gradle-config" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/tmiyamon/gradle-config&text=Gradle Config Plugin" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/tmiyamon/gradle-config" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/tmiyamon/gradle-config&title=Gradle Config Plugin" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/tmiyamon/gradle-config" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/tmiyamon/gradle-config">
+				<span class="item-title">Gradle Config Plugin</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://android-developers.blogspot.de/2015/11/android-studio-20-preview.html" class="item-link" target="_blank">Android Studio 2.0</a>
-			<div>
-				<a href="http://android-developers.blogspot.de" class="source" target="_blank">android-developers.blogspot.de</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://android-developers.blogspot.de/2015/11/android-studio-20-preview.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://android-developers.blogspot.de/2015/11/android-studio-20-preview.html&text=Android Studio 2.0" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://android-developers.blogspot.de/2015/11/android-studio-20-preview.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://android-developers.blogspot.de/2015/11/android-studio-20-preview.html&title=Android Studio 2.0" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://android-developers.blogspot.de/2015/11/android-studio-20-preview.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://android-developers.blogspot.de/2015/11/android-studio-20-preview.html">
+				<span class="item-title">Android Studio 2.0</span>
+				<span class="item-info">android-developers.blogspot.de</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.youtube.com/watch?v=Nt5GMaFUvog" class="item-link" target="_blank">Upgrading android camera intent app to marshmallow runtime permissions</a>
-			<div>
-				<a href="http://youtube.com" class="source" target="_blank">youtube.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.youtube.com/watch?v=Nt5GMaFUvog" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.youtube.com/watch?v=Nt5GMaFUvog&text=Upgrading android camera intent app to marshmallow runtime permissions" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.youtube.com/watch?v=Nt5GMaFUvog" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.youtube.com/watch?v=Nt5GMaFUvog&title=Upgrading android camera intent app to marshmallow runtime permissions" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.youtube.com/watch?v=Nt5GMaFUvog" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=Nt5GMaFUvog">
+				<span class="item-title">Upgrading android camera intent app to marshmallow runtime permissions</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://goo.gl/iW884I" class="item-link" target="_blank">Droidcon San Francisco 2016</a>
-			<div>
-				<a href="http://goo.gl" class="source" target="_blank">goo.gl</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://goo.gl/iW884I" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://goo.gl/iW884I&text=Droidcon San Francisco 2016" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://goo.gl/iW884I" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://goo.gl/iW884I&title=Droidcon San Francisco 2016" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://goo.gl/iW884I" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://goo.gl/iW884I">
+				<span class="item-title">Droidcon San Francisco 2016</span>
+				<span class="item-info">goo.gl</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://prolificinteractive.com/jobs/san-francisco/android-engineer.html?gh_jid=41730" class="item-link" target="_blank">Android Engineer</a>
-			<div>
-				<a href="http://prolificinteractive.com" class="source" target="_blank">prolificinteractive.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://prolificinteractive.com/jobs/san-francisco/android-engineer.html?gh_jid=41730" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://prolificinteractive.com/jobs/san-francisco/android-engineer.html?gh_jid=41730&text=Android Engineer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://prolificinteractive.com/jobs/san-francisco/android-engineer.html?gh_jid=41730" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://prolificinteractive.com/jobs/san-francisco/android-engineer.html?gh_jid=41730&title=Android Engineer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://prolificinteractive.com/jobs/san-francisco/android-engineer.html?gh_jid=41730" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://g.co/play/developerguide">
+				<span class="item-title">The Secrets to App Success on Google Play</span>
+				<span class="item-info">g.co</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://composed.recruiterbox.com/jobs/fk0halb" class="item-link" target="_blank">Android Developer at Composed</a>
-			<div>
-				<a href="http://recruiterbox.com" class="source" target="_blank">recruiterbox.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://composed.recruiterbox.com/jobs/fk0halb" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://composed.recruiterbox.com/jobs/fk0halb&text=Android Developer at Composed" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://composed.recruiterbox.com/jobs/fk0halb" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://composed.recruiterbox.com/jobs/fk0halb&title=Android Developer at Composed" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://composed.recruiterbox.com/jobs/fk0halb" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://prolificinteractive.com/jobs/san-francisco/android-engineer.html?gh_jid=41730">
+				<span class="item-title">Android Engineer</span>
+				<span class="item-info">prolificinteractive.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://glownet.workable.com/jobs/163263" class="item-link" target="_blank">Android Developer at Glownet</a>
-			<div>
-				<a href="http://workable.com" class="source" target="_blank">workable.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://glownet.workable.com/jobs/163263" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://glownet.workable.com/jobs/163263&text=Android Developer at Glownet" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://glownet.workable.com/jobs/163263" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://glownet.workable.com/jobs/163263&title=Android Developer at Glownet" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://glownet.workable.com/jobs/163263" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://composed.recruiterbox.com/jobs/fk0halb">
+				<span class="item-title">Android Developer at Composed</span>
+				<span class="item-info">recruiterbox.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.mydrivesolutions.com/mobile_engineer" class="item-link" target="_blank">Android Mobile Software Engineer with MyDrive</a>
-			<div>
-				<a href="http://mydrivesolutions.com" class="source" target="_blank">mydrivesolutions.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.mydrivesolutions.com/mobile_engineer" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.mydrivesolutions.com/mobile_engineer&text=Android Mobile Software Engineer with MyDrive" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.mydrivesolutions.com/mobile_engineer" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.mydrivesolutions.com/mobile_engineer&title=Android Mobile Software Engineer with MyDrive" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.mydrivesolutions.com/mobile_engineer" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.bignerdranch.com/blog/i-like-big-apps-and-i-cannot-lie-using-proguard-to-avoid-the-dalvik-method-limit/">
+				<span class="item-title">I Like Big Apps and I Cannot Lie</span>
+				<span class="item-info">bignerdranch.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.inthepocket.mobi/careers/" class="item-link" target="_blank">Senior Android Developer</a>
-			<div>
-				<a href="http://inthepocket.mobi" class="source" target="_blank">inthepocket.mobi</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.inthepocket.mobi/careers/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.inthepocket.mobi/careers/&text=Senior Android Developer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.inthepocket.mobi/careers/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.inthepocket.mobi/careers/&title=Senior Android Developer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.inthepocket.mobi/careers/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://glownet.workable.com/jobs/163263">
+				<span class="item-title">Android Developer at Glownet</span>
+				<span class="item-info">workable.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/christophesmet/colorpicker" class="item-link" target="_blank">Colorpicker</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/christophesmet/colorpicker" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/christophesmet/colorpicker&text=Colorpicker" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/christophesmet/colorpicker" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/christophesmet/colorpicker&title=Colorpicker" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/christophesmet/colorpicker" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.mydrivesolutions.com/mobile_engineer">
+				<span class="item-title">Android Mobile Software Engineer with MyDrive</span>
+				<span class="item-info">mydrivesolutions.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/thyrlian/ScreenshotsNanny" class="item-link" target="_blank">ScreenshotsNanny</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/thyrlian/ScreenshotsNanny" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/thyrlian/ScreenshotsNanny&text=ScreenshotsNanny" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/thyrlian/ScreenshotsNanny" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/thyrlian/ScreenshotsNanny&title=ScreenshotsNanny" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/thyrlian/ScreenshotsNanny" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.inthepocket.mobi/careers/">
+				<span class="item-title">Senior Android Developer</span>
+				<span class="item-info">inthepocket.mobi</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://g.co/play/developerguide" class="item-link" target="_blank">The Secrets to App Success on Google Play</a>
-			<div>
-				<a href="http://g.co" class="source" target="_blank">g.co</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://g.co/play/developerguide" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://g.co/play/developerguide&text=The Secrets to App Success on Google Play" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://g.co/play/developerguide" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://g.co/play/developerguide&title=The Secrets to App Success on Google Play" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://g.co/play/developerguide" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/christophesmet/colorpicker">
+				<span class="item-title">Colorpicker</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.fasteque.com/android-reverse-engineering-101-part-3/" class="item-link" target="_blank">Android Reverse Engineering 101 – Part 3</a>
-			<div>
-				<a href="http://fasteque.com" class="source" target="_blank">fasteque.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.fasteque.com/android-reverse-engineering-101-part-3/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.fasteque.com/android-reverse-engineering-101-part-3/&text=Android Reverse Engineering 101 – Part 3" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.fasteque.com/android-reverse-engineering-101-part-3/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.fasteque.com/android-reverse-engineering-101-part-3/&title=Android Reverse Engineering 101 – Part 3" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.fasteque.com/android-reverse-engineering-101-part-3/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/thyrlian/ScreenshotsNanny">
+				<span class="item-title">ScreenshotsNanny</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@jsuch2362/android-build-speed-up-ver-english-c76890aa610#.wqqetay68" class="item-link" target="_blank">Android Build Speed Up</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@jsuch2362/android-build-speed-up-ver-english-c76890aa610#.wqqetay68" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@jsuch2362/android-build-speed-up-ver-english-c76890aa610#.wqqetay68&text=Android Build Speed Up" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@jsuch2362/android-build-speed-up-ver-english-c76890aa610#.wqqetay68" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@jsuch2362/android-build-speed-up-ver-english-c76890aa610#.wqqetay68&title=Android Build Speed Up" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@jsuch2362/android-build-speed-up-ver-english-c76890aa610#.wqqetay68" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://code.tutsplus.com/tutorials/an-introduction-to-face-detection-on-android--cms-25212">
+				<span class="item-title">An Introduction to Face Detection on Android</span>
+				<span class="item-info">tutsplus.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://eng.lyft.com/scissors-an-image-cropping-library-for-android-a56369154a19#.g94hkdzcj" class="item-link" target="_blank">Scissors: an image cropping library for Android</a>
-			<div>
-				<a href="http://lyft.com" class="source" target="_blank">lyft.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://eng.lyft.com/scissors-an-image-cropping-library-for-android-a56369154a19#.g94hkdzcj" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://eng.lyft.com/scissors-an-image-cropping-library-for-android-a56369154a19#.g94hkdzcj&text=Scissors: an image cropping library for Android" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://eng.lyft.com/scissors-an-image-cropping-library-for-android-a56369154a19#.g94hkdzcj" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://eng.lyft.com/scissors-an-image-cropping-library-for-android-a56369154a19#.g94hkdzcj&title=Scissors: an image cropping library for Android" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://eng.lyft.com/scissors-an-image-cropping-library-for-android-a56369154a19#.g94hkdzcj" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.fasteque.com/android-reverse-engineering-101-part-3/">
+				<span class="item-title">Android Reverse Engineering 101 – Part 3</span>
+				<span class="item-info">fasteque.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.simform.com/blog/top-resources-to-learn-android" class="item-link" target="_blank">Top resources to learn Android</a>
-			<div>
-				<a href="http://simform.com" class="source" target="_blank">simform.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.simform.com/blog/top-resources-to-learn-android" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.simform.com/blog/top-resources-to-learn-android&text=Top resources to learn Android" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.simform.com/blog/top-resources-to-learn-android" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.simform.com/blog/top-resources-to-learn-android&title=Top resources to learn Android" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.simform.com/blog/top-resources-to-learn-android" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@jsuch2362/android-build-speed-up-ver-english-c76890aa610#.wqqetay68">
+				<span class="item-title">Android Build Speed Up</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://blog.egorand.me/testing-a-sorted-list-with-espresso/" class="item-link" target="_blank">Testing a sorted list with Espresso</a>
-			<div>
-				<a href="http://egorand.me" class="source" target="_blank">egorand.me</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.egorand.me/testing-a-sorted-list-with-espresso/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.egorand.me/testing-a-sorted-list-with-espresso/&text=Testing a sorted list with Espresso" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.egorand.me/testing-a-sorted-list-with-espresso/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.egorand.me/testing-a-sorted-list-with-espresso/&title=Testing a sorted list with Espresso" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.egorand.me/testing-a-sorted-list-with-espresso/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://eng.lyft.com/scissors-an-image-cropping-library-for-android-a56369154a19#.g94hkdzcj">
+				<span class="item-title">Scissors: an image cropping library for Android</span>
+				<span class="item-info">lyft.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://johnpetitto.com/no-more-realm/" class="item-link" target="_blank">Why I Don't Use Realm Anymore</a>
-			<div>
-				<a href="http://johnpetitto.com" class="source" target="_blank">johnpetitto.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://johnpetitto.com/no-more-realm/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://johnpetitto.com/no-more-realm/&text=Why I Don't Use Realm Anymore" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://johnpetitto.com/no-more-realm/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://johnpetitto.com/no-more-realm/&title=Why I Don't Use Realm Anymore" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://johnpetitto.com/no-more-realm/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.simform.com/blog/top-resources-to-learn-android">
+				<span class="item-title">Top resources to learn Android</span>
+				<span class="item-info">simform.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.bignerdranch.com/blog/i-like-big-apps-and-i-cannot-lie-using-proguard-to-avoid-the-dalvik-method-limit/" class="item-link" target="_blank">I Like Big Apps and I Cannot Lie</a>
-			<div>
-				<a href="http://bignerdranch.com" class="source" target="_blank">bignerdranch.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.bignerdranch.com/blog/i-like-big-apps-and-i-cannot-lie-using-proguard-to-avoid-the-dalvik-method-limit/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.bignerdranch.com/blog/i-like-big-apps-and-i-cannot-lie-using-proguard-to-avoid-the-dalvik-method-limit/&text=I Like Big Apps and I Cannot Lie" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.bignerdranch.com/blog/i-like-big-apps-and-i-cannot-lie-using-proguard-to-avoid-the-dalvik-method-limit/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.bignerdranch.com/blog/i-like-big-apps-and-i-cannot-lie-using-proguard-to-avoid-the-dalvik-method-limit/&title=I Like Big Apps and I Cannot Lie" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.bignerdranch.com/blog/i-like-big-apps-and-i-cannot-lie-using-proguard-to-avoid-the-dalvik-method-limit/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.egorand.me/testing-a-sorted-list-with-espresso/">
+				<span class="item-title">Testing a sorted list with Espresso</span>
+				<span class="item-info">egorand.me</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://code.tutsplus.com/tutorials/an-introduction-to-face-detection-on-android--cms-25212" class="item-link" target="_blank">An Introduction to Face Detection on Android</a>
-			<div>
-				<a href="http://tutsplus.com" class="source" target="_blank">tutsplus.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://code.tutsplus.com/tutorials/an-introduction-to-face-detection-on-android--cms-25212" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://code.tutsplus.com/tutorials/an-introduction-to-face-detection-on-android--cms-25212&text=An Introduction to Face Detection on Android" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://code.tutsplus.com/tutorials/an-introduction-to-face-detection-on-android--cms-25212" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://code.tutsplus.com/tutorials/an-introduction-to-face-detection-on-android--cms-25212&title=An Introduction to Face Detection on Android" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://code.tutsplus.com/tutorials/an-introduction-to-face-detection-on-android--cms-25212" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://johnpetitto.com/no-more-realm/">
+				<span class="item-title">Why I Don't Use Realm Anymore</span>
+				<span class="item-info">johnpetitto.com</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -481,33 +349,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

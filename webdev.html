@@ -32,755 +32,569 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" selected>Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" selected>Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>webdev</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>webdev</h2>
-		Sources: 
-					<a href="http://bdconf.com/" target="_blank">Breaking Development</a>
-					<a href="http://www.sitepoint.com/versioning/" target="_blank">Versioning</a>
-					<a href="https://wdrl.info/" target="_blank">Web Development Reading List</a>
-					<a href="https://www.reddit.com/r/webdev/top/?sort=top&t=week" target="_blank">Reddit Webdev</a>
-					<a href="https://twitter.com/cancelBubble" target="_blank">CancelBubble</a>
-					<a href="https://changelog.com/weekly/" target="_blank">The Changelog</a>
-					<a href="http://fullweb.io/" target="_blank">Full Web Weekly</a>
-			</div>
-		<div class="small">Last updated: 2015-11-30 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 30</div>
-			<a href="http://www.pokegraphs.com" class="item-link" target="_blank">I built a pokemon color graph website! :)</a>
-			<div>
-				<a href="http://pokegraphs.com" class="source" target="_blank">pokegraphs.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.pokegraphs.com" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.pokegraphs.com&text=I built a pokemon color graph website! :)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.pokegraphs.com" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.pokegraphs.com&title=I built a pokemon color graph website! :)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.pokegraphs.com" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://franciskim.co/2015/11/28/promise-based-scraper-in-node-js/">
+				<span class="item-title">Promise Based Scraper in Node.js</span>
+				<span class="item-info">franciskim.co</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://imgur.com/4azrS1C/" class="item-link" target="_blank">Loaded a web page: 660 requests, 30.1mb and a crashed developer tools window later. Time to install a content and ad-blocker.</a>
-			<div>
-				<a href="http://imgur.com" class="source" target="_blank">imgur.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://imgur.com/4azrS1C/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://imgur.com/4azrS1C/&text=Loaded a web page: 660 requests, 30.1mb and a crashed developer tools window later. Time to install a content and ad-blocker." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://imgur.com/4azrS1C/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://imgur.com/4azrS1C/&title=Loaded a web page: 660 requests, 30.1mb and a crashed developer tools window later. Time to install a content and ad-blocker." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://imgur.com/4azrS1C/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://flexboxfroggy.com/">
+				<span class="item-title">Flexbox Froggy: A game for learning CSS flexbox</span>
+				<span class="item-info">flexboxfroggy.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://placingbad.com" class="item-link" target="_blank">Placing Bad - A Breaking Bad placeholder image generator</a>
-			<div>
-				<a href="http://placingbad.com" class="source" target="_blank">placingbad.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://placingbad.com" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://placingbad.com&text=Placing Bad - A Breaking Bad placeholder image generator" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://placingbad.com" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://placingbad.com&title=Placing Bad - A Breaking Bad placeholder image generator" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://placingbad.com" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://i.imgur.com/vXgP5Jh.png">
+				<span class="item-title">Cloudflare CDN causes time to first byte to be ridiculously long at random times, but site loads fine without passing through Cloudflare. Any ideas why?</span>
+				<span class="item-info">imgur.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/creative-business/why-is-it-so-hard-to-find-a-front-end-developer-cb92848a7c6f?ref=webdesignernews.com#.r880ixioq" class="item-link" target="_blank">Why is it so hard to find a good front end developer?</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/creative-business/why-is-it-so-hard-to-find-a-front-end-developer-cb92848a7c6f?ref=webdesignernews.com#.r880ixioq" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/creative-business/why-is-it-so-hard-to-find-a-front-end-developer-cb92848a7c6f?ref=webdesignernews.com#.r880ixioq&text=Why is it so hard to find a good front end developer?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/creative-business/why-is-it-so-hard-to-find-a-front-end-developer-cb92848a7c6f?ref=webdesignernews.com#.r880ixioq" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/creative-business/why-is-it-so-hard-to-find-a-front-end-developer-cb92848a7c6f?ref=webdesignernews.com#.r880ixioq&title=Why is it so hard to find a good front end developer?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/creative-business/why-is-it-so-hard-to-find-a-front-end-developer-cb92848a7c6f?ref=webdesignernews.com#.r880ixioq" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.pokegraphs.com">
+				<span class="item-title">I built a pokemon color graph website! :)</span>
+				<span class="item-info">pokegraphs.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://bevacqua.github.io/dragula/" class="item-link" target="_blank">Dragula: Drag and drop so simple it hurts</a>
-			<div>
-				<a href="http://bevacqua.github.io" class="source" target="_blank">bevacqua.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://bevacqua.github.io/dragula/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://bevacqua.github.io/dragula/&text=Dragula: Drag and drop so simple it hurts" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://bevacqua.github.io/dragula/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://bevacqua.github.io/dragula/&title=Dragula: Drag and drop so simple it hurts" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://bevacqua.github.io/dragula/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://imgur.com/4azrS1C/">
+				<span class="item-title">Loaded a web page: 660 requests, 30.1mb and a crashed developer tools window later. Time to install a content and ad-blocker.</span>
+				<span class="item-info">imgur.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://shaneriley.com/dickbuttjs/#.VllqG2QrI_W" class="item-link" target="_blank">The js library to end all js libraries</a>
-			<div>
-				<a href="http://shaneriley.com" class="source" target="_blank">shaneriley.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://shaneriley.com/dickbuttjs/#.VllqG2QrI_W" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://shaneriley.com/dickbuttjs/#.VllqG2QrI_W&text=The js library to end all js libraries" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://shaneriley.com/dickbuttjs/#.VllqG2QrI_W" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://shaneriley.com/dickbuttjs/#.VllqG2QrI_W&title=The js library to end all js libraries" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://shaneriley.com/dickbuttjs/#.VllqG2QrI_W" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://regexcrossword.com">
+				<span class="item-title">Regex Crossword – An interesting way to either learn or practice regular expressions, because out-of-the-box validation isn't always an option.</span>
+				<span class="item-info">regexcrossword.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://i.imgur.com/5cxTJ65.png" class="item-link" target="_blank">Hah, I just noticed the developers of kremlin.ru have hidden a little Russian flag in the ::selection colors.</a>
-			<div>
-				<a href="http://imgur.com" class="source" target="_blank">imgur.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://i.imgur.com/5cxTJ65.png" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://i.imgur.com/5cxTJ65.png&text=Hah, I just noticed the developers of kremlin.ru have hidden a little Russian flag in the ::selection colors." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://i.imgur.com/5cxTJ65.png" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://i.imgur.com/5cxTJ65.png&title=Hah, I just noticed the developers of kremlin.ru have hidden a little Russian flag in the ::selection colors." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://i.imgur.com/5cxTJ65.png" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/creative-business/why-is-it-so-hard-to-find-a-front-end-developer-cb92848a7c6f?ref=webdesignernews.com#.r880ixioq">
+				<span class="item-title">Why is it so hard to find a good front end developer?</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://goo.gl/8L7WTl" class="item-link" target="_blank">Startup employees, before you buy your options…</a>
-			<div>
-				<a href="http://goo.gl" class="source" target="_blank">goo.gl</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://goo.gl/8L7WTl" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://goo.gl/8L7WTl&text=Startup employees, before you buy your options…" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://goo.gl/8L7WTl" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://goo.gl/8L7WTl&title=Startup employees, before you buy your options…" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://goo.gl/8L7WTl" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://bevacqua.github.io/dragula/">
+				<span class="item-title">Dragula: Drag and drop so simple it hurts</span>
+				<span class="item-info">bevacqua.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://bzfd.it/1O73PM7" class="item-link" target="_blank">Photos Of San Francisco In The 40s And 50s </a>
-			<div>
-				<a href="http://bzfd.it" class="source" target="_blank">bzfd.it</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://bzfd.it/1O73PM7" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://bzfd.it/1O73PM7&text=Photos Of San Francisco In The 40s And 50s " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://bzfd.it/1O73PM7" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://bzfd.it/1O73PM7&title=Photos Of San Francisco In The 40s And 50s " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://bzfd.it/1O73PM7" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://shaneriley.com/dickbuttjs/#.VllqG2QrI_W">
+				<span class="item-title">The js library to end all js libraries</span>
+				<span class="item-info">shaneriley.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/bmschmidt/D3-trail" class="item-link" target="_blank">D3-trail - Trail layout for D3 </a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/bmschmidt/D3-trail" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/bmschmidt/D3-trail&text=D3-trail - Trail layout for D3 " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/bmschmidt/D3-trail" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/bmschmidt/D3-trail&title=D3-trail - Trail layout for D3 " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/bmschmidt/D3-trail" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://i.imgur.com/5cxTJ65.png">
+				<span class="item-title">Hah, I just noticed the developers of kremlin.ru have hidden a little Russian flag in the ::selection colors.</span>
+				<span class="item-info">imgur.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://bit.ly/1LdKoNh" class="item-link" target="_blank">Yahoo rolls out slick new search results exclusively for U.S. Firefox users </a>
-			<div>
-				<a href="http://bit.ly" class="source" target="_blank">bit.ly</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://bit.ly/1LdKoNh" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://bit.ly/1LdKoNh&text=Yahoo rolls out slick new search results exclusively for U.S. Firefox users " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://bit.ly/1LdKoNh" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://bit.ly/1LdKoNh&title=Yahoo rolls out slick new search results exclusively for U.S. Firefox users " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://bit.ly/1LdKoNh" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://allegrojs.net/">
+				<span class="item-title">allegro.js - a HTML5 game making library </span>
+				<span class="item-info">allegrojs.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.isaacchansky.me/days-since-last-new-js-framework/" class="item-link" target="_blank">Days Since Last New JavaScript Framework  </a>
-			<div>
-				<a href="http://isaacchansky.me" class="source" target="_blank">isaacchansky.me</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.isaacchansky.me/days-since-last-new-js-framework/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.isaacchansky.me/days-since-last-new-js-framework/&text=Days Since Last New JavaScript Framework  " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.isaacchansky.me/days-since-last-new-js-framework/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.isaacchansky.me/days-since-last-new-js-framework/&title=Days Since Last New JavaScript Framework  " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.isaacchansky.me/days-since-last-new-js-framework/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://css-cursor.techstream.org/">
+				<span class="item-title">CSS Cursor - shows you which cursor property types result in which styles of pointer in your current browser </span>
+				<span class="item-info">techstream.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://omniscientjs.github.io/" class="item-link" target="_blank">Omniscient v4.0.0 - fast top-down rendering of views while thinking functional programming </a>
-			<div>
-				<a href="http://omniscientjs.github.io" class="source" target="_blank">omniscientjs.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://omniscientjs.github.io/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://omniscientjs.github.io/&text=Omniscient v4.0.0 - fast top-down rendering of views while thinking functional programming " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://omniscientjs.github.io/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://omniscientjs.github.io/&title=Omniscient v4.0.0 - fast top-down rendering of views while thinking functional programming " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://omniscientjs.github.io/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://bit.ly/1XrVrPi">
+				<span class="item-title">Don't lose user and app state, use Page Visibility </span>
+				<span class="item-info">bit.ly</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://bit.ly/1HMK4VA" class="item-link" target="_blank">Windows 3.1 Is Still Alive, And It Just Killed a French Airport </a>
-			<div>
-				<a href="http://bit.ly" class="source" target="_blank">bit.ly</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://bit.ly/1HMK4VA" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://bit.ly/1HMK4VA&text=Windows 3.1 Is Still Alive, And It Just Killed a French Airport " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://bit.ly/1HMK4VA" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://bit.ly/1HMK4VA&title=Windows 3.1 Is Still Alive, And It Just Killed a French Airport " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://bit.ly/1HMK4VA" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://callmecavs.github.io/jump.js/">
+				<span class="item-title">Jump.js - a small, modern, dependency-free smooth scrolling library </span>
+				<span class="item-info">callmecavs.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://ow.ly/UD6l6" class="item-link" target="_blank">Children don't ruin women's careers — husbands do, Harvard study finds </a>
-			<div>
-				<a href="http://ow.ly" class="source" target="_blank">ow.ly</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://ow.ly/UD6l6" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://ow.ly/UD6l6&text=Children don't ruin women's careers — husbands do, Harvard study finds " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://ow.ly/UD6l6" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://ow.ly/UD6l6&title=Children don't ruin women's careers — husbands do, Harvard study finds " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://ow.ly/UD6l6" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://bit.ly/1Ssdazp">
+				<span class="item-title">JavaScript Air - the live broadcast podcast all about JavaScript. Will air regularly on Wednesdays at 12:00 CST </span>
+				<span class="item-info">bit.ly</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.zipplease.com/" class="item-link" target="_blank">ZipPlease - create zip files from existing online files and let your users download them immediately </a>
-			<div>
-				<a href="http://zipplease.com" class="source" target="_blank">zipplease.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.zipplease.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.zipplease.com/&text=ZipPlease - create zip files from existing online files and let your users download them immediately " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.zipplease.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.zipplease.com/&title=ZipPlease - create zip files from existing online files and let your users download them immediately " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.zipplease.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://bit.ly/1Q1XV2f">
+				<span class="item-title">Warning: You’re Killing Your SEO Efforts by Using Angular JS </span>
+				<span class="item-info">bit.ly</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.zdnet.com/article/linux-gaming-steam-machines-finally-ship/" class="item-link" target="_blank">Linux gaming ​Steam Machines finally ship </a>
-			<div>
-				<a href="http://zdnet.com" class="source" target="_blank">zdnet.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.zdnet.com/article/linux-gaming-steam-machines-finally-ship/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.zdnet.com/article/linux-gaming-steam-machines-finally-ship/&text=Linux gaming ​Steam Machines finally ship " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.zdnet.com/article/linux-gaming-steam-machines-finally-ship/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.zdnet.com/article/linux-gaming-steam-machines-finally-ship/&title=Linux gaming ​Steam Machines finally ship " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.zdnet.com/article/linux-gaming-steam-machines-finally-ship/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/openalpr/openalpr">
+				<span class="item-title">openalpr - Automatic License Plate Recognition library </span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://ow.ly/UD1u0" class="item-link" target="_blank">Your live coding demo is boring </a>
-			<div>
-				<a href="http://ow.ly" class="source" target="_blank">ow.ly</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://ow.ly/UD1u0" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://ow.ly/UD1u0&text=Your live coding demo is boring " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://ow.ly/UD1u0" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://ow.ly/UD1u0&title=Your live coding demo is boring " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://ow.ly/UD1u0" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://journal.sjdm.org/15/15923a/jdm15923a.html">
+				<span class="item-title">On the reception and detection of pseudo-profound bullshit </span>
+				<span class="item-info">sjdm.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://ow.ly/UCYl0" class="item-link" target="_blank">Gmail Android App Bug Lets You Send Emails Pretending To Be Someone Else </a>
-			<div>
-				<a href="http://ow.ly" class="source" target="_blank">ow.ly</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://ow.ly/UCYl0" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://ow.ly/UCYl0&text=Gmail Android App Bug Lets You Send Emails Pretending To Be Someone Else " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://ow.ly/UCYl0" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://ow.ly/UCYl0&title=Gmail Android App Bug Lets You Send Emails Pretending To Be Someone Else " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://ow.ly/UCYl0" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://en.arguman.org/computer-science-is-not-actually-a-science">
+				<span class="item-title">Computer Science is not actually a science (Argument Map) </span>
+				<span class="item-info">arguman.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1222550" class="item-link" target="_blank">Firefox getting rid of tab groups (aka Panorama mode)  </a>
-			<div>
-				<a href="http://mozilla.org" class="source" target="_blank">mozilla.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://bugzilla.mozilla.org/show_bug.cgi?id=1222550" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://bugzilla.mozilla.org/show_bug.cgi?id=1222550&text=Firefox getting rid of tab groups (aka Panorama mode)  " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://bugzilla.mozilla.org/show_bug.cgi?id=1222550" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://bugzilla.mozilla.org/show_bug.cgi?id=1222550&title=Firefox getting rid of tab groups (aka Panorama mode)  " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://bugzilla.mozilla.org/show_bug.cgi?id=1222550" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://bit.ly/1YAPwEw">
+				<span class="item-title">Pirates Can Now Rip 4K Content From Netflix and Amazon </span>
+				<span class="item-info">bit.ly</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://ow.ly/UCPN2" class="item-link" target="_blank">What the CIA knew before 9/11: New details </a>
-			<div>
-				<a href="http://ow.ly" class="source" target="_blank">ow.ly</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://ow.ly/UCPN2" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://ow.ly/UCPN2&text=What the CIA knew before 9/11: New details " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://ow.ly/UCPN2" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://ow.ly/UCPN2&title=What the CIA knew before 9/11: New details " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://ow.ly/UCPN2" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://bit.ly/1MkQxuX">
+				<span class="item-title">Aurelia Beta Week - Day 1 - The Beta is Here! </span>
+				<span class="item-info">bit.ly</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://vimeo.com/channels/fronteers15" class="item-link" target="_blank">Fronteers15 talks available (17 videos) </a>
-			<div>
-				<a href="http://vimeo.com" class="source" target="_blank">vimeo.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://vimeo.com/channels/fronteers15" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://vimeo.com/channels/fronteers15&text=Fronteers15 talks available (17 videos) " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://vimeo.com/channels/fronteers15" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://vimeo.com/channels/fronteers15&title=Fronteers15 talks available (17 videos) " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://vimeo.com/channels/fronteers15" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/flavioribeiro/video-thumbnail-generator">
+				<span class="item-title">video-thumbnail-generator - generate thumbnail sprites from videos (python) </span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://twitter.com/sapegin/status/663456245630836740" class="item-link" target="_blank">RT @nachocoloma: Bower development is stopped. Move to npm, if you haven't already. </a>
-			<div>
-				<a href="http://twitter.com" class="source" target="_blank">twitter.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://twitter.com/sapegin/status/663456245630836740" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://twitter.com/sapegin/status/663456245630836740&text=RT @nachocoloma: Bower development is stopped. Move to npm, if you haven't already. " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://twitter.com/sapegin/status/663456245630836740" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://twitter.com/sapegin/status/663456245630836740&title=RT @nachocoloma: Bower development is stopped. Move to npm, if you haven't already. " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://twitter.com/sapegin/status/663456245630836740" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://potemkin.se/solar/system.html">
+				<span class="item-title">Solar System in WebGL </span>
+				<span class="item-info">potemkin.se</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://ratter.com/ratter/all/ratter/213928-star-wars-the-force-awakens-c-3po" class="item-link" target="_blank">I Met C-3PO And Learned About His Raggedy-Ass Costume </a>
-			<div>
-				<a href="http://ratter.com" class="source" target="_blank">ratter.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://ratter.com/ratter/all/ratter/213928-star-wars-the-force-awakens-c-3po" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://ratter.com/ratter/all/ratter/213928-star-wars-the-force-awakens-c-3po&text=I Met C-3PO And Learned About His Raggedy-Ass Costume " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://ratter.com/ratter/all/ratter/213928-star-wars-the-force-awakens-c-3po" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://ratter.com/ratter/all/ratter/213928-star-wars-the-force-awakens-c-3po&title=I Met C-3PO And Learned About His Raggedy-Ass Costume " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://ratter.com/ratter/all/ratter/213928-star-wars-the-force-awakens-c-3po" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://bit.ly/1QPVGPJ">
+				<span class="item-title">Angular 2 — Introduction to new HTTP module - New Data Architecture using Reactive Programming and Observables </span>
+				<span class="item-info">bit.ly</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://meowni.ca/emoji-translate/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">an English to emoji text translator</a>
-			<div>
-				<a href="http://meowni.ca" class="source" target="_blank">meowni.ca</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://meowni.ca/emoji-translate/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://meowni.ca/emoji-translate/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=an English to emoji text translator" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://meowni.ca/emoji-translate/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://meowni.ca/emoji-translate/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=an English to emoji text translator" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://meowni.ca/emoji-translate/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://meowni.ca/emoji-translate/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">an English to emoji text translator</span>
+				<span class="item-info">meowni.ca</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.fastcodesign.com/3049499/from-the-designers-of-monument-valley-an-iphone-journal-to-improve-your-mood?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">Moodnotes</a>
-			<div>
-				<a href="http://fastcodesign.com" class="source" target="_blank">fastcodesign.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.fastcodesign.com/3049499/from-the-designers-of-monument-valley-an-iphone-journal-to-improve-your-mood?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.fastcodesign.com/3049499/from-the-designers-of-monument-valley-an-iphone-journal-to-improve-your-mood?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=Moodnotes" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.fastcodesign.com/3049499/from-the-designers-of-monument-valley-an-iphone-journal-to-improve-your-mood?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.fastcodesign.com/3049499/from-the-designers-of-monument-valley-an-iphone-journal-to-improve-your-mood?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=Moodnotes" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.fastcodesign.com/3049499/from-the-designers-of-monument-valley-an-iphone-journal-to-improve-your-mood?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.fastcodesign.com/3049499/from-the-designers-of-monument-valley-an-iphone-journal-to-improve-your-mood?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">Moodnotes</span>
+				<span class="item-info">fastcodesign.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/life-learning/uber-s-secret-weapon-6966ada226d5?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">what you can learn from “Uber’s secret weapon”, Ryan Graves</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/life-learning/uber-s-secret-weapon-6966ada226d5?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/life-learning/uber-s-secret-weapon-6966ada226d5?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=what you can learn from “Uber’s secret weapon”, Ryan Graves" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/life-learning/uber-s-secret-weapon-6966ada226d5?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/life-learning/uber-s-secret-weapon-6966ada226d5?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=what you can learn from “Uber’s secret weapon”, Ryan Graves" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/life-learning/uber-s-secret-weapon-6966ada226d5?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">a pretty interesting post about Google’s work on advanced datacenters</span>
+				<span class="item-info">highscalability.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">a pretty interesting post about Google’s work on advanced datacenters</a>
-			<div>
-				<a href="http://highscalability.com" class="source" target="_blank">highscalability.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=a pretty interesting post about Google’s work on advanced datacenters" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=a pretty interesting post about Google’s work on advanced datacenters" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://highscalability.com/blog/2015/8/10/how-google-invented-an-amazing-datacenter-network-only-they.html/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/life-learning/uber-s-secret-weapon-6966ada226d5?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">what you can learn from “Uber’s secret weapon”, Ryan Graves</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://twitter.com/alexweprin/status/630848214892191745?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">an amusing, Silicon Valley (the TV show) based Easter Egg on the Alphabet homepage</a>
-			<div>
-				<a href="http://twitter.com" class="source" target="_blank">twitter.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://twitter.com/alexweprin/status/630848214892191745?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://twitter.com/alexweprin/status/630848214892191745?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=an amusing, Silicon Valley (the TV show) based Easter Egg on the Alphabet homepage" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://twitter.com/alexweprin/status/630848214892191745?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://twitter.com/alexweprin/status/630848214892191745?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=an amusing, Silicon Valley (the TV show) based Easter Egg on the Alphabet homepage" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://twitter.com/alexweprin/status/630848214892191745?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.theverge.com/2015/8/10/9128287/google-alphabet-com?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">Goog— sorry, Alphabet — doesn’t even own the Twitter handle @alphabet or the URL alphabet.com</span>
+				<span class="item-info">theverge.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.theverge.com/2015/8/10/9128287/google-alphabet-com?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">Goog— sorry, Alphabet — doesn’t even own the Twitter handle @alphabet or the URL alphabet.com</a>
-			<div>
-				<a href="http://theverge.com" class="source" target="_blank">theverge.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.theverge.com/2015/8/10/9128287/google-alphabet-com?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.theverge.com/2015/8/10/9128287/google-alphabet-com?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=Goog— sorry, Alphabet — doesn’t even own the Twitter handle @alphabet or the URL alphabet.com" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.theverge.com/2015/8/10/9128287/google-alphabet-com?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.theverge.com/2015/8/10/9128287/google-alphabet-com?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=Goog— sorry, Alphabet — doesn’t even own the Twitter handle @alphabet or the URL alphabet.com" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.theverge.com/2015/8/10/9128287/google-alphabet-com?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://twitter.com/alexweprin/status/630848214892191745?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">an amusing, Silicon Valley (the TV show) based Easter Egg on the Alphabet homepage</span>
+				<span class="item-info">twitter.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://googleblog.blogspot.com.au/2015/08/google-alphabet.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">the company is now being run by a holding company called Alphabet</a>
-			<div>
-				<a href="http://googleblog.blogspot.com.au" class="source" target="_blank">googleblog.blogspot.com.au</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://googleblog.blogspot.com.au/2015/08/google-alphabet.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://googleblog.blogspot.com.au/2015/08/google-alphabet.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=the company is now being run by a holding company called Alphabet" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://googleblog.blogspot.com.au/2015/08/google-alphabet.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://googleblog.blogspot.com.au/2015/08/google-alphabet.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=the company is now being run by a holding company called Alphabet" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://googleblog.blogspot.com.au/2015/08/google-alphabet.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://googleblog.blogspot.com.au/2015/08/google-alphabet.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">the company is now being run by a holding company called Alphabet</span>
+				<span class="item-info">googleblog.blogspot.com.au</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/product-labs/5-tips-to-help-you-design-faster-in-sketch-a9db54d10a72?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">five easy ways to design faster (and better) in Sketch</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/product-labs/5-tips-to-help-you-design-faster-in-sketch-a9db54d10a72?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/product-labs/5-tips-to-help-you-design-faster-in-sketch-a9db54d10a72?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=five easy ways to design faster (and better) in Sketch" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/product-labs/5-tips-to-help-you-design-faster-in-sketch-a9db54d10a72?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/product-labs/5-tips-to-help-you-design-faster-in-sketch-a9db54d10a72?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=five easy ways to design faster (and better) in Sketch" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/product-labs/5-tips-to-help-you-design-faster-in-sketch-a9db54d10a72?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/product-labs/5-tips-to-help-you-design-faster-in-sketch-a9db54d10a72?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">five easy ways to design faster (and better) in Sketch</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">how Facebook uses 200 byte images to make its image loading feel faster on slow connections</a>
-			<div>
-				<a href="http://facebook.com" class="source" target="_blank">facebook.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=how Facebook uses 200 byte images to make its image loading feel faster on slow connections" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=how Facebook uses 200 byte images to make its image loading feel faster on slow connections" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">how Facebook uses 200 byte images to make its image loading feel faster on slow connections</span>
+				<span class="item-info">facebook.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://www.punchkick.com/blog/2015/08/07/how-apple-has-shaped-the-user-interface?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">a detailed timeline showing its efforts</a>
-			<div>
-				<a href="http://punchkick.com" class="source" target="_blank">punchkick.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.punchkick.com/blog/2015/08/07/how-apple-has-shaped-the-user-interface?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.punchkick.com/blog/2015/08/07/how-apple-has-shaped-the-user-interface?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=a detailed timeline showing its efforts" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.punchkick.com/blog/2015/08/07/how-apple-has-shaped-the-user-interface?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.punchkick.com/blog/2015/08/07/how-apple-has-shaped-the-user-interface?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=a detailed timeline showing its efforts" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.punchkick.com/blog/2015/08/07/how-apple-has-shaped-the-user-interface?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.punchkick.com/blog/2015/08/07/how-apple-has-shaped-the-user-interface?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">a detailed timeline showing its efforts</span>
+				<span class="item-info">punchkick.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://arstechnica.com/gadgets/2015/08/android-to-support-vulkan-graphics-api-the-open-answer-to-metal-and-dx12/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">Vulkan API, as a low-overhead graphics API along the lines of Apple’s Metal</a>
-			<div>
-				<a href="http://arstechnica.com" class="source" target="_blank">arstechnica.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://arstechnica.com/gadgets/2015/08/android-to-support-vulkan-graphics-api-the-open-answer-to-metal-and-dx12/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://arstechnica.com/gadgets/2015/08/android-to-support-vulkan-graphics-api-the-open-answer-to-metal-and-dx12/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=Vulkan API, as a low-overhead graphics API along the lines of Apple’s Metal" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://arstechnica.com/gadgets/2015/08/android-to-support-vulkan-graphics-api-the-open-answer-to-metal-and-dx12/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://arstechnica.com/gadgets/2015/08/android-to-support-vulkan-graphics-api-the-open-answer-to-metal-and-dx12/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=Vulkan API, as a low-overhead graphics API along the lines of Apple’s Metal" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://arstechnica.com/gadgets/2015/08/android-to-support-vulkan-graphics-api-the-open-answer-to-metal-and-dx12/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://arstechnica.com/gadgets/2015/08/android-to-support-vulkan-graphics-api-the-open-answer-to-metal-and-dx12/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">Vulkan API, as a low-overhead graphics API along the lines of Apple’s Metal</span>
+				<span class="item-info">arstechnica.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/minimaxir/big-list-of-naughty-strings?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">the dodgy strings that will probably get you into trouble if you accept them as user input data</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/minimaxir/big-list-of-naughty-strings?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/minimaxir/big-list-of-naughty-strings?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=the dodgy strings that will probably get you into trouble if you accept them as user input data" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/minimaxir/big-list-of-naughty-strings?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/minimaxir/big-list-of-naughty-strings?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=the dodgy strings that will probably get you into trouble if you accept them as user input data" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/minimaxir/big-list-of-naughty-strings?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/minimaxir/big-list-of-naughty-strings?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">the dodgy strings that will probably get you into trouble if you accept them as user input data</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.infoworld.com/article/2966158/application-virtualization/5-nifty-new-tools-for-docker.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">five nifty new tools, including Gockerize, Dusty and Hyper</a>
-			<div>
-				<a href="http://infoworld.com" class="source" target="_blank">infoworld.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.infoworld.com/article/2966158/application-virtualization/5-nifty-new-tools-for-docker.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.infoworld.com/article/2966158/application-virtualization/5-nifty-new-tools-for-docker.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=five nifty new tools, including Gockerize, Dusty and Hyper" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.infoworld.com/article/2966158/application-virtualization/5-nifty-new-tools-for-docker.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.infoworld.com/article/2966158/application-virtualization/5-nifty-new-tools-for-docker.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=five nifty new tools, including Gockerize, Dusty and Hyper" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.infoworld.com/article/2966158/application-virtualization/5-nifty-new-tools-for-docker.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.infoworld.com/article/2966158/application-virtualization/5-nifty-new-tools-for-docker.html?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">five nifty new tools, including Gockerize, Dusty and Hyper</span>
+				<span class="item-info">infoworld.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&" class="item-link" target="_blank">using IFTTT to monitor if your Internet of Things devices are online</a>
-			<div>
-				<a href="http://sitepoint.com" class="source" target="_blank">sitepoint.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&&text=using IFTTT to monitor if your Internet of Things devices are online" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&&title=using IFTTT to monitor if your Internet of Things devices are online" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&">
+				<span class="item-title">using IFTTT to monitor if your Internet of Things devices are online</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://blog.codeship.com/a-survey-of-non-rails-frameworks-in-ruby-cuba-sinatra-padrino-lotus/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">the alternatives, including Cuba, Sinatra, Pardrino and Lotus</a>
-			<div>
-				<a href="http://codeship.com" class="source" target="_blank">codeship.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.codeship.com/a-survey-of-non-rails-frameworks-in-ruby-cuba-sinatra-padrino-lotus/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.codeship.com/a-survey-of-non-rails-frameworks-in-ruby-cuba-sinatra-padrino-lotus/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=the alternatives, including Cuba, Sinatra, Pardrino and Lotus" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.codeship.com/a-survey-of-non-rails-frameworks-in-ruby-cuba-sinatra-padrino-lotus/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.codeship.com/a-survey-of-non-rails-frameworks-in-ruby-cuba-sinatra-padrino-lotus/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=the alternatives, including Cuba, Sinatra, Pardrino and Lotus" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.codeship.com/a-survey-of-non-rails-frameworks-in-ruby-cuba-sinatra-padrino-lotus/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/qpautrat/reactjs-php-bundle?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">React.js bundle for PHP</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/qpautrat/reactjs-php-bundle?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">React.js bundle for PHP</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/qpautrat/reactjs-php-bundle?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/qpautrat/reactjs-php-bundle?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=React.js bundle for PHP" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/qpautrat/reactjs-php-bundle?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/qpautrat/reactjs-php-bundle?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=React.js bundle for PHP" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/qpautrat/reactjs-php-bundle?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.codeship.com/a-survey-of-non-rails-frameworks-in-ruby-cuba-sinatra-padrino-lotus/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">the alternatives, including Cuba, Sinatra, Pardrino and Lotus</span>
+				<span class="item-info">codeship.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=" class="item-link" target="_blank">the issues involved in evolving a language as ubiquitous and confounding as JavaScript</a>
-			<div>
-				<a href="http://sitepoint.com" class="source" target="_blank">sitepoint.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=&text=the issues involved in evolving a language as ubiquitous and confounding as JavaScript" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=&title=the issues involved in evolving a language as ubiquitous and confounding as JavaScript" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=">
+				<span class="item-title">the issues involved in evolving a language as ubiquitous and confounding as JavaScript</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://eng.localytics.com/tips-and-tricks-for-debugging-unfamiliar-angularjs-code/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">debugging weird/unfamiliar Angular code</a>
-			<div>
-				<a href="http://localytics.com" class="source" target="_blank">localytics.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://eng.localytics.com/tips-and-tricks-for-debugging-unfamiliar-angularjs-code/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://eng.localytics.com/tips-and-tricks-for-debugging-unfamiliar-angularjs-code/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=debugging weird/unfamiliar Angular code" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://eng.localytics.com/tips-and-tricks-for-debugging-unfamiliar-angularjs-code/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://eng.localytics.com/tips-and-tricks-for-debugging-unfamiliar-angularjs-code/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=debugging weird/unfamiliar Angular code" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://eng.localytics.com/tips-and-tricks-for-debugging-unfamiliar-angularjs-code/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://eng.localytics.com/tips-and-tricks-for-debugging-unfamiliar-angularjs-code/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">debugging weird/unfamiliar Angular code</span>
+				<span class="item-info">localytics.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/johnpapa/angular-styleguide?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">an opinionated AngularJS styleguide</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/johnpapa/angular-styleguide?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/johnpapa/angular-styleguide?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=an opinionated AngularJS styleguide" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/johnpapa/angular-styleguide?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/johnpapa/angular-styleguide?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=an opinionated AngularJS styleguide" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/johnpapa/angular-styleguide?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/johnpapa/angular-styleguide?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">an opinionated AngularJS styleguide</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://swizec.com/blog/using-react-in-the-real-world/swizec/6710?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">Yep</a>
-			<div>
-				<a href="http://swizec.com" class="source" target="_blank">swizec.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://swizec.com/blog/using-react-in-the-real-world/swizec/6710?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://swizec.com/blog/using-react-in-the-real-world/swizec/6710?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=Yep" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://swizec.com/blog/using-react-in-the-real-world/swizec/6710?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://swizec.com/blog/using-react-in-the-real-world/swizec/6710?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=Yep" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://swizec.com/blog/using-react-in-the-real-world/swizec/6710?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://swizec.com/blog/using-react-in-the-real-world/swizec/6710?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">Yep</span>
+				<span class="item-info">swizec.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/ericclemmons/react-resolver?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="item-link" target="_blank">React Resolver</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/ericclemmons/react-resolver?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/ericclemmons/react-resolver?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&text=React Resolver" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/ericclemmons/react-resolver?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/ericclemmons/react-resolver?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&title=React Resolver" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/ericclemmons/react-resolver?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/ericclemmons/react-resolver?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning">
+				<span class="item-title">React Resolver</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5" class="item-link" target="_blank">tools and libraries for the modern JavaScript developer</a>
-			<div>
-				<a href="http://sitepoint.com" class="source" target="_blank">sitepoint.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5&text=tools and libraries for the modern JavaScript developer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5&title=tools and libraries for the modern JavaScript developer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5">
+				<span class="item-title">tools and libraries for the modern JavaScript developer</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
 		</li>
-		</ul>
+				<li class="item">
+			<a href="http://placingbad.com">
+				<span class="item-title">Placing Bad - A Breaking Bad placeholder image generator</span>
+				<span class="item-info">placingbad.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://goo.gl/8L7WTl">
+				<span class="item-title">Startup employees, before you buy your options…</span>
+				<span class="item-info">goo.gl</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://bzfd.it/1O73PM7">
+				<span class="item-title">Photos Of San Francisco In The 40s And 50s </span>
+				<span class="item-info">bzfd.it</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://github.com/bmschmidt/D3-trail">
+				<span class="item-title">D3-trail - Trail layout for D3 </span>
+				<span class="item-info">github.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://bit.ly/1LdKoNh">
+				<span class="item-title">Yahoo rolls out slick new search results exclusively for U.S. Firefox users </span>
+				<span class="item-info">bit.ly</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.isaacchansky.me/days-since-last-new-js-framework/">
+				<span class="item-title">Days Since Last New JavaScript Framework  </span>
+				<span class="item-info">isaacchansky.me</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://omniscientjs.github.io/">
+				<span class="item-title">Omniscient v4.0.0 - fast top-down rendering of views while thinking functional programming </span>
+				<span class="item-info">omniscientjs.github.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://bit.ly/1HMK4VA">
+				<span class="item-title">Windows 3.1 Is Still Alive, And It Just Killed a French Airport </span>
+				<span class="item-info">bit.ly</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://ow.ly/UD6l6">
+				<span class="item-title">Children don't ruin women's careers — husbands do, Harvard study finds </span>
+				<span class="item-info">ow.ly</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://www.zipplease.com/">
+				<span class="item-title">ZipPlease - create zip files from existing online files and let your users download them immediately </span>
+				<span class="item-info">zipplease.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.zdnet.com/article/linux-gaming-steam-machines-finally-ship/">
+				<span class="item-title">Linux gaming ​Steam Machines finally ship </span>
+				<span class="item-info">zdnet.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://ow.ly/UD1u0">
+				<span class="item-title">Your live coding demo is boring </span>
+				<span class="item-info">ow.ly</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://ow.ly/UCYl0">
+				<span class="item-title">Gmail Android App Bug Lets You Send Emails Pretending To Be Someone Else </span>
+				<span class="item-info">ow.ly</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1222550">
+				<span class="item-title">Firefox getting rid of tab groups (aka Panorama mode)  </span>
+				<span class="item-info">mozilla.org</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://ow.ly/UCPN2">
+				<span class="item-title">What the CIA knew before 9/11: New details </span>
+				<span class="item-info">ow.ly</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://vimeo.com/channels/fronteers15">
+				<span class="item-title">Fronteers15 talks available (17 videos) </span>
+				<span class="item-info">vimeo.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://twitter.com/sapegin/status/663456245630836740">
+				<span class="item-title">RT @nachocoloma: Bower development is stopped. Move to npm, if you haven't already. </span>
+				<span class="item-info">twitter.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://ratter.com/ratter/all/ratter/213928-star-wars-the-force-awakens-c-3po">
+				<span class="item-title">I Met C-3PO And Learned About His Raggedy-Ass Costume </span>
+				<span class="item-info">ratter.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.sitepoint.com/monitoring-your-particle-devices-with-ifttt/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&">
+				<span class="item-title">using IFTTT to monitor if your Internet of Things devices are online</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.sitepoint.com/the-es6-conundrum/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a50959eb6dc6&utm_source=email&utm_term=">
+				<span class="item-title">the issues involved in evolving a language as ubiquitous and confounding as JavaScript</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.sitepoint.com/essential-tools-libraries-modern-javascript-developers/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning&utm_medium=email&utm_campaign=Versioning%20295&utm_content=Versioning%20295+Version+B+CID_c82ac734e578f0492d42a5">
+				<span class="item-title">tools and libraries for the modern JavaScript developer</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
+		</li>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -793,33 +607,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

@@ -32,428 +32,407 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" selected>Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" selected>Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>ruby</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>ruby</h2>
-		Sources: 
-					<a href="http://rubyweekly.com/" target="_blank">Ruby Weekly</a>
-					<a href="http://greenruby.org/" target="_blank">Green Ruby News</a>
-			</div>
-		<div class="small">Last updated: 2015-11-30 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 30</div>
-			<a href="https://medium.com/@addyosmani/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.4qsm1b5yp" class="item-link" target="_blank">Instant Loading Web Apps With An Application Shell Architecture</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@addyosmani/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.4qsm1b5yp" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@addyosmani/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.4qsm1b5yp&text=Instant Loading Web Apps With An Application Shell Architecture" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@addyosmani/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.4qsm1b5yp" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@addyosmani/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.4qsm1b5yp&title=Instant Loading Web Apps With An Application Shell Architecture" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@addyosmani/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.4qsm1b5yp" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=LE0g2TUsJ4U">
+				<span class="item-title">Matz's RubyConf Keynote: Ruby 3's Goal To Be 3x Faster</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://brakemanpro.com/blog/announcement/2015/11/18/brakeman-pro-is-available/" class="item-link" target="_blank">Brakeman Pro 1.0</a>
-			<div>
-				<a href="http://brakemanpro.com" class="source" target="_blank">brakemanpro.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://brakemanpro.com/blog/announcement/2015/11/18/brakeman-pro-is-available/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://brakemanpro.com/blog/announcement/2015/11/18/brakeman-pro-is-available/&text=Brakeman Pro 1.0" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://brakemanpro.com/blog/announcement/2015/11/18/brakeman-pro-is-available/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://brakemanpro.com/blog/announcement/2015/11/18/brakeman-pro-is-available/&title=Brakeman Pro 1.0" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://brakemanpro.com/blog/announcement/2015/11/18/brakeman-pro-is-available/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://css-tricks.com/drag-and-drop-file-uploading/">
+				<span class="item-title">Drag and Drop File Uploading</span>
+				<span class="item-info">css-tricks.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://codyhouse.co/gem/stretchy-navigation/" class="item-link" target="_blank">Stretchy Navigation in CSS and jQuery</a>
-			<div>
-				<a href="http://codyhouse.co" class="source" target="_blank">codyhouse.co</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://codyhouse.co/gem/stretchy-navigation/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://codyhouse.co/gem/stretchy-navigation/&text=Stretchy Navigation in CSS and jQuery" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://codyhouse.co/gem/stretchy-navigation/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://codyhouse.co/gem/stretchy-navigation/&title=Stretchy Navigation in CSS and jQuery" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://codyhouse.co/gem/stretchy-navigation/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=TZWQAvlMru8">
+				<span class="item-title">Messenger: The (Complete) Story of Method Lookup</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.sitepoint.com/learn-concurrency-by-implementing-futures-in-ruby/" class="item-link" target="_blank">Learn concurrency by implementing futures in Ruby</a>
-			<div>
-				<a href="http://sitepoint.com" class="source" target="_blank">sitepoint.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.sitepoint.com/learn-concurrency-by-implementing-futures-in-ruby/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.sitepoint.com/learn-concurrency-by-implementing-futures-in-ruby/&text=Learn concurrency by implementing futures in Ruby" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.sitepoint.com/learn-concurrency-by-implementing-futures-in-ruby/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.sitepoint.com/learn-concurrency-by-implementing-futures-in-ruby/&title=Learn concurrency by implementing futures in Ruby" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.sitepoint.com/learn-concurrency-by-implementing-futures-in-ruby/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=8OQUH8q4sMM">
+				<span class="item-title">Reliable Concurrency Without the Actor Model</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.blackbytes.info/2015/10/ruby-case/" class="item-link" target="_blank">The many uses of Ruby case statements</a>
-			<div>
-				<a href="http://blackbytes.info" class="source" target="_blank">blackbytes.info</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.blackbytes.info/2015/10/ruby-case/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.blackbytes.info/2015/10/ruby-case/&text=The many uses of Ruby case statements" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.blackbytes.info/2015/10/ruby-case/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.blackbytes.info/2015/10/ruby-case/&title=The many uses of Ruby case statements" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.blackbytes.info/2015/10/ruby-case/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.uiready.io/rails-asset-pipeline-simple-guide/">
+				<span class="item-title">Rails Asset Pipeline Simple Guide</span>
+				<span class="item-info">uiready.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://nicksda.apotomo.de/2015/11/representable-2-4-how-functional-programming-speeds-up-rendering-and-parsing/" class="item-link" target="_blank">Representable 2.4</a>
-			<div>
-				<a href="http://apotomo.de" class="source" target="_blank">apotomo.de</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://nicksda.apotomo.de/2015/11/representable-2-4-how-functional-programming-speeds-up-rendering-and-parsing/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://nicksda.apotomo.de/2015/11/representable-2-4-how-functional-programming-speeds-up-rendering-and-parsing/&text=Representable 2.4" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://nicksda.apotomo.de/2015/11/representable-2-4-how-functional-programming-speeds-up-rendering-and-parsing/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://nicksda.apotomo.de/2015/11/representable-2-4-how-functional-programming-speeds-up-rendering-and-parsing/&title=Representable 2.4" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://nicksda.apotomo.de/2015/11/representable-2-4-how-functional-programming-speeds-up-rendering-and-parsing/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://lucaguidi.com/2015/11/24/json-api-apps-with-lotus.html">
+				<span class="item-title">JSON API Apps With Lotus</span>
+				<span class="item-info">lucaguidi.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.sitepoint.com/getting-started-with-service-workers/" class="item-link" target="_blank">Getting started with service workers</a>
-			<div>
-				<a href="http://sitepoint.com" class="source" target="_blank">sitepoint.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.sitepoint.com/getting-started-with-service-workers/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.sitepoint.com/getting-started-with-service-workers/&text=Getting started with service workers" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.sitepoint.com/getting-started-with-service-workers/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.sitepoint.com/getting-started-with-service-workers/&title=Getting started with service workers" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.sitepoint.com/getting-started-with-service-workers/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.pluralsight.com/rails-tutorial-part-one">
+				<span class="item-title">Rails: How to create a custom PDF renderer plugin</span>
+				<span class="item-info">pluralsight.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.sitepoint.com/deploying-ruby-apps-bare-metal-self-sufficient-containers-right-way/" class="item-link" target="_blank">Deploying Ruby Apps with Bare Metal: A New Type of VM</a>
-			<div>
-				<a href="http://sitepoint.com" class="source" target="_blank">sitepoint.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.sitepoint.com/deploying-ruby-apps-bare-metal-self-sufficient-containers-right-way/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.sitepoint.com/deploying-ruby-apps-bare-metal-self-sufficient-containers-right-way/&text=Deploying Ruby Apps with Bare Metal: A New Type of VM" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.sitepoint.com/deploying-ruby-apps-bare-metal-self-sufficient-containers-right-way/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.sitepoint.com/deploying-ruby-apps-bare-metal-self-sufficient-containers-right-way/&title=Deploying Ruby Apps with Bare Metal: A New Type of VM" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.sitepoint.com/deploying-ruby-apps-bare-metal-self-sufficient-containers-right-way/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://vaidehijoshi.github.io/blog/2015/11/24/peeking-under-the-hood-of-actioncontroller-parameters-part-2/">
+				<span class="item-title">Peeking Under the Hood of ActionController Parameters, Part 2</span>
+				<span class="item-info">vaidehijoshi.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://adarsh.io/save-money-and-be-happier-by-updating-your-gems-every-monday-morning/" class="item-link" target="_blank">Update your gems every Monday morning</a>
-			<div>
-				<a href="http://adarsh.io" class="source" target="_blank">adarsh.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://adarsh.io/save-money-and-be-happier-by-updating-your-gems-every-monday-morning/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://adarsh.io/save-money-and-be-happier-by-updating-your-gems-every-monday-morning/&text=Update your gems every Monday morning" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://adarsh.io/save-money-and-be-happier-by-updating-your-gems-every-monday-morning/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://adarsh.io/save-money-and-be-happier-by-updating-your-gems-every-monday-morning/&title=Update your gems every Monday morning" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://adarsh.io/save-money-and-be-happier-by-updating-your-gems-every-monday-morning/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.leighhalliday.com/is-it-nil">
+				<span class="item-title">Is it nil?</span>
+				<span class="item-info">leighhalliday.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/" class="item-link" target="_blank">Static Website Generators Reviewed</a>
-			<div>
-				<a href="http://smashingmagazine.com" class="source" target="_blank">smashingmagazine.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/&text=Static Website Generators Reviewed" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/&title=Static Website Generators Reviewed" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.sitepoint.com/know-what-your-users-know-with-raygun/">
+				<span class="item-title">Know What Your Users Know with Raygun</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://dev.acquia.com/blog/open-sourcing-statsgod-a-statsd-implementation-in-go/16/11/2015/8171" class="item-link" target="_blank">Open Sourcing Statsgod</a>
-			<div>
-				<a href="http://acquia.com" class="source" target="_blank">acquia.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://dev.acquia.com/blog/open-sourcing-statsgod-a-statsd-implementation-in-go/16/11/2015/8171" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://dev.acquia.com/blog/open-sourcing-statsgod-a-statsd-implementation-in-go/16/11/2015/8171&text=Open Sourcing Statsgod" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://dev.acquia.com/blog/open-sourcing-statsgod-a-statsd-implementation-in-go/16/11/2015/8171" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://dev.acquia.com/blog/open-sourcing-statsgod-a-statsd-implementation-in-go/16/11/2015/8171&title=Open Sourcing Statsgod" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://dev.acquia.com/blog/open-sourcing-statsgod-a-statsd-implementation-in-go/16/11/2015/8171" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://loopback.io/">
+				<span class="item-title">LoopBack</span>
+				<span class="item-info">loopback.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://engineeredweb.com/blog/2015/go-packages-need-release-versions/" class="item-link" target="_blank">Why It's Time For Go Packages To Start Versioning</a>
-			<div>
-				<a href="http://engineeredweb.com" class="source" target="_blank">engineeredweb.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://engineeredweb.com/blog/2015/go-packages-need-release-versions/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://engineeredweb.com/blog/2015/go-packages-need-release-versions/&text=Why It's Time For Go Packages To Start Versioning" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://engineeredweb.com/blog/2015/go-packages-need-release-versions/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://engineeredweb.com/blog/2015/go-packages-need-release-versions/&title=Why It's Time For Go Packages To Start Versioning" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://engineeredweb.com/blog/2015/go-packages-need-release-versions/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.perfect.org/">
+				<span class="item-title">Perfect</span>
+				<span class="item-info">perfect.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://blog.honeybadger.io/spying-on-running-ruby-processes/" class="item-link" target="_blank">Spying on running Ruby processes</a>
-			<div>
-				<a href="http://honeybadger.io" class="source" target="_blank">honeybadger.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.honeybadger.io/spying-on-running-ruby-processes/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.honeybadger.io/spying-on-running-ruby-processes/&text=Spying on running Ruby processes" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.honeybadger.io/spying-on-running-ruby-processes/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.honeybadger.io/spying-on-running-ruby-processes/&title=Spying on running Ruby processes" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.honeybadger.io/spying-on-running-ruby-processes/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/bryanwb/kh">
+				<span class="item-title">Kings hand</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://vaidehijoshi.github.io/blog/2015/11/17/peeking-under-the-hood-of-actioncontroller-parameters-part-1/" class="item-link" target="_blank">Peeking Under the Hood of ActionController Parameters, Part 1</a>
-			<div>
-				<a href="http://vaidehijoshi.github.io" class="source" target="_blank">vaidehijoshi.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://vaidehijoshi.github.io/blog/2015/11/17/peeking-under-the-hood-of-actioncontroller-parameters-part-1/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://vaidehijoshi.github.io/blog/2015/11/17/peeking-under-the-hood-of-actioncontroller-parameters-part-1/&text=Peeking Under the Hood of ActionController Parameters, Part 1" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://vaidehijoshi.github.io/blog/2015/11/17/peeking-under-the-hood-of-actioncontroller-parameters-part-1/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://vaidehijoshi.github.io/blog/2015/11/17/peeking-under-the-hood-of-actioncontroller-parameters-part-1/&title=Peeking Under the Hood of ActionController Parameters, Part 1" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://vaidehijoshi.github.io/blog/2015/11/17/peeking-under-the-hood-of-actioncontroller-parameters-part-1/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.sitepoint.com/building-a-slackbot-with-ruby-and-sinatra/">
+				<span class="item-title">Building a Slackbot with Ruby and Sinatra</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/caarlos0/nprogress-rails" class="item-link" target="_blank">Nprogress-rails</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/caarlos0/nprogress-rails" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/caarlos0/nprogress-rails&text=Nprogress-rails" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/caarlos0/nprogress-rails" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/caarlos0/nprogress-rails&title=Nprogress-rails" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/caarlos0/nprogress-rails" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.sweetpunk.com">
+				<span class="item-title">Sweet Punk</span>
+				<span class="item-info">sweetpunk.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/varvet/godmin" class="item-link" target="_blank">Godmin</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/varvet/godmin" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/varvet/godmin&text=Godmin" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/varvet/godmin" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/varvet/godmin&title=Godmin" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/varvet/godmin" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.scriptrock.com/ebooks">
+				<span class="item-title">DevOps eBooks and Resources</span>
+				<span class="item-info">scriptrock.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://designbeep.com/2015/11/18/multi-level-menu-a-simple-menu-with-multiple-levels/" class="item-link" target="_blank">Multi-Level Menu</a>
-			<div>
-				<a href="http://designbeep.com" class="source" target="_blank">designbeep.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://designbeep.com/2015/11/18/multi-level-menu-a-simple-menu-with-multiple-levels/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://designbeep.com/2015/11/18/multi-level-menu-a-simple-menu-with-multiple-levels/&text=Multi-Level Menu" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://designbeep.com/2015/11/18/multi-level-menu-a-simple-menu-with-multiple-levels/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://designbeep.com/2015/11/18/multi-level-menu-a-simple-menu-with-multiple-levels/&title=Multi-Level Menu" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://designbeep.com/2015/11/18/multi-level-menu-a-simple-menu-with-multiple-levels/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.hackerrank.com">
+				<span class="item-title">HackerRank</span>
+				<span class="item-info">hackerrank.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://jaredreich.com/projects/notie.js/" class="item-link" target="_blank">Notie.js</a>
-			<div>
-				<a href="http://jaredreich.com" class="source" target="_blank">jaredreich.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://jaredreich.com/projects/notie.js/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://jaredreich.com/projects/notie.js/&text=Notie.js" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://jaredreich.com/projects/notie.js/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://jaredreich.com/projects/notie.js/&title=Notie.js" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://jaredreich.com/projects/notie.js/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@addyosmani/instant-loading-web-apps-with-an-application-shell-architecture-7c0c2f10c73#.4qsm1b5yp">
+				<span class="item-title">Instant Loading Web Apps With An Application Shell Architecture</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/Mashape/kong" class="item-link" target="_blank">Kong</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/Mashape/kong" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/Mashape/kong&text=Kong" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/Mashape/kong" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/Mashape/kong&title=Kong" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/Mashape/kong" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://brakemanpro.com/blog/announcement/2015/11/18/brakeman-pro-is-available/">
+				<span class="item-title">Brakeman Pro 1.0</span>
+				<span class="item-info">brakemanpro.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://github.com/square/git-fastclone" class="item-link" target="_blank">Git-fastclone</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/square/git-fastclone" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/square/git-fastclone&text=Git-fastclone" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/square/git-fastclone" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/square/git-fastclone&title=Git-fastclone" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/square/git-fastclone" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://codyhouse.co/gem/stretchy-navigation/">
+				<span class="item-title">Stretchy Navigation in CSS and jQuery</span>
+				<span class="item-info">codyhouse.co</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.mikeperham.com/2015/11/16/sidekiq-4.0/" class="item-link" target="_blank">Sidekiq 4.0 is now available</a>
-			<div>
-				<a href="http://mikeperham.com" class="source" target="_blank">mikeperham.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.mikeperham.com/2015/11/16/sidekiq-4.0/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.mikeperham.com/2015/11/16/sidekiq-4.0/&text=Sidekiq 4.0 is now available" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.mikeperham.com/2015/11/16/sidekiq-4.0/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.mikeperham.com/2015/11/16/sidekiq-4.0/&title=Sidekiq 4.0 is now available" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.mikeperham.com/2015/11/16/sidekiq-4.0/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.sitepoint.com/learn-concurrency-by-implementing-futures-in-ruby/">
+				<span class="item-title">Learn concurrency by implementing futures in Ruby</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/" class="item-link" target="_blank">Lexical scoping and Ruby class variables</a>
-			<div>
-				<a href="http://honeybadger.io" class="source" target="_blank">honeybadger.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/&text=Lexical scoping and Ruby class variables" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/&title=Lexical scoping and Ruby class variables" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.blackbytes.info/2015/10/ruby-case/">
+				<span class="item-title">The many uses of Ruby case statements</span>
+				<span class="item-info">blackbytes.info</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.bucaboot.com/" class="item-link" target="_blank">Buca boot</a>
-			<div>
-				<a href="http://bucaboot.com" class="source" target="_blank">bucaboot.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.bucaboot.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.bucaboot.com/&text=Buca boot" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.bucaboot.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.bucaboot.com/&title=Buca boot" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.bucaboot.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://nicksda.apotomo.de/2015/11/representable-2-4-how-functional-programming-speeds-up-rendering-and-parsing/">
+				<span class="item-title">Representable 2.4</span>
+				<span class="item-info">apotomo.de</span>
+			</a>
 		</li>
-		</ul>
+				<li class="item">
+			<a href="http://www.sitepoint.com/getting-started-with-service-workers/">
+				<span class="item-title">Getting started with service workers</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.sitepoint.com/deploying-ruby-apps-bare-metal-self-sufficient-containers-right-way/">
+				<span class="item-title">Deploying Ruby Apps with Bare Metal: A New Type of VM</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://adarsh.io/save-money-and-be-happier-by-updating-your-gems-every-monday-morning/">
+				<span class="item-title">Update your gems every Monday morning</span>
+				<span class="item-info">adarsh.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/">
+				<span class="item-title">Static Website Generators Reviewed</span>
+				<span class="item-info">smashingmagazine.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://dev.acquia.com/blog/open-sourcing-statsgod-a-statsd-implementation-in-go/16/11/2015/8171">
+				<span class="item-title">Open Sourcing Statsgod</span>
+				<span class="item-info">acquia.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://engineeredweb.com/blog/2015/go-packages-need-release-versions/">
+				<span class="item-title">Why It's Time For Go Packages To Start Versioning</span>
+				<span class="item-info">engineeredweb.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://blog.honeybadger.io/spying-on-running-ruby-processes/">
+				<span class="item-title">Spying on running Ruby processes</span>
+				<span class="item-info">honeybadger.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://vaidehijoshi.github.io/blog/2015/11/17/peeking-under-the-hood-of-actioncontroller-parameters-part-1/">
+				<span class="item-title">Peeking Under the Hood of ActionController Parameters, Part 1</span>
+				<span class="item-info">vaidehijoshi.github.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://github.com/caarlos0/nprogress-rails">
+				<span class="item-title">Nprogress-rails</span>
+				<span class="item-info">github.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://github.com/varvet/godmin">
+				<span class="item-title">Godmin</span>
+				<span class="item-info">github.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://designbeep.com/2015/11/18/multi-level-menu-a-simple-menu-with-multiple-levels/">
+				<span class="item-title">Multi-Level Menu</span>
+				<span class="item-info">designbeep.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://jaredreich.com/projects/notie.js/">
+				<span class="item-title">Notie.js</span>
+				<span class="item-info">jaredreich.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://github.com/Mashape/kong">
+				<span class="item-title">Kong</span>
+				<span class="item-info">github.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://github.com/square/git-fastclone">
+				<span class="item-title">Git-fastclone</span>
+				<span class="item-info">github.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.mikeperham.com/2015/11/16/sidekiq-4.0/">
+				<span class="item-title">Sidekiq 4.0 is now available</span>
+				<span class="item-info">mikeperham.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://blog.honeybadger.io/lexical-scoping-and-ruby-class-variables/">
+				<span class="item-title">Lexical scoping and Ruby class variables</span>
+				<span class="item-info">honeybadger.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.bucaboot.com/">
+				<span class="item-title">Buca boot</span>
+				<span class="item-info">bucaboot.com</span>
+			</a>
+		</li>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -466,33 +445,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

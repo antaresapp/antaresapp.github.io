@@ -32,476 +32,323 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" selected>Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" selected>Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>db</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>db</h2>
-		Sources: 
-					<a href="http://dbweekly.com/" target="_blank">DB Weekly</a>
-					<a href="http://postgresweekly.com/" target="_blank">Postgres Weekly</a>
-					<a href="http://www.nosqlweekly.com/" target="_blank">NoSQL Weekly</a>
-					<a href="https://redislabs.com/redis-watch-archive" target="_blank">Redis Watch</a>
-					<a href="http://redisweekly.com/" target="_blank">Redis Weekly</a>
-					<a href="http://mysqlnewsletter.com/" target="_blank">Weekly MySQL News</a>
-					<a href="http://www.bigdataweekly.com/" target="_blank">Big Data Weekly</a>
-					<a href="http://www.hadoopweekly.com/" target="_blank">Hadoop Weekly</a>
-			</div>
-		<div class="small">Last updated: 2015-11-28 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 28</div>
-			<a href="https://www.citusdata.com/blog/14-marco/335-pgpaxos-high-availability-table-replication-postgresql?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">pg_paxos: High Availability Data Replication for PostgreSQL</a>
-			<div>
-				<a href="http://citusdata.com" class="source" target="_blank">citusdata.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.citusdata.com/blog/14-marco/335-pgpaxos-high-availability-table-replication-postgresql?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.citusdata.com/blog/14-marco/335-pgpaxos-high-availability-table-replication-postgresql?utm_source=dbweekly&amp;utm_medium=email&text=pg_paxos: High Availability Data Replication for PostgreSQL" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.citusdata.com/blog/14-marco/335-pgpaxos-high-availability-table-replication-postgresql?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.citusdata.com/blog/14-marco/335-pgpaxos-high-availability-table-replication-postgresql?utm_source=dbweekly&amp;utm_medium=email&title=pg_paxos: High Availability Data Replication for PostgreSQL" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.citusdata.com/blog/14-marco/335-pgpaxos-high-availability-table-replication-postgresql?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://www.citusdata.com/blog/14-marco/335-pgpaxos-high-availability-table-replication-postgresql?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">pg_paxos: High Availability Data Replication for PostgreSQL</span>
+				<span class="item-info">citusdata.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://cloudmonix.com/blog/the-ultimate-list-of-top-sql-monitoring-tools/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">The Ultimate list of Top SQL Monitoring Tools</a>
-			<div>
-				<a href="http://cloudmonix.com" class="source" target="_blank">cloudmonix.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://cloudmonix.com/blog/the-ultimate-list-of-top-sql-monitoring-tools/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://cloudmonix.com/blog/the-ultimate-list-of-top-sql-monitoring-tools/?utm_source=dbweekly&amp;utm_medium=email&text=The Ultimate list of Top SQL Monitoring Tools" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://cloudmonix.com/blog/the-ultimate-list-of-top-sql-monitoring-tools/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://cloudmonix.com/blog/the-ultimate-list-of-top-sql-monitoring-tools/?utm_source=dbweekly&amp;utm_medium=email&title=The Ultimate list of Top SQL Monitoring Tools" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://cloudmonix.com/blog/the-ultimate-list-of-top-sql-monitoring-tools/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://cloudmonix.com/blog/the-ultimate-list-of-top-sql-monitoring-tools/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">The Ultimate list of Top SQL Monitoring Tools</span>
+				<span class="item-info">cloudmonix.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://segment.com/blog/choosing-a-database-for-analytics/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Choosing a Database for Analytics</a>
-			<div>
-				<a href="http://segment.com" class="source" target="_blank">segment.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://segment.com/blog/choosing-a-database-for-analytics/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://segment.com/blog/choosing-a-database-for-analytics/?utm_source=dbweekly&amp;utm_medium=email&text=Choosing a Database for Analytics" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://segment.com/blog/choosing-a-database-for-analytics/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://segment.com/blog/choosing-a-database-for-analytics/?utm_source=dbweekly&amp;utm_medium=email&title=Choosing a Database for Analytics" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://segment.com/blog/choosing-a-database-for-analytics/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://segment.com/blog/choosing-a-database-for-analytics/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Choosing a Database for Analytics</span>
+				<span class="item-info">segment.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://blog.ruxit.com/how-to-achieve-outstanding-performance-with-mongodb-monitoring/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">How to Achieve Outstanding Performance with MongoDB Monitoring</a>
-			<div>
-				<a href="http://ruxit.com" class="source" target="_blank">ruxit.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://blog.ruxit.com/how-to-achieve-outstanding-performance-with-mongodb-monitoring/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://blog.ruxit.com/how-to-achieve-outstanding-performance-with-mongodb-monitoring/?utm_source=dbweekly&amp;utm_medium=email&text=How to Achieve Outstanding Performance with MongoDB Monitoring" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://blog.ruxit.com/how-to-achieve-outstanding-performance-with-mongodb-monitoring/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://blog.ruxit.com/how-to-achieve-outstanding-performance-with-mongodb-monitoring/?utm_source=dbweekly&amp;utm_medium=email&title=How to Achieve Outstanding Performance with MongoDB Monitoring" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://blog.ruxit.com/how-to-achieve-outstanding-performance-with-mongodb-monitoring/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://blog.ruxit.com/how-to-achieve-outstanding-performance-with-mongodb-monitoring/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">How to Achieve Outstanding Performance with MongoDB Monitoring</span>
+				<span class="item-info">ruxit.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://antirez.com/news/97?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Recent Improvements to Redis Lua Scripting</a>
-			<div>
-				<a href="http://antirez.com" class="source" target="_blank">antirez.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://antirez.com/news/97?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://antirez.com/news/97?utm_source=dbweekly&amp;utm_medium=email&text=Recent Improvements to Redis Lua Scripting" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://antirez.com/news/97?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://antirez.com/news/97?utm_source=dbweekly&amp;utm_medium=email&title=Recent Improvements to Redis Lua Scripting" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://antirez.com/news/97?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://antirez.com/news/97?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Recent Improvements to Redis Lua Scripting</span>
+				<span class="item-info">antirez.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://dashboard.redisgreen.net/new?utm_source=dbweekly&amp;utm_medium=email&amp;utm_campaign=2015b&amp;utm_content=link&amp;utm_term=seamless%20autoscaling%20performance" class="item-link" target="_blank">Redis Performance Dashboard and Autoscaling from RedisGreen</a>
-			<div>
-				<a href="http://redisgreen.net" class="source" target="_blank">redisgreen.net</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://dashboard.redisgreen.net/new?utm_source=dbweekly&amp;utm_medium=email&amp;utm_campaign=2015b&amp;utm_content=link&amp;utm_term=seamless%20autoscaling%20performance" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://dashboard.redisgreen.net/new?utm_source=dbweekly&amp;utm_medium=email&amp;utm_campaign=2015b&amp;utm_content=link&amp;utm_term=seamless%20autoscaling%20performance&text=Redis Performance Dashboard and Autoscaling from RedisGreen" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://dashboard.redisgreen.net/new?utm_source=dbweekly&amp;utm_medium=email&amp;utm_campaign=2015b&amp;utm_content=link&amp;utm_term=seamless%20autoscaling%20performance" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://dashboard.redisgreen.net/new?utm_source=dbweekly&amp;utm_medium=email&amp;utm_campaign=2015b&amp;utm_content=link&amp;utm_term=seamless%20autoscaling%20performance&title=Redis Performance Dashboard and Autoscaling from RedisGreen" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://dashboard.redisgreen.net/new?utm_source=dbweekly&amp;utm_medium=email&amp;utm_campaign=2015b&amp;utm_content=link&amp;utm_term=seamless%20autoscaling%20performance" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://dashboard.redisgreen.net/new?utm_source=dbweekly&amp;utm_medium=email&amp;utm_campaign=2015b&amp;utm_content=link&amp;utm_term=seamless%20autoscaling%20performance">
+				<span class="item-title">Redis Performance Dashboard and Autoscaling from RedisGreen</span>
+				<span class="item-info">redisgreen.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://periscopedata.com/blog//sql-summary-statistics.html?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Adding Summary Statistics to your SQL Table</a>
-			<div>
-				<a href="http://periscopedata.com" class="source" target="_blank">periscopedata.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://periscopedata.com/blog//sql-summary-statistics.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://periscopedata.com/blog//sql-summary-statistics.html?utm_source=dbweekly&amp;utm_medium=email&text=Adding Summary Statistics to your SQL Table" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://periscopedata.com/blog//sql-summary-statistics.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://periscopedata.com/blog//sql-summary-statistics.html?utm_source=dbweekly&amp;utm_medium=email&title=Adding Summary Statistics to your SQL Table" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://periscopedata.com/blog//sql-summary-statistics.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://periscopedata.com/blog//sql-summary-statistics.html?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Adding Summary Statistics to your SQL Table</span>
+				<span class="item-info">periscopedata.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://joshrendek.com/2015/11/understanding-elasticsearch-performance/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Understanding ElasticSearch Performance</a>
-			<div>
-				<a href="http://joshrendek.com" class="source" target="_blank">joshrendek.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://joshrendek.com/2015/11/understanding-elasticsearch-performance/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://joshrendek.com/2015/11/understanding-elasticsearch-performance/?utm_source=dbweekly&amp;utm_medium=email&text=Understanding ElasticSearch Performance" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://joshrendek.com/2015/11/understanding-elasticsearch-performance/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://joshrendek.com/2015/11/understanding-elasticsearch-performance/?utm_source=dbweekly&amp;utm_medium=email&title=Understanding ElasticSearch Performance" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://joshrendek.com/2015/11/understanding-elasticsearch-performance/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://joshrendek.com/2015/11/understanding-elasticsearch-performance/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Understanding ElasticSearch Performance</span>
+				<span class="item-info">joshrendek.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.datapine.com/blog/mysql-data-analysis-example/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">A MySQL Data Analysis Example In 3 Easy Steps</a>
-			<div>
-				<a href="http://datapine.com" class="source" target="_blank">datapine.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.datapine.com/blog/mysql-data-analysis-example/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.datapine.com/blog/mysql-data-analysis-example/?utm_source=dbweekly&amp;utm_medium=email&text=A MySQL Data Analysis Example In 3 Easy Steps" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.datapine.com/blog/mysql-data-analysis-example/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.datapine.com/blog/mysql-data-analysis-example/?utm_source=dbweekly&amp;utm_medium=email&title=A MySQL Data Analysis Example In 3 Easy Steps" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.datapine.com/blog/mysql-data-analysis-example/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.datapine.com/blog/mysql-data-analysis-example/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">A MySQL Data Analysis Example In 3 Easy Steps</span>
+				<span class="item-info">datapine.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://blog.couchbase.com/bulk-transformations-of-couchbase-data-with-an-external-source-using-apache-spark?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Bulk Transformations of Couchbase Data Using Apache Spark with an External Source</a>
-			<div>
-				<a href="http://couchbase.com" class="source" target="_blank">couchbase.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.couchbase.com/bulk-transformations-of-couchbase-data-with-an-external-source-using-apache-spark?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.couchbase.com/bulk-transformations-of-couchbase-data-with-an-external-source-using-apache-spark?utm_source=dbweekly&amp;utm_medium=email&text=Bulk Transformations of Couchbase Data Using Apache Spark with an External Source" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.couchbase.com/bulk-transformations-of-couchbase-data-with-an-external-source-using-apache-spark?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.couchbase.com/bulk-transformations-of-couchbase-data-with-an-external-source-using-apache-spark?utm_source=dbweekly&amp;utm_medium=email&title=Bulk Transformations of Couchbase Data Using Apache Spark with an External Source" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.couchbase.com/bulk-transformations-of-couchbase-data-with-an-external-source-using-apache-spark?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.couchbase.com/bulk-transformations-of-couchbase-data-with-an-external-source-using-apache-spark?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Bulk Transformations of Couchbase Data Using Apache Spark with an External Source</span>
+				<span class="item-info">couchbase.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://neo4j.com/blog/neo4j-application-performance-ruxit/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">How to Monitor Neo4j-Based Application Performance with Ruxit</a>
-			<div>
-				<a href="http://neo4j.com" class="source" target="_blank">neo4j.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://neo4j.com/blog/neo4j-application-performance-ruxit/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://neo4j.com/blog/neo4j-application-performance-ruxit/?utm_source=dbweekly&amp;utm_medium=email&text=How to Monitor Neo4j-Based Application Performance with Ruxit" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://neo4j.com/blog/neo4j-application-performance-ruxit/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://neo4j.com/blog/neo4j-application-performance-ruxit/?utm_source=dbweekly&amp;utm_medium=email&title=How to Monitor Neo4j-Based Application Performance with Ruxit" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://neo4j.com/blog/neo4j-application-performance-ruxit/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://neo4j.com/blog/neo4j-application-performance-ruxit/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">How to Monitor Neo4j-Based Application Performance with Ruxit</span>
+				<span class="item-info">neo4j.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.enterprisedb.com/postgres-plus-edb-blog/dick-dowdell/generated-primary-and-foreign-keys-distributed-databases?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Generated Primary and Foreign Keys for Distributed Databases</a>
-			<div>
-				<a href="http://enterprisedb.com" class="source" target="_blank">enterprisedb.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.enterprisedb.com/postgres-plus-edb-blog/dick-dowdell/generated-primary-and-foreign-keys-distributed-databases?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.enterprisedb.com/postgres-plus-edb-blog/dick-dowdell/generated-primary-and-foreign-keys-distributed-databases?utm_source=dbweekly&amp;utm_medium=email&text=Generated Primary and Foreign Keys for Distributed Databases" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.enterprisedb.com/postgres-plus-edb-blog/dick-dowdell/generated-primary-and-foreign-keys-distributed-databases?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.enterprisedb.com/postgres-plus-edb-blog/dick-dowdell/generated-primary-and-foreign-keys-distributed-databases?utm_source=dbweekly&amp;utm_medium=email&title=Generated Primary and Foreign Keys for Distributed Databases" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.enterprisedb.com/postgres-plus-edb-blog/dick-dowdell/generated-primary-and-foreign-keys-distributed-databases?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.enterprisedb.com/postgres-plus-edb-blog/dick-dowdell/generated-primary-and-foreign-keys-distributed-databases?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Generated Primary and Foreign Keys for Distributed Databases</span>
+				<span class="item-info">enterprisedb.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://modern-sql.com/feature/with?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Organize Complex Queries Using SQL's 'WITH'</a>
-			<div>
-				<a href="http://modern-sql.com" class="source" target="_blank">modern-sql.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://modern-sql.com/feature/with?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://modern-sql.com/feature/with?utm_source=dbweekly&amp;utm_medium=email&text=Organize Complex Queries Using SQL's 'WITH'" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://modern-sql.com/feature/with?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://modern-sql.com/feature/with?utm_source=dbweekly&amp;utm_medium=email&title=Organize Complex Queries Using SQL's 'WITH'" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://modern-sql.com/feature/with?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://modern-sql.com/feature/with?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Organize Complex Queries Using SQL's 'WITH'</span>
+				<span class="item-info">modern-sql.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://geode.incubator.apache.org/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Apache Geode: A Distributed, In-Memory Low Latency Database</a>
-			<div>
-				<a href="http://apache.org" class="source" target="_blank">apache.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://geode.incubator.apache.org/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://geode.incubator.apache.org/?utm_source=dbweekly&amp;utm_medium=email&text=Apache Geode: A Distributed, In-Memory Low Latency Database" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://geode.incubator.apache.org/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://geode.incubator.apache.org/?utm_source=dbweekly&amp;utm_medium=email&title=Apache Geode: A Distributed, In-Memory Low Latency Database" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://geode.incubator.apache.org/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://geode.incubator.apache.org/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Apache Geode: A Distributed, In-Memory Low Latency Database</span>
+				<span class="item-info">apache.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.periscopedata.com/blog/hyperloglog-in-pure-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">HyperLogLog in Pure SQL</a>
-			<div>
-				<a href="http://periscopedata.com" class="source" target="_blank">periscopedata.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.periscopedata.com/blog/hyperloglog-in-pure-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.periscopedata.com/blog/hyperloglog-in-pure-sql.html?utm_source=dbweekly&amp;utm_medium=email&text=HyperLogLog in Pure SQL" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.periscopedata.com/blog/hyperloglog-in-pure-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.periscopedata.com/blog/hyperloglog-in-pure-sql.html?utm_source=dbweekly&amp;utm_medium=email&title=HyperLogLog in Pure SQL" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.periscopedata.com/blog/hyperloglog-in-pure-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.periscopedata.com/blog/hyperloglog-in-pure-sql.html?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">HyperLogLog in Pure SQL</span>
+				<span class="item-info">periscopedata.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/aggregateknowledge/postgresql-hll" class="item-link" target="_blank">directly in Postgres</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/aggregateknowledge/postgresql-hll" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/aggregateknowledge/postgresql-hll&text=directly in Postgres" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/aggregateknowledge/postgresql-hll" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/aggregateknowledge/postgresql-hll&title=directly in Postgres" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/aggregateknowledge/postgresql-hll" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/aggregateknowledge/postgresql-hll">
+				<span class="item-title">directly in Postgres</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.networkworld.com/article/2999856/big-data-business-intelligence/10-use-cases-where-nosql-will-outperform-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">10 Use Cases Where NoSQL Will Outperform SQL</a>
-			<div>
-				<a href="http://networkworld.com" class="source" target="_blank">networkworld.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.networkworld.com/article/2999856/big-data-business-intelligence/10-use-cases-where-nosql-will-outperform-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.networkworld.com/article/2999856/big-data-business-intelligence/10-use-cases-where-nosql-will-outperform-sql.html?utm_source=dbweekly&amp;utm_medium=email&text=10 Use Cases Where NoSQL Will Outperform SQL" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.networkworld.com/article/2999856/big-data-business-intelligence/10-use-cases-where-nosql-will-outperform-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.networkworld.com/article/2999856/big-data-business-intelligence/10-use-cases-where-nosql-will-outperform-sql.html?utm_source=dbweekly&amp;utm_medium=email&title=10 Use Cases Where NoSQL Will Outperform SQL" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.networkworld.com/article/2999856/big-data-business-intelligence/10-use-cases-where-nosql-will-outperform-sql.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.networkworld.com/article/2999856/big-data-business-intelligence/10-use-cases-where-nosql-will-outperform-sql.html?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">10 Use Cases Where NoSQL Will Outperform SQL</span>
+				<span class="item-info">networkworld.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.toptal.com/developers?utm_source=cooperpress&amp;utm_medium=cpm-newsletter&amp;utm_content=freelanceWithCompanies&amp;utm_campaign=db" class="item-link" target="_blank">Freelance with Companies like Airbnb, IDEO, & JPMorgan</a>
-			<div>
-				<a href="http://toptal.com" class="source" target="_blank">toptal.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.toptal.com/developers?utm_source=cooperpress&amp;utm_medium=cpm-newsletter&amp;utm_content=freelanceWithCompanies&amp;utm_campaign=db" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.toptal.com/developers?utm_source=cooperpress&amp;utm_medium=cpm-newsletter&amp;utm_content=freelanceWithCompanies&amp;utm_campaign=db&text=Freelance with Companies like Airbnb, IDEO, & JPMorgan" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.toptal.com/developers?utm_source=cooperpress&amp;utm_medium=cpm-newsletter&amp;utm_content=freelanceWithCompanies&amp;utm_campaign=db" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.toptal.com/developers?utm_source=cooperpress&amp;utm_medium=cpm-newsletter&amp;utm_content=freelanceWithCompanies&amp;utm_campaign=db&title=Freelance with Companies like Airbnb, IDEO, & JPMorgan" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.toptal.com/developers?utm_source=cooperpress&amp;utm_medium=cpm-newsletter&amp;utm_content=freelanceWithCompanies&amp;utm_campaign=db" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.toptal.com/developers?utm_source=cooperpress&amp;utm_medium=cpm-newsletter&amp;utm_content=freelanceWithCompanies&amp;utm_campaign=db">
+				<span class="item-title">Freelance with Companies like Airbnb, IDEO, & JPMorgan</span>
+				<span class="item-info">toptal.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.vertabelo.com/blog/notes-from-the-lab/upcoming-database-conferences-winter-2015-2016?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">4 Upcoming Database Conferences: Winter 2015-2016</a>
-			<div>
-				<a href="http://vertabelo.com" class="source" target="_blank">vertabelo.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.vertabelo.com/blog/notes-from-the-lab/upcoming-database-conferences-winter-2015-2016?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.vertabelo.com/blog/notes-from-the-lab/upcoming-database-conferences-winter-2015-2016?utm_source=dbweekly&amp;utm_medium=email&text=4 Upcoming Database Conferences: Winter 2015-2016" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.vertabelo.com/blog/notes-from-the-lab/upcoming-database-conferences-winter-2015-2016?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.vertabelo.com/blog/notes-from-the-lab/upcoming-database-conferences-winter-2015-2016?utm_source=dbweekly&amp;utm_medium=email&title=4 Upcoming Database Conferences: Winter 2015-2016" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.vertabelo.com/blog/notes-from-the-lab/upcoming-database-conferences-winter-2015-2016?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.vertabelo.com/blog/notes-from-the-lab/upcoming-database-conferences-winter-2015-2016?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">4 Upcoming Database Conferences: Winter 2015-2016</span>
+				<span class="item-info">vertabelo.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.cio.com/article/3007062/servers/what-end-of-support-for-sql-server-2005-means-for-cios.html?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">What End of Support for SQL Server 2005 Means for CIOs</a>
-			<div>
-				<a href="http://cio.com" class="source" target="_blank">cio.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.cio.com/article/3007062/servers/what-end-of-support-for-sql-server-2005-means-for-cios.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.cio.com/article/3007062/servers/what-end-of-support-for-sql-server-2005-means-for-cios.html?utm_source=dbweekly&amp;utm_medium=email&text=What End of Support for SQL Server 2005 Means for CIOs" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.cio.com/article/3007062/servers/what-end-of-support-for-sql-server-2005-means-for-cios.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.cio.com/article/3007062/servers/what-end-of-support-for-sql-server-2005-means-for-cios.html?utm_source=dbweekly&amp;utm_medium=email&title=What End of Support for SQL Server 2005 Means for CIOs" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.cio.com/article/3007062/servers/what-end-of-support-for-sql-server-2005-means-for-cios.html?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.cio.com/article/3007062/servers/what-end-of-support-for-sql-server-2005-means-for-cios.html?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">What End of Support for SQL Server 2005 Means for CIOs</span>
+				<span class="item-info">cio.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://dbweekly.com/issues/81" class="item-link" target="_blank">Read this on the Web</a>
-			<div>
-				<a href="http://dbweekly.com" class="source" target="_blank">dbweekly.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://dbweekly.com/issues/81" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://dbweekly.com/issues/81&text=Read this on the Web" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://dbweekly.com/issues/81" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://dbweekly.com/issues/81&title=Read this on the Web" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://dbweekly.com/issues/81" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://dbweekly.com/issues/81">
+				<span class="item-title">Read this on the Web</span>
+				<span class="item-info">dbweekly.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.vertabelo.com/blog/technical-articles/50-shades-of-null-or-how-a-billion-dollar-mistake-has-been-stalking-a-whole-industry-for-decades?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">50 Shades of NULL</a>
-			<div>
-				<a href="http://vertabelo.com" class="source" target="_blank">vertabelo.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.vertabelo.com/blog/technical-articles/50-shades-of-null-or-how-a-billion-dollar-mistake-has-been-stalking-a-whole-industry-for-decades?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.vertabelo.com/blog/technical-articles/50-shades-of-null-or-how-a-billion-dollar-mistake-has-been-stalking-a-whole-industry-for-decades?utm_source=dbweekly&amp;utm_medium=email&text=50 Shades of NULL" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.vertabelo.com/blog/technical-articles/50-shades-of-null-or-how-a-billion-dollar-mistake-has-been-stalking-a-whole-industry-for-decades?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.vertabelo.com/blog/technical-articles/50-shades-of-null-or-how-a-billion-dollar-mistake-has-been-stalking-a-whole-industry-for-decades?utm_source=dbweekly&amp;utm_medium=email&title=50 Shades of NULL" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.vertabelo.com/blog/technical-articles/50-shades-of-null-or-how-a-billion-dollar-mistake-has-been-stalking-a-whole-industry-for-decades?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.vertabelo.com/blog/technical-articles/50-shades-of-null-or-how-a-billion-dollar-mistake-has-been-stalking-a-whole-industry-for-decades?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">50 Shades of NULL</span>
+				<span class="item-info">vertabelo.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://kuzzle.io/blog/2015/11/what-nosql-solution-should-you-choose-mongodb-elastisearch-oriendb/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">What NoSQL Solution Should You Choose?</a>
-			<div>
-				<a href="http://kuzzle.io" class="source" target="_blank">kuzzle.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://kuzzle.io/blog/2015/11/what-nosql-solution-should-you-choose-mongodb-elastisearch-oriendb/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://kuzzle.io/blog/2015/11/what-nosql-solution-should-you-choose-mongodb-elastisearch-oriendb/?utm_source=dbweekly&amp;utm_medium=email&text=What NoSQL Solution Should You Choose?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://kuzzle.io/blog/2015/11/what-nosql-solution-should-you-choose-mongodb-elastisearch-oriendb/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://kuzzle.io/blog/2015/11/what-nosql-solution-should-you-choose-mongodb-elastisearch-oriendb/?utm_source=dbweekly&amp;utm_medium=email&title=What NoSQL Solution Should You Choose?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://kuzzle.io/blog/2015/11/what-nosql-solution-should-you-choose-mongodb-elastisearch-oriendb/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://kuzzle.io/blog/2015/11/what-nosql-solution-should-you-choose-mongodb-elastisearch-oriendb/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">What NoSQL Solution Should You Choose?</span>
+				<span class="item-info">kuzzle.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://spotify.github.io/heroic/?utm_source=dbweekly&amp;utm_medium=email" class="item-link" target="_blank">Heroic: A Time Series Database from Spotify</a>
-			<div>
-				<a href="http://spotify.github.io" class="source" target="_blank">spotify.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://spotify.github.io/heroic/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://spotify.github.io/heroic/?utm_source=dbweekly&amp;utm_medium=email&text=Heroic: A Time Series Database from Spotify" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://spotify.github.io/heroic/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://spotify.github.io/heroic/?utm_source=dbweekly&amp;utm_medium=email&title=Heroic: A Time Series Database from Spotify" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://spotify.github.io/heroic/?utm_source=dbweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://spotify.github.io/heroic/?utm_source=dbweekly&amp;utm_medium=email">
+				<span class="item-title">Heroic: A Time Series Database from Spotify</span>
+				<span class="item-info">spotify.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly&amp;utm_medium=displayemail&amp;utm_content=sqlfingers_v2&amp;utm_campaign=sqlprompt&amp;utm_term=email-24174" class="item-link" target="_blank">Have you got SQL fingers?</a>
-			<div>
-				<a href="http://red-gate.com" class="source" target="_blank">red-gate.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly&amp;utm_medium=displayemail&amp;utm_content=sqlfingers_v2&amp;utm_campaign=sqlprompt&amp;utm_term=email-24174" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly&amp;utm_medium=displayemail&amp;utm_content=sqlfingers_v2&amp;utm_campaign=sqlprompt&amp;utm_term=email-24174&text=Have you got SQL fingers?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly&amp;utm_medium=displayemail&amp;utm_content=sqlfingers_v2&amp;utm_campaign=sqlprompt&amp;utm_term=email-24174" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly&amp;utm_medium=displayemail&amp;utm_content=sqlfingers_v2&amp;utm_campaign=sqlprompt&amp;utm_term=email-24174&title=Have you got SQL fingers?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly&amp;utm_medium=displayemail&amp;utm_content=sqlfingers_v2&amp;utm_campaign=sqlprompt&amp;utm_term=email-24174" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly&amp;utm_medium=displayemail&amp;utm_content=sqlfingers_v2&amp;utm_campaign=sqlprompt&amp;utm_term=email-24174">
+				<span class="item-title">Have you got SQL fingers?</span>
+				<span class="item-info">red-gate.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly=displayemail=sqlfingers_v2=sqlprompt=email-24174" class="item-link" target="_blank">Find out how easily you can write SQL.</a>
-			<div>
-				<a href="http://red-gate.com" class="source" target="_blank">red-gate.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly=displayemail=sqlfingers_v2=sqlprompt=email-24174" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly=displayemail=sqlfingers_v2=sqlprompt=email-24174&text=Find out how easily you can write SQL." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly=displayemail=sqlfingers_v2=sqlprompt=email-24174" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly=displayemail=sqlfingers_v2=sqlprompt=email-24174&title=Find out how easily you can write SQL." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly=displayemail=sqlfingers_v2=sqlprompt=email-24174" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=dbweekly=displayemail=sqlfingers_v2=sqlprompt=email-24174">
+				<span class="item-title">Find out how easily you can write SQL.</span>
+				<span class="item-info">red-gate.com</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -514,33 +361,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

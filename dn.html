@@ -32,399 +32,413 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" selected>Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" selected>Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>dn</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>dn</h2>
-		Sources: 
-					<a href="https://news.layervault.com/" target="_blank">Designer News</a>
-			</div>
-		<div class="small">Last updated: 2015-11-30 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 30</div>
-			<a href="https://www.azendoo.com/calendar?utm_source=designernews" class="item-link" target="_blank">Show DN: Azendoo Calendar Animation</a>
-			<div>
-				<a href="http://azendoo.com" class="source" target="_blank">azendoo.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.azendoo.com/calendar?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.azendoo.com/calendar?utm_source=designernews&text=Show DN: Azendoo Calendar Animation" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.azendoo.com/calendar?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.azendoo.com/calendar?utm_source=designernews&title=Show DN: Azendoo Calendar Animation" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.azendoo.com/calendar?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://antonsten.com/book/?utm_source=designernews">
+				<span class="item-title">User Experiences that Matter e-book is now available</span>
+				<span class="item-info">antonsten.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://css-tricks.com/drag-and-drop-file-uploading/?utm_source=designernews" class="item-link" target="_blank">Drag and Drop File Uploading | CSS-Tricks</a>
-			<div>
-				<a href="http://css-tricks.com" class="source" target="_blank">css-tricks.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://css-tricks.com/drag-and-drop-file-uploading/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://css-tricks.com/drag-and-drop-file-uploading/?utm_source=designernews&text=Drag and Drop File Uploading | CSS-Tricks" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://css-tricks.com/drag-and-drop-file-uploading/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://css-tricks.com/drag-and-drop-file-uploading/?utm_source=designernews&title=Drag and Drop File Uploading | CSS-Tricks" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://css-tricks.com/drag-and-drop-file-uploading/?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://callmecavs.github.io/jump.js/?utm_source=designernews">
+				<span class="item-title">Show DN: Jump.js Dependency-Free Smooth Scrolling Library</span>
+				<span class="item-info">callmecavs.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@ConceptHacker/introducing-super-naikan-challenge-8855ecafc0b3?utm_source=designernews#.33mr77o1f" class="item-link" target="_blank">An Awesome New Way to Start Your Day</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@ConceptHacker/introducing-super-naikan-challenge-8855ecafc0b3?utm_source=designernews#.33mr77o1f" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@ConceptHacker/introducing-super-naikan-challenge-8855ecafc0b3?utm_source=designernews#.33mr77o1f&text=An Awesome New Way to Start Your Day" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@ConceptHacker/introducing-super-naikan-challenge-8855ecafc0b3?utm_source=designernews#.33mr77o1f" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@ConceptHacker/introducing-super-naikan-challenge-8855ecafc0b3?utm_source=designernews#.33mr77o1f&title=An Awesome New Way to Start Your Day" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@ConceptHacker/introducing-super-naikan-challenge-8855ecafc0b3?utm_source=designernews#.33mr77o1f" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://sympli.io/?utm_source=designernews">
+				<span class="item-title">Sympli: Collaboration tool for designers and developers</span>
+				<span class="item-info">sympli.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://creative.adobe.com/plans?store_code=gb&amp;promoid=KSPAL&amp;utm_source=designernews" class="item-link" target="_blank">20% off Adobe Creative Cloud (Today Only)</a>
-			<div>
-				<a href="http://adobe.com" class="source" target="_blank">adobe.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://creative.adobe.com/plans?store_code=gb&amp;promoid=KSPAL&amp;utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://creative.adobe.com/plans?store_code=gb&amp;promoid=KSPAL&amp;utm_source=designernews&text=20% off Adobe Creative Cloud (Today Only)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://creative.adobe.com/plans?store_code=gb&amp;promoid=KSPAL&amp;utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://creative.adobe.com/plans?store_code=gb&amp;promoid=KSPAL&amp;utm_source=designernews&title=20% off Adobe Creative Cloud (Today Only)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://creative.adobe.com/plans?store_code=gb&amp;promoid=KSPAL&amp;utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://chrome.google.com/webstore/detail/tab-monitor/ndppnnfbbpbcekmmjhkpfnplkppneflk?utm_source=designernews">
+				<span class="item-title">Show DN: Tab Monitor ( Chrome Extension )</span>
+				<span class="item-info">google.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://store.ramotion.com?utm_source=designernews-blackfriday-Denis-post&amp;utm_medium=special&amp;utm_campaign=Designernews-Denis-Post&amp;utm_source=designernews" class="item-link" target="_blank">Show DN: 50% OFF All Exclusive PSD Mockups (Coupon: BLACK50)</a>
-			<div>
-				<a href="http://ramotion.com" class="source" target="_blank">ramotion.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://store.ramotion.com?utm_source=designernews-blackfriday-Denis-post&amp;utm_medium=special&amp;utm_campaign=Designernews-Denis-Post&amp;utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://store.ramotion.com?utm_source=designernews-blackfriday-Denis-post&amp;utm_medium=special&amp;utm_campaign=Designernews-Denis-Post&amp;utm_source=designernews&text=Show DN: 50% OFF All Exclusive PSD Mockups (Coupon: BLACK50)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://store.ramotion.com?utm_source=designernews-blackfriday-Denis-post&amp;utm_medium=special&amp;utm_campaign=Designernews-Denis-Post&amp;utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://store.ramotion.com?utm_source=designernews-blackfriday-Denis-post&amp;utm_medium=special&amp;utm_campaign=Designernews-Denis-Post&amp;utm_source=designernews&title=Show DN: 50% OFF All Exclusive PSD Mockups (Coupon: BLACK50)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://store.ramotion.com?utm_source=designernews-blackfriday-Denis-post&amp;utm_medium=special&amp;utm_campaign=Designernews-Denis-Post&amp;utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://robots.thoughtbot.com/building-ios-interfaces-swift-primer?utm_source=designernews">
+				<span class="item-title">Building iOS Interfaces with Swift: A Primer</span>
+				<span class="item-info">thoughtbot.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://flarum.org/?utm_source=designernews" class="item-link" target="_blank">Flarum is the next-generation forum software that makes online discussion fun. It's simple, fast, and free.</a>
-			<div>
-				<a href="http://flarum.org" class="source" target="_blank">flarum.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://flarum.org/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://flarum.org/?utm_source=designernews&text=Flarum is the next-generation forum software that makes online discussion fun. It's simple, fast, and free." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://flarum.org/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://flarum.org/?utm_source=designernews&title=Flarum is the next-generation forum software that makes online discussion fun. It's simple, fast, and free." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://flarum.org/?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://fstoppers.com/apps/how-make-living-using-just-iphone-99679?utm_source=designernews">
+				<span class="item-title">How to Make A Living Using Just an iPhone</span>
+				<span class="item-info">fstoppers.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.worldsfairusa.com?utm_source=designernews" class="item-link" target="_blank">Site Design: Worlds Fair USA</a>
-			<div>
-				<a href="http://worldsfairusa.com" class="source" target="_blank">worldsfairusa.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.worldsfairusa.com?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.worldsfairusa.com?utm_source=designernews&text=Site Design: Worlds Fair USA" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.worldsfairusa.com?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.worldsfairusa.com?utm_source=designernews&title=Site Design: Worlds Fair USA" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.worldsfairusa.com?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://spec.fm/podcasts/developer-tea/21072?utm_source=designernews">
+				<span class="item-title">The Great Framework Debate, Part Two</span>
+				<span class="item-info">spec.fm</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://designcode.io/sketch-mastering?utm_source=designernews" class="item-link" target="_blank">Mastering Sketch 3</a>
-			<div>
-				<a href="http://designcode.io" class="source" target="_blank">designcode.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://designcode.io/sketch-mastering?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://designcode.io/sketch-mastering?utm_source=designernews&text=Mastering Sketch 3" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://designcode.io/sketch-mastering?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://designcode.io/sketch-mastering?utm_source=designernews&title=Mastering Sketch 3" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://designcode.io/sketch-mastering?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://jonyablonski.com/2015/design-principles-for-reducing-cognitive-load/?utm_source=designernews">
+				<span class="item-title">Design Principles for Reducing Cognitive Load</span>
+				<span class="item-info">jonyablonski.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@flarup/designing-better-app-icons-bac276f89ead?utm_source=designernews" class="item-link" target="_blank">Designing better app icons</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@flarup/designing-better-app-icons-bac276f89ead?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@flarup/designing-better-app-icons-bac276f89ead?utm_source=designernews&text=Designing better app icons" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@flarup/designing-better-app-icons-bac276f89ead?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@flarup/designing-better-app-icons-bac276f89ead?utm_source=designernews&title=Designing better app icons" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@flarup/designing-better-app-icons-bac276f89ead?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://codyhouse.co/gem/horizontal-timeline/?utm_source=designernews">
+				<span class="item-title">Horizontal Timeline</span>
+				<span class="item-info">codyhouse.co</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://responsifyjs.space/?utm_source=designernews#demo" class="item-link" target="_blank">Show DN: How to make image responsive and appropriately cropped?</a>
-			<div>
-				<a href="http://responsifyjs.space" class="source" target="_blank">responsifyjs.space</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://responsifyjs.space/?utm_source=designernews#demo" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://responsifyjs.space/?utm_source=designernews#demo&text=Show DN: How to make image responsive and appropriately cropped?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://responsifyjs.space/?utm_source=designernews#demo" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://responsifyjs.space/?utm_source=designernews#demo&title=Show DN: How to make image responsive and appropriately cropped?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://responsifyjs.space/?utm_source=designernews#demo" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.mikebloomberg.com/?utm_source=designernews">
+				<span class="item-title">Site Design: Mike Bloomberg</span>
+				<span class="item-info">mikebloomberg.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://dealroundup.io/black-friday-2015/?utm_source=designernews" class="item-link" target="_blank">Black Friday Web Dev Deal Round Up / all in one place.</a>
-			<div>
-				<a href="http://dealroundup.io" class="source" target="_blank">dealroundup.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://dealroundup.io/black-friday-2015/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://dealroundup.io/black-friday-2015/?utm_source=designernews&text=Black Friday Web Dev Deal Round Up / all in one place." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://dealroundup.io/black-friday-2015/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://dealroundup.io/black-friday-2015/?utm_source=designernews&title=Black Friday Web Dev Deal Round Up / all in one place." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://dealroundup.io/black-friday-2015/?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/the-artificial/selecting-the-optimal-prototyping-tool-f60bc49aecf3?utm_source=designernews">
+				<span class="item-title">Comparing prototyping tools</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://www.gizmag.com/room-tent-indoor-kickstarter/40635/?utm_source=designernews" class="item-link" target="_blank">Room in Room saves on heating by pitching a tent over your bed</a>
-			<div>
-				<a href="http://gizmag.com" class="source" target="_blank">gizmag.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.gizmag.com/room-tent-indoor-kickstarter/40635/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.gizmag.com/room-tent-indoor-kickstarter/40635/?utm_source=designernews&text=Room in Room saves on heating by pitching a tent over your bed" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.gizmag.com/room-tent-indoor-kickstarter/40635/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.gizmag.com/room-tent-indoor-kickstarter/40635/?utm_source=designernews&title=Room in Room saves on heating by pitching a tent over your bed" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.gizmag.com/room-tent-indoor-kickstarter/40635/?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://ivyleads.co/blog/how-to-find-new-business-as-a-freelancer/?utm_source=designernews">
+				<span class="item-title">How to Find New Business as a Freelancer</span>
+				<span class="item-info">ivyleads.co</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://nadatheme.com?utm_source=designernews" class="item-link" target="_blank">This remember me the new iA Wordpress theme</a>
-			<div>
-				<a href="http://nadatheme.com" class="source" target="_blank">nadatheme.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://nadatheme.com?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://nadatheme.com?utm_source=designernews&text=This remember me the new iA Wordpress theme" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://nadatheme.com?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://nadatheme.com?utm_source=designernews&title=This remember me the new iA Wordpress theme" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://nadatheme.com?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://v4-alpha.getbootstrap.com/?utm_source=designernews">
+				<span class="item-title">Bootstrap 4 Alpha</span>
+				<span class="item-info">getbootstrap.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://una.im/classy-css/?utm_source=designernews" class="item-link" target="_blank">Classy CSS: a Programmatic Approach to Sass Stylesheets</a>
-			<div>
-				<a href="http://una.im" class="source" target="_blank">una.im</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://una.im/classy-css/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://una.im/classy-css/?utm_source=designernews&text=Classy CSS: a Programmatic Approach to Sass Stylesheets" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://una.im/classy-css/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://una.im/classy-css/?utm_source=designernews&title=Classy CSS: a Programmatic Approach to Sass Stylesheets" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://una.im/classy-css/?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.equinux.com/blackfriday?utm_source=designernews">
+				<span class="item-title">Mail Designer Pro 50% off - only today</span>
+				<span class="item-info">equinux.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://ecal-typefaces.ch?utm_source=designernews" class="item-link" target="_blank">ECAL Typefaces. Typefaces from ECAL design students</a>
-			<div>
-				<a href="http://ecal-typefaces.ch" class="source" target="_blank">ecal-typefaces.ch</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://ecal-typefaces.ch?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://ecal-typefaces.ch?utm_source=designernews&text=ECAL Typefaces. Typefaces from ECAL design students" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://ecal-typefaces.ch?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://ecal-typefaces.ch?utm_source=designernews&title=ECAL Typefaces. Typefaces from ECAL design students" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://ecal-typefaces.ch?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://layout.fm?utm_source=designernews">
+				<span class="item-title">Site Design: Layout.fm</span>
+				<span class="item-info">layout.fm</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://gardencollage.com?utm_source=designernews" class="item-link" target="_blank">Site Design: Garden Collage</a>
-			<div>
-				<a href="http://gardencollage.com" class="source" target="_blank">gardencollage.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://gardencollage.com?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://gardencollage.com?utm_source=designernews&text=Site Design: Garden Collage" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://gardencollage.com?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://gardencollage.com?utm_source=designernews&title=Site Design: Garden Collage" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://gardencollage.com?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://rightfontapp.com?utm_source=designernews">
+				<span class="item-title">Have anyone used the new font manager app RightFont?</span>
+				<span class="item-info">rightfontapp.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://henryfreel.com/?utm_source=designernews" class="item-link" target="_blank">Show DN: New Portfolio Site</a>
-			<div>
-				<a href="http://henryfreel.com" class="source" target="_blank">henryfreel.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://henryfreel.com/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://henryfreel.com/?utm_source=designernews&text=Show DN: New Portfolio Site" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://henryfreel.com/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://henryfreel.com/?utm_source=designernews&title=Show DN: New Portfolio Site" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://henryfreel.com/?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://buypeel.com/products/peel-glass-screen-protector?dn=&amp;utm_source=designernews">
+				<span class="item-title">Featured: Introducing Peel Glass Screen Protector, Precision Cut to Contour the Surface of your iPhone.</span>
+				<span class="item-info">buypeel.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://buypeel.com/products/peel-glass-screen-protector?dn=&amp;utm_source=designernews" class="item-link" target="_blank">Featured: Introducing Peel Glass Screen Protector, Precision Cut to Contour the Surface of your iPhone.</a>
-			<div>
-				<a href="http://buypeel.com" class="source" target="_blank">buypeel.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://buypeel.com/products/peel-glass-screen-protector?dn=&amp;utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://buypeel.com/products/peel-glass-screen-protector?dn=&amp;utm_source=designernews&text=Featured: Introducing Peel Glass Screen Protector, Precision Cut to Contour the Surface of your iPhone." class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://buypeel.com/products/peel-glass-screen-protector?dn=&amp;utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://buypeel.com/products/peel-glass-screen-protector?dn=&amp;utm_source=designernews&title=Featured: Introducing Peel Glass Screen Protector, Precision Cut to Contour the Surface of your iPhone." class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://buypeel.com/products/peel-glass-screen-protector?dn=&amp;utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://dennisadelmann.de?utm_source=designernews">
+				<span class="item-title">Show DN: New Portfolio - Dennis Adelmann</span>
+				<span class="item-info">dennisadelmann.de</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41?utm_source=designernews" class="item-link" target="_blank">The new Google Material icons could use some work</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41?utm_source=designernews&text=The new Google Material icons could use some work" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41?utm_source=designernews&title=The new Google Material icons could use some work" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=vpbKDlUDUfE&amp;utm_source=designernews">
+				<span class="item-title">Stunning Photography in your Design: Unsplash Sketch Plugin (UX Prototyping)</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://whatpixel.com/dribbble-freebies-nov-2015/?utm_source=designernews" class="item-link" target="_blank">Best Dribbble Design Freebies from November 2015</a>
-			<div>
-				<a href="http://whatpixel.com" class="source" target="_blank">whatpixel.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://whatpixel.com/dribbble-freebies-nov-2015/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://whatpixel.com/dribbble-freebies-nov-2015/?utm_source=designernews&text=Best Dribbble Design Freebies from November 2015" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://whatpixel.com/dribbble-freebies-nov-2015/?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://whatpixel.com/dribbble-freebies-nov-2015/?utm_source=designernews&title=Best Dribbble Design Freebies from November 2015" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://whatpixel.com/dribbble-freebies-nov-2015/?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/nolastan/sync.sketchplugin?utm_source=designernews">
+				<span class="item-title">Sync Sketch Plugin</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 30</div>
-			<a href="http://mattanddesign.com/blog/testing-websites-locally-on-iphone-and-ipad?utm_source=designernews" class="item-link" target="_blank">Testing websites locally on iPad, iPhone, and Android during local development</a>
-			<div>
-				<a href="http://mattanddesign.com" class="source" target="_blank">mattanddesign.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://mattanddesign.com/blog/testing-websites-locally-on-iphone-and-ipad?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://mattanddesign.com/blog/testing-websites-locally-on-iphone-and-ipad?utm_source=designernews&text=Testing websites locally on iPad, iPhone, and Android during local development" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://mattanddesign.com/blog/testing-websites-locally-on-iphone-and-ipad?utm_source=designernews" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://mattanddesign.com/blog/testing-websites-locally-on-iphone-and-ipad?utm_source=designernews&title=Testing websites locally on iPad, iPhone, and Android during local development" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://mattanddesign.com/blog/testing-websites-locally-on-iphone-and-ipad?utm_source=designernews" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/alexcarpenter/butane-jekyll-theme?utm_source=designernews">
+				<span class="item-title">Butane Jekyll Theme</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-		</ul>
+				<li class="item">
+			<a href="https://www.azendoo.com/calendar?utm_source=designernews">
+				<span class="item-title">Show DN: Azendoo Calendar Animation</span>
+				<span class="item-info">azendoo.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://css-tricks.com/drag-and-drop-file-uploading/?utm_source=designernews">
+				<span class="item-title">Drag and Drop File Uploading | CSS-Tricks</span>
+				<span class="item-info">css-tricks.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@ConceptHacker/introducing-super-naikan-challenge-8855ecafc0b3?utm_source=designernews#.33mr77o1f">
+				<span class="item-title">An Awesome New Way to Start Your Day</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://creative.adobe.com/plans?store_code=gb&amp;promoid=KSPAL&amp;utm_source=designernews">
+				<span class="item-title">20% off Adobe Creative Cloud (Today Only)</span>
+				<span class="item-info">adobe.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://store.ramotion.com?utm_source=designernews-blackfriday-Denis-post&amp;utm_medium=special&amp;utm_campaign=Designernews-Denis-Post&amp;utm_source=designernews">
+				<span class="item-title">Show DN: 50% OFF All Exclusive PSD Mockups (Coupon: BLACK50)</span>
+				<span class="item-info">ramotion.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://flarum.org/?utm_source=designernews">
+				<span class="item-title">Flarum is the next-generation forum software that makes online discussion fun. It's simple, fast, and free.</span>
+				<span class="item-info">flarum.org</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.worldsfairusa.com?utm_source=designernews">
+				<span class="item-title">Site Design: Worlds Fair USA</span>
+				<span class="item-info">worldsfairusa.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://designcode.io/sketch-mastering?utm_source=designernews">
+				<span class="item-title">Mastering Sketch 3</span>
+				<span class="item-info">designcode.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@flarup/designing-better-app-icons-bac276f89ead?utm_source=designernews">
+				<span class="item-title">Designing better app icons</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://responsifyjs.space/?utm_source=designernews#demo">
+				<span class="item-title">Show DN: How to make image responsive and appropriately cropped?</span>
+				<span class="item-info">responsifyjs.space</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://dealroundup.io/black-friday-2015/?utm_source=designernews">
+				<span class="item-title">Black Friday Web Dev Deal Round Up / all in one place.</span>
+				<span class="item-info">dealroundup.io</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://www.gizmag.com/room-tent-indoor-kickstarter/40635/?utm_source=designernews">
+				<span class="item-title">Room in Room saves on heating by pitching a tent over your bed</span>
+				<span class="item-info">gizmag.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://nadatheme.com?utm_source=designernews">
+				<span class="item-title">This remember me the new iA Wordpress theme</span>
+				<span class="item-info">nadatheme.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://una.im/classy-css/?utm_source=designernews">
+				<span class="item-title">Classy CSS: a Programmatic Approach to Sass Stylesheets</span>
+				<span class="item-info">una.im</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://ecal-typefaces.ch?utm_source=designernews">
+				<span class="item-title">ECAL Typefaces. Typefaces from ECAL design students</span>
+				<span class="item-info">ecal-typefaces.ch</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://gardencollage.com?utm_source=designernews">
+				<span class="item-title">Site Design: Garden Collage</span>
+				<span class="item-info">gardencollage.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://henryfreel.com/?utm_source=designernews">
+				<span class="item-title">Show DN: New Portfolio Site</span>
+				<span class="item-info">henryfreel.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="https://medium.com/@lloyd/the-new-google-material-icons-could-use-some-work-6b323ddd4e41?utm_source=designernews">
+				<span class="item-title">The new Google Material icons could use some work</span>
+				<span class="item-info">medium.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://whatpixel.com/dribbble-freebies-nov-2015/?utm_source=designernews">
+				<span class="item-title">Best Dribbble Design Freebies from November 2015</span>
+				<span class="item-info">whatpixel.com</span>
+			</a>
+		</li>
+				<li class="item">
+			<a href="http://mattanddesign.com/blog/testing-websites-locally-on-iphone-and-ipad?utm_source=designernews">
+				<span class="item-title">Testing websites locally on iPad, iPhone, and Android during local development</span>
+				<span class="item-info">mattanddesign.com</span>
+			</a>
+		</li>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -437,33 +451,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

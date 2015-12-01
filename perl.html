@@ -32,427 +32,305 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" selected>Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" selected>Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>perl</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>perl</h2>
-		Sources: 
-					<a href="http://perlweekly.com/" target="_blank">Perl Weekly</a>
-			</div>
-		<div class="small">Last updated: 2015-11-24 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 24</div>
-			<a href="http://niceperl.blogspot.com/" class="item-link" target="_blank">NICEPERL's lists</a>
-			<div>
-				<a href="http://niceperl.blogspot.com" class="source" target="_blank">niceperl.blogspot.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://niceperl.blogspot.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://niceperl.blogspot.com/&text=NICEPERL's lists" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://niceperl.blogspot.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://niceperl.blogspot.com/&title=NICEPERL's lists" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://niceperl.blogspot.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="http://niceperl.blogspot.com/">
+				<span class="item-title">NICEPERL's lists</span>
+				<span class="item-info">niceperl.blogspot.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://act.yapc.eu/lpw2015/talk/6347" class="item-link" target="_blank">A gentle crash course on Perl in London</a>
-			<div>
-				<a href="http://yapc.eu" class="source" target="_blank">yapc.eu</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://act.yapc.eu/lpw2015/talk/6347" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://act.yapc.eu/lpw2015/talk/6347&text=A gentle crash course on Perl in London" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://act.yapc.eu/lpw2015/talk/6347" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://act.yapc.eu/lpw2015/talk/6347&title=A gentle crash course on Perl in London" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://act.yapc.eu/lpw2015/talk/6347" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://act.yapc.eu/lpw2015/talk/6347">
+				<span class="item-title">A gentle crash course on Perl in London</span>
+				<span class="item-info">yapc.eu</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blog.bestpractical.com/2015/11/our-last-training-of-2015-is-filling-up.html" class="item-link" target="_blank">RT: Our Last Training of 2015 is Filling Up!</a>
-			<div>
-				<a href="http://bestpractical.com" class="source" target="_blank">bestpractical.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.bestpractical.com/2015/11/our-last-training-of-2015-is-filling-up.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.bestpractical.com/2015/11/our-last-training-of-2015-is-filling-up.html&text=RT: Our Last Training of 2015 is Filling Up!" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.bestpractical.com/2015/11/our-last-training-of-2015-is-filling-up.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.bestpractical.com/2015/11/our-last-training-of-2015-is-filling-up.html&title=RT: Our Last Training of 2015 is Filling Up!" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.bestpractical.com/2015/11/our-last-training-of-2015-is-filling-up.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.bestpractical.com/2015/11/our-last-training-of-2015-is-filling-up.html">
+				<span class="item-title">RT: Our Last Training of 2015 is Filling Up!</span>
+				<span class="item-info">bestpractical.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://code-maven.com/angular-filter-table-created-with-ng-repeat" class="item-link" target="_blank">AngularJS: filter table created with ng-repeat</a>
-			<div>
-				<a href="http://code-maven.com" class="source" target="_blank">code-maven.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://code-maven.com/angular-filter-table-created-with-ng-repeat" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://code-maven.com/angular-filter-table-created-with-ng-repeat&text=AngularJS: filter table created with ng-repeat" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://code-maven.com/angular-filter-table-created-with-ng-repeat" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://code-maven.com/angular-filter-table-created-with-ng-repeat&title=AngularJS: filter table created with ng-repeat" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://code-maven.com/angular-filter-table-created-with-ng-repeat" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://code-maven.com/angular-filter-table-created-with-ng-repeat">
+				<span class="item-title">AngularJS: filter table created with ng-repeat</span>
+				<span class="item-info">code-maven.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://act.yapc.eu/lpw2015/news/1369" class="item-link" target="_blank">Jonathon Worthington to Keynote at London Perl Workshop</a>
-			<div>
-				<a href="http://yapc.eu" class="source" target="_blank">yapc.eu</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://act.yapc.eu/lpw2015/news/1369" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://act.yapc.eu/lpw2015/news/1369&text=Jonathon Worthington to Keynote at London Perl Workshop" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://act.yapc.eu/lpw2015/news/1369" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://act.yapc.eu/lpw2015/news/1369&title=Jonathon Worthington to Keynote at London Perl Workshop" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://act.yapc.eu/lpw2015/news/1369" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://act.yapc.eu/lpw2015/news/1369">
+				<span class="item-title">Jonathon Worthington to Keynote at London Perl Workshop</span>
+				<span class="item-info">yapc.eu</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blogs.perl.org/users/shadowcat_mdk/2015/11/oscon-call-for-papers.html" class="item-link" target="_blank">OSCON Call for Papers</a>
-			<div>
-				<a href="http://perl.org" class="source" target="_blank">perl.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blogs.perl.org/users/shadowcat_mdk/2015/11/oscon-call-for-papers.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blogs.perl.org/users/shadowcat_mdk/2015/11/oscon-call-for-papers.html&text=OSCON Call for Papers" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blogs.perl.org/users/shadowcat_mdk/2015/11/oscon-call-for-papers.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blogs.perl.org/users/shadowcat_mdk/2015/11/oscon-call-for-papers.html&title=OSCON Call for Papers" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blogs.perl.org/users/shadowcat_mdk/2015/11/oscon-call-for-papers.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blogs.perl.org/users/shadowcat_mdk/2015/11/oscon-call-for-papers.html">
+				<span class="item-title">OSCON Call for Papers</span>
+				<span class="item-info">perl.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blogs.perl.org/users/neilb/2015/11/one-more-month-in-the-2015-cpan-pr-challenge.html" class="item-link" target="_blank">One more month in the 2015 CPAN PR Challenge</a>
-			<div>
-				<a href="http://perl.org" class="source" target="_blank">perl.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blogs.perl.org/users/neilb/2015/11/one-more-month-in-the-2015-cpan-pr-challenge.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blogs.perl.org/users/neilb/2015/11/one-more-month-in-the-2015-cpan-pr-challenge.html&text=One more month in the 2015 CPAN PR Challenge" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blogs.perl.org/users/neilb/2015/11/one-more-month-in-the-2015-cpan-pr-challenge.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blogs.perl.org/users/neilb/2015/11/one-more-month-in-the-2015-cpan-pr-challenge.html&title=One more month in the 2015 CPAN PR Challenge" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blogs.perl.org/users/neilb/2015/11/one-more-month-in-the-2015-cpan-pr-challenge.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blogs.perl.org/users/neilb/2015/11/one-more-month-in-the-2015-cpan-pr-challenge.html">
+				<span class="item-title">One more month in the 2015 CPAN PR Challenge</span>
+				<span class="item-info">perl.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blogs.perl.org/users/ingy_dot_net/2015/11/perl-regular-expression-awesomeness.html" class="item-link" target="_blank">Perl Regular Expression Awesomeness</a>
-			<div>
-				<a href="http://perl.org" class="source" target="_blank">perl.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blogs.perl.org/users/ingy_dot_net/2015/11/perl-regular-expression-awesomeness.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blogs.perl.org/users/ingy_dot_net/2015/11/perl-regular-expression-awesomeness.html&text=Perl Regular Expression Awesomeness" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blogs.perl.org/users/ingy_dot_net/2015/11/perl-regular-expression-awesomeness.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blogs.perl.org/users/ingy_dot_net/2015/11/perl-regular-expression-awesomeness.html&title=Perl Regular Expression Awesomeness" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blogs.perl.org/users/ingy_dot_net/2015/11/perl-regular-expression-awesomeness.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blogs.perl.org/users/ingy_dot_net/2015/11/perl-regular-expression-awesomeness.html">
+				<span class="item-title">Perl Regular Expression Awesomeness</span>
+				<span class="item-info">perl.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="https://github.com/trizen/sidef" class="item-link" target="_blank">Sidef - A modern object-oriented programming language, implemented in Perl</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/trizen/sidef" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/trizen/sidef&text=Sidef - A modern object-oriented programming language, implemented in Perl" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/trizen/sidef" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/trizen/sidef&title=Sidef - A modern object-oriented programming language, implemented in Perl" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/trizen/sidef" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/trizen/sidef">
+				<span class="item-title">Sidef - A modern object-oriented programming language, implemented in Perl</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://news.perlfoundation.org/2015/11/november-2015-grant-proposals.html" class="item-link" target="_blank">November 2015 Grant Proposals</a>
-			<div>
-				<a href="http://perlfoundation.org" class="source" target="_blank">perlfoundation.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://news.perlfoundation.org/2015/11/november-2015-grant-proposals.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://news.perlfoundation.org/2015/11/november-2015-grant-proposals.html&text=November 2015 Grant Proposals" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://news.perlfoundation.org/2015/11/november-2015-grant-proposals.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://news.perlfoundation.org/2015/11/november-2015-grant-proposals.html&title=November 2015 Grant Proposals" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://news.perlfoundation.org/2015/11/november-2015-grant-proposals.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://news.perlfoundation.org/2015/11/november-2015-grant-proposals.html">
+				<span class="item-title">November 2015 Grant Proposals</span>
+				<span class="item-info">perlfoundation.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blogs.perl.org/users/sawyer_x/2015/11/perl-5-porters-mailing-list-summary-november-10th-15th.html" class="item-link" target="_blank">Perl 5 Porters Mailing List Summary: November 10th-15th</a>
-			<div>
-				<a href="http://perl.org" class="source" target="_blank">perl.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blogs.perl.org/users/sawyer_x/2015/11/perl-5-porters-mailing-list-summary-november-10th-15th.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blogs.perl.org/users/sawyer_x/2015/11/perl-5-porters-mailing-list-summary-november-10th-15th.html&text=Perl 5 Porters Mailing List Summary: November 10th-15th" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blogs.perl.org/users/sawyer_x/2015/11/perl-5-porters-mailing-list-summary-november-10th-15th.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blogs.perl.org/users/sawyer_x/2015/11/perl-5-porters-mailing-list-summary-november-10th-15th.html&title=Perl 5 Porters Mailing List Summary: November 10th-15th" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blogs.perl.org/users/sawyer_x/2015/11/perl-5-porters-mailing-list-summary-november-10th-15th.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blogs.perl.org/users/sawyer_x/2015/11/perl-5-porters-mailing-list-summary-november-10th-15th.html">
+				<span class="item-title">Perl 5 Porters Mailing List Summary: November 10th-15th</span>
+				<span class="item-info">perl.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="https://twit.tv/shows/triangulation/episodes/225" class="item-link" target="_blank">Triangulation 225 - Leo Laporte talks with Larry Wall</a>
-			<div>
-				<a href="http://twit.tv" class="source" target="_blank">twit.tv</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://twit.tv/shows/triangulation/episodes/225" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://twit.tv/shows/triangulation/episodes/225&text=Triangulation 225 - Leo Laporte talks with Larry Wall" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://twit.tv/shows/triangulation/episodes/225" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://twit.tv/shows/triangulation/episodes/225&title=Triangulation 225 - Leo Laporte talks with Larry Wall" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://twit.tv/shows/triangulation/episodes/225" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://twit.tv/shows/triangulation/episodes/225">
+				<span class="item-title">Triangulation 225 - Leo Laporte talks with Larry Wall</span>
+				<span class="item-info">twit.tv</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="https://twit.tv/shows/floss-weekly/episodes/363?autostart=false" class="item-link" target="_blank">FLOSS Weekly 363 - DBIx::Class</a>
-			<div>
-				<a href="http://twit.tv" class="source" target="_blank">twit.tv</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://twit.tv/shows/floss-weekly/episodes/363?autostart=false" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://twit.tv/shows/floss-weekly/episodes/363?autostart=false&text=FLOSS Weekly 363 - DBIx::Class" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://twit.tv/shows/floss-weekly/episodes/363?autostart=false" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://twit.tv/shows/floss-weekly/episodes/363?autostart=false&title=FLOSS Weekly 363 - DBIx::Class" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://twit.tv/shows/floss-weekly/episodes/363?autostart=false" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://twit.tv/shows/floss-weekly/episodes/363?autostart=false">
+				<span class="item-title">FLOSS Weekly 363 - DBIx::Class</span>
+				<span class="item-info">twit.tv</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="https://6guts.wordpress.com/2015/11/21/what-one-christmas-elf-has-been-up-to/" class="item-link" target="_blank">What one Christmas elf has been up to</a>
-			<div>
-				<a href="http://wordpress.com" class="source" target="_blank">wordpress.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://6guts.wordpress.com/2015/11/21/what-one-christmas-elf-has-been-up-to/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://6guts.wordpress.com/2015/11/21/what-one-christmas-elf-has-been-up-to/&text=What one Christmas elf has been up to" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://6guts.wordpress.com/2015/11/21/what-one-christmas-elf-has-been-up-to/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://6guts.wordpress.com/2015/11/21/what-one-christmas-elf-has-been-up-to/&title=What one Christmas elf has been up to" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://6guts.wordpress.com/2015/11/21/what-one-christmas-elf-has-been-up-to/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://6guts.wordpress.com/2015/11/21/what-one-christmas-elf-has-been-up-to/">
+				<span class="item-title">What one Christmas elf has been up to</span>
+				<span class="item-info">wordpress.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://szabgab.com/gratipay.html" class="item-link" target="_blank">Supporting the Perl Weekly?</a>
-			<div>
-				<a href="http://szabgab.com" class="source" target="_blank">szabgab.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://szabgab.com/gratipay.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://szabgab.com/gratipay.html&text=Supporting the Perl Weekly?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://szabgab.com/gratipay.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://szabgab.com/gratipay.html&title=Supporting the Perl Weekly?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://szabgab.com/gratipay.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://szabgab.com/gratipay.html">
+				<span class="item-title">Supporting the Perl Weekly?</span>
+				<span class="item-info">szabgab.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blog.foswiki.org/foswiki-2-0-3-is-released/" class="item-link" target="_blank">Foswiki 2.0.3 is released</a>
-			<div>
-				<a href="http://foswiki.org" class="source" target="_blank">foswiki.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.foswiki.org/foswiki-2-0-3-is-released/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.foswiki.org/foswiki-2-0-3-is-released/&text=Foswiki 2.0.3 is released" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.foswiki.org/foswiki-2-0-3-is-released/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.foswiki.org/foswiki-2-0-3-is-released/&title=Foswiki 2.0.3 is released" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.foswiki.org/foswiki-2-0-3-is-released/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.foswiki.org/foswiki-2-0-3-is-released/">
+				<span class="item-title">Foswiki 2.0.3 is released</span>
+				<span class="item-info">foswiki.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="https://www.nu42.com/2015/11/ghcn-climate-files.html" class="item-link" target="_blank">Dive into the Global Historical Climatology Network data using Perl and SQL</a>
-			<div>
-				<a href="http://nu42.com" class="source" target="_blank">nu42.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.nu42.com/2015/11/ghcn-climate-files.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.nu42.com/2015/11/ghcn-climate-files.html&text=Dive into the Global Historical Climatology Network data using Perl and SQL" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.nu42.com/2015/11/ghcn-climate-files.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.nu42.com/2015/11/ghcn-climate-files.html&title=Dive into the Global Historical Climatology Network data using Perl and SQL" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.nu42.com/2015/11/ghcn-climate-files.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.nu42.com/2015/11/ghcn-climate-files.html">
+				<span class="item-title">Dive into the Global Historical Climatology Network data using Perl and SQL</span>
+				<span class="item-info">nu42.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://savage.net.au/Ron/html/Understanding.Marpa-style.action.subs.parameters.html" class="item-link" target="_blank">Understanding Marpa-style action subs parameters</a>
-			<div>
-				<a href="http://savage.net.au" class="source" target="_blank">savage.net.au</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://savage.net.au/Ron/html/Understanding.Marpa-style.action.subs.parameters.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://savage.net.au/Ron/html/Understanding.Marpa-style.action.subs.parameters.html&text=Understanding Marpa-style action subs parameters" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://savage.net.au/Ron/html/Understanding.Marpa-style.action.subs.parameters.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://savage.net.au/Ron/html/Understanding.Marpa-style.action.subs.parameters.html&title=Understanding Marpa-style action subs parameters" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://savage.net.au/Ron/html/Understanding.Marpa-style.action.subs.parameters.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://savage.net.au/Ron/html/Understanding.Marpa-style.action.subs.parameters.html">
+				<span class="item-title">Understanding Marpa-style action subs parameters</span>
+				<span class="item-info">savage.net.au</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://www.learning-perl.com/2015/11/should-we-call-it-learning-perl-5/" class="item-link" target="_blank">Should we call it "Learning Perl 5"</a>
-			<div>
-				<a href="http://learning-perl.com" class="source" target="_blank">learning-perl.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.learning-perl.com/2015/11/should-we-call-it-learning-perl-5/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.learning-perl.com/2015/11/should-we-call-it-learning-perl-5/&text=Should we call it "Learning Perl 5"" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.learning-perl.com/2015/11/should-we-call-it-learning-perl-5/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.learning-perl.com/2015/11/should-we-call-it-learning-perl-5/&title=Should we call it "Learning Perl 5"" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.learning-perl.com/2015/11/should-we-call-it-learning-perl-5/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.learning-perl.com/2015/11/should-we-call-it-learning-perl-5/">
+				<span class="item-title">Should we call it "Learning Perl 5"</span>
+				<span class="item-info">learning-perl.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blogs.perl.org/users/melezhik/2015/11/bootstraping-test-infrastructure-for-mojo-application-using-swat.html" class="item-link" target="_blank">Bootstrapping test infrastructure for mojo application using swat</a>
-			<div>
-				<a href="http://perl.org" class="source" target="_blank">perl.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blogs.perl.org/users/melezhik/2015/11/bootstraping-test-infrastructure-for-mojo-application-using-swat.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blogs.perl.org/users/melezhik/2015/11/bootstraping-test-infrastructure-for-mojo-application-using-swat.html&text=Bootstrapping test infrastructure for mojo application using swat" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blogs.perl.org/users/melezhik/2015/11/bootstraping-test-infrastructure-for-mojo-application-using-swat.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blogs.perl.org/users/melezhik/2015/11/bootstraping-test-infrastructure-for-mojo-application-using-swat.html&title=Bootstrapping test infrastructure for mojo application using swat" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blogs.perl.org/users/melezhik/2015/11/bootstraping-test-infrastructure-for-mojo-application-using-swat.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blogs.perl.org/users/melezhik/2015/11/bootstraping-test-infrastructure-for-mojo-application-using-swat.html">
+				<span class="item-title">Bootstrapping test infrastructure for mojo application using swat</span>
+				<span class="item-info">perl.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://blogs.perl.org/users/ovid/2015/11/improved-syntax-highlighting-in-the-debugger.html" class="item-link" target="_blank">Improved Syntax Highlighting in the Debugger</a>
-			<div>
-				<a href="http://perl.org" class="source" target="_blank">perl.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blogs.perl.org/users/ovid/2015/11/improved-syntax-highlighting-in-the-debugger.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blogs.perl.org/users/ovid/2015/11/improved-syntax-highlighting-in-the-debugger.html&text=Improved Syntax Highlighting in the Debugger" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blogs.perl.org/users/ovid/2015/11/improved-syntax-highlighting-in-the-debugger.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blogs.perl.org/users/ovid/2015/11/improved-syntax-highlighting-in-the-debugger.html&title=Improved Syntax Highlighting in the Debugger" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blogs.perl.org/users/ovid/2015/11/improved-syntax-highlighting-in-the-debugger.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blogs.perl.org/users/ovid/2015/11/improved-syntax-highlighting-in-the-debugger.html">
+				<span class="item-title">Improved Syntax Highlighting in the Debugger</span>
+				<span class="item-info">perl.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="http://perlmaven.com/oop" class="item-link" target="_blank">OOP - Object Oriented Perl</a>
-			<div>
-				<a href="http://perlmaven.com" class="source" target="_blank">perlmaven.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://perlmaven.com/oop" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://perlmaven.com/oop&text=OOP - Object Oriented Perl" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://perlmaven.com/oop" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://perlmaven.com/oop&title=OOP - Object Oriented Perl" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://perlmaven.com/oop" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://perlmaven.com/oop">
+				<span class="item-title">OOP - Object Oriented Perl</span>
+				<span class="item-info">perlmaven.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 24</div>
-			<a href="https://careers.stackoverflow.com/jobs/101754/senior-applications-engineer-uniregistry" class="item-link" target="_blank">Senior Applications Engineer</a>
-			<div>
-				<a href="http://stackoverflow.com" class="source" target="_blank">stackoverflow.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://careers.stackoverflow.com/jobs/101754/senior-applications-engineer-uniregistry" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://careers.stackoverflow.com/jobs/101754/senior-applications-engineer-uniregistry&text=Senior Applications Engineer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://careers.stackoverflow.com/jobs/101754/senior-applications-engineer-uniregistry" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://careers.stackoverflow.com/jobs/101754/senior-applications-engineer-uniregistry&title=Senior Applications Engineer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://careers.stackoverflow.com/jobs/101754/senior-applications-engineer-uniregistry" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://careers.stackoverflow.com/jobs/101754/senior-applications-engineer-uniregistry">
+				<span class="item-title">Senior Applications Engineer</span>
+				<span class="item-info">stackoverflow.com</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -465,33 +343,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

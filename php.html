@@ -32,791 +32,461 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" selected>PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" selected>PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>php</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>php</h2>
-		Sources: 
-					<a href="http://www.phpweekly.com/" target="_blank">PHP Weekly</a>
-			</div>
-		<div class="small">Last updated: 2015-11-27 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 27</div>
-			<a href="https://github.com/filp/whoops" class="item-link" target="_blank">whoops</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/filp/whoops" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/filp/whoops&text=whoops" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/filp/whoops" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/filp/whoops&title=whoops" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/filp/whoops" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://github.com/filp/whoops">
+				<span class="item-title">whoops</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://launchbit.com/taz/10754-5882-*|EMAIL_UID|*" class="item-link" target="_blank">DataNerd</a>
-			<div>
-				<a href="http://launchbit.com" class="source" target="_blank">launchbit.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://launchbit.com/taz/10754-5882-*|EMAIL_UID|*" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://launchbit.com/taz/10754-5882-*|EMAIL_UID|*&text=DataNerd" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://launchbit.com/taz/10754-5882-*|EMAIL_UID|*" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://launchbit.com/taz/10754-5882-*|EMAIL_UID|*&title=DataNerd" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://launchbit.com/taz/10754-5882-*|EMAIL_UID|*" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://launchbit.com/taz/10754-5882-*|EMAIL_UID|*">
+				<span class="item-title">DataNerd</span>
+				<span class="item-info">launchbit.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/PHPBoost/PHPBoost" class="item-link" target="_blank">phpboost</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/PHPBoost/PHPBoost" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/PHPBoost/PHPBoost&text=phpboost" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/PHPBoost/PHPBoost" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/PHPBoost/PHPBoost&title=phpboost" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/PHPBoost/PHPBoost" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/PHPBoost/PHPBoost">
+				<span class="item-title">phpboost</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/spress/Spress" class="item-link" target="_blank">spress</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/spress/Spress" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/spress/Spress&text=spress" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/spress/Spress" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/spress/Spress&title=spress" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/spress/Spress" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/spress/Spress">
+				<span class="item-title">spress</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/szymach/c-pchart" class="item-link" target="_blank">c-pchart</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/szymach/c-pchart" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/szymach/c-pchart&text=c-pchart" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/szymach/c-pchart" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/szymach/c-pchart&title=c-pchart" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/szymach/c-pchart" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/szymach/c-pchart">
+				<span class="item-title">c-pchart</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/servo-php/fluidxml" class="item-link" target="_blank">fluidxml</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/servo-php/fluidxml" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/servo-php/fluidxml&text=fluidxml" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/servo-php/fluidxml" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/servo-php/fluidxml&title=fluidxml" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/servo-php/fluidxml" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/servo-php/fluidxml">
+				<span class="item-title">fluidxml</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/crysalead/kahlan" class="item-link" target="_blank">kahlan</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/crysalead/kahlan" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/crysalead/kahlan&text=kahlan" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/crysalead/kahlan" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/crysalead/kahlan&title=kahlan" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/crysalead/kahlan" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/crysalead/kahlan">
+				<span class="item-title">kahlan</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/dshorthouse/SimpleMappr" class="item-link" target="_blank">simplemappr</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/dshorthouse/SimpleMappr" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/dshorthouse/SimpleMappr&text=simplemappr" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/dshorthouse/SimpleMappr" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/dshorthouse/SimpleMappr&title=simplemappr" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/dshorthouse/SimpleMappr" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/dshorthouse/SimpleMappr">
+				<span class="item-title">simplemappr</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/phpfunct/funct" class="item-link" target="_blank">funct</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/phpfunct/funct" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/phpfunct/funct&text=funct" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/phpfunct/funct" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/phpfunct/funct&title=funct" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/phpfunct/funct" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/phpfunct/funct">
+				<span class="item-title">funct</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.pchart.net/" class="item-link" target="_blank">pchart</a>
-			<div>
-				<a href="http://pchart.net" class="source" target="_blank">pchart.net</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.pchart.net/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.pchart.net/&text=pchart" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.pchart.net/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.pchart.net/&title=pchart" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.pchart.net/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.pchart.net/">
+				<span class="item-title">pchart</span>
+				<span class="item-info">pchart.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/badphp/dispatch" class="item-link" target="_blank">dispatch</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/badphp/dispatch" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/badphp/dispatch&text=dispatch" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/badphp/dispatch" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/badphp/dispatch&title=dispatch" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/badphp/dispatch" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/badphp/dispatch">
+				<span class="item-title">dispatch</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.phpaes.com/" class="item-link" target="_blank">phpaes</a>
-			<div>
-				<a href="http://phpaes.com" class="source" target="_blank">phpaes.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.phpaes.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.phpaes.com/&text=phpaes" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.phpaes.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.phpaes.com/&title=phpaes" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.phpaes.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.phpaes.com/">
+				<span class="item-title">phpaes</span>
+				<span class="item-info">phpaes.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/minkphp/phpunit-mink" class="item-link" target="_blank">phpunit-mink</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/minkphp/phpunit-mink" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/minkphp/phpunit-mink&text=phpunit-mink" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/minkphp/phpunit-mink" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/minkphp/phpunit-mink&title=phpunit-mink" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/minkphp/phpunit-mink" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/minkphp/phpunit-mink">
+				<span class="item-title">phpunit-mink</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/krakjoe/ustring" class="item-link" target="_blank">ustring</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/krakjoe/ustring" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/krakjoe/ustring&text=ustring" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/krakjoe/ustring" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/krakjoe/ustring&title=ustring" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/krakjoe/ustring" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/krakjoe/ustring">
+				<span class="item-title">ustring</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/fzaninotto/Faker" class="item-link" target="_blank">faker</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/fzaninotto/Faker" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/fzaninotto/Faker&text=faker" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/fzaninotto/Faker" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/fzaninotto/Faker&title=faker" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/fzaninotto/Faker" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/fzaninotto/Faker">
+				<span class="item-title">faker</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://socketo.me/" class="item-link" target="_blank">ratchet</a>
-			<div>
-				<a href="http://socketo.me" class="source" target="_blank">socketo.me</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://socketo.me/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://socketo.me/&text=ratchet" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://socketo.me/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://socketo.me/&title=ratchet" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://socketo.me/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://socketo.me/">
+				<span class="item-title">ratchet</span>
+				<span class="item-info">socketo.me</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/opulencephp/Opulence" class="item-link" target="_blank">opulence</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/opulencephp/Opulence" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/opulencephp/Opulence&text=opulence" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/opulencephp/Opulence" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/opulencephp/Opulence&title=opulence" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/opulencephp/Opulence" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/opulencephp/Opulence">
+				<span class="item-title">opulence</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.fullstackradio.com/30" class="item-link" target="_blank">Full Stack Radio Podcast Episode 30: Evan You - Diving Deep into Vue.js</a>
-			<div>
-				<a href="http://fullstackradio.com" class="source" target="_blank">fullstackradio.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.fullstackradio.com/30" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.fullstackradio.com/30&text=Full Stack Radio Podcast Episode 30: Evan You - Diving Deep into Vue.js" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.fullstackradio.com/30" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.fullstackradio.com/30&title=Full Stack Radio Podcast Episode 30: Evan You - Diving Deep into Vue.js" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.fullstackradio.com/30" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.fullstackradio.com/30">
+				<span class="item-title">Full Stack Radio Podcast Episode 30: Evan You - Diving Deep into Vue.js</span>
+				<span class="item-info">fullstackradio.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://blog.feryn.eu/2015/11/09/varnish-where-developers-sysadmins-meet/" class="item-link" target="_blank">Varnish: Where Developers & Sysadmins Meet</a>
-			<div>
-				<a href="http://feryn.eu" class="source" target="_blank">feryn.eu</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.feryn.eu/2015/11/09/varnish-where-developers-sysadmins-meet/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.feryn.eu/2015/11/09/varnish-where-developers-sysadmins-meet/&text=Varnish: Where Developers & Sysadmins Meet" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.feryn.eu/2015/11/09/varnish-where-developers-sysadmins-meet/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.feryn.eu/2015/11/09/varnish-where-developers-sysadmins-meet/&title=Varnish: Where Developers & Sysadmins Meet" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.feryn.eu/2015/11/09/varnish-where-developers-sysadmins-meet/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.feryn.eu/2015/11/09/varnish-where-developers-sysadmins-meet/">
+				<span class="item-title">Varnish: Where Developers & Sysadmins Meet</span>
+				<span class="item-info">feryn.eu</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://voicesoftheelephpant.com/2015/11/23/periscope-sebastian-bergmann/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+VoicesOfTheElephpant+%28Voices+of+the+ElePHPant%29" class="item-link" target="_blank">Voice of the ElePHPant - Periscope - Sebastian Bergmann</a>
-			<div>
-				<a href="http://voicesoftheelephpant.com" class="source" target="_blank">voicesoftheelephpant.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://voicesoftheelephpant.com/2015/11/23/periscope-sebastian-bergmann/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+VoicesOfTheElephpant+%28Voices+of+the+ElePHPant%29" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://voicesoftheelephpant.com/2015/11/23/periscope-sebastian-bergmann/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+VoicesOfTheElephpant+%28Voices+of+the+ElePHPant%29&text=Voice of the ElePHPant - Periscope - Sebastian Bergmann" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://voicesoftheelephpant.com/2015/11/23/periscope-sebastian-bergmann/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+VoicesOfTheElephpant+%28Voices+of+the+ElePHPant%29" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://voicesoftheelephpant.com/2015/11/23/periscope-sebastian-bergmann/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+VoicesOfTheElephpant+%28Voices+of+the+ElePHPant%29&title=Voice of the ElePHPant - Periscope - Sebastian Bergmann" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://voicesoftheelephpant.com/2015/11/23/periscope-sebastian-bergmann/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+VoicesOfTheElephpant+%28Voices+of+the+ElePHPant%29" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://voicesoftheelephpant.com/2015/11/23/periscope-sebastian-bergmann/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+VoicesOfTheElephpant+%28Voices+of+the+ElePHPant%29">
+				<span class="item-title">Voice of the ElePHPant - Periscope - Sebastian Bergmann</span>
+				<span class="item-info">voicesoftheelephpant.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.johnmorrisonline.com/periscope-how-do-i-create-a-multilingual-website-using-php/" class="item-link" target="_blank">How Do I Create a Multilingual Website Using PHP?</a>
-			<div>
-				<a href="http://johnmorrisonline.com" class="source" target="_blank">johnmorrisonline.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.johnmorrisonline.com/periscope-how-do-i-create-a-multilingual-website-using-php/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.johnmorrisonline.com/periscope-how-do-i-create-a-multilingual-website-using-php/&text=How Do I Create a Multilingual Website Using PHP?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.johnmorrisonline.com/periscope-how-do-i-create-a-multilingual-website-using-php/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.johnmorrisonline.com/periscope-how-do-i-create-a-multilingual-website-using-php/&title=How Do I Create a Multilingual Website Using PHP?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.johnmorrisonline.com/periscope-how-do-i-create-a-multilingual-website-using-php/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.johnmorrisonline.com/periscope-how-do-i-create-a-multilingual-website-using-php/">
+				<span class="item-title">How Do I Create a Multilingual Website Using PHP?</span>
+				<span class="item-info">johnmorrisonline.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://www.youtube.com/watch?v=xKefsl_UiM0" class="item-link" target="_blank">Laravel: Lessons Learned - php[world] 2015 - Taylor Otwell</a>
-			<div>
-				<a href="http://youtube.com" class="source" target="_blank">youtube.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.youtube.com/watch?v=xKefsl_UiM0" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.youtube.com/watch?v=xKefsl_UiM0&text=Laravel: Lessons Learned - php[world] 2015 - Taylor Otwell" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.youtube.com/watch?v=xKefsl_UiM0" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.youtube.com/watch?v=xKefsl_UiM0&title=Laravel: Lessons Learned - php[world] 2015 - Taylor Otwell" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.youtube.com/watch?v=xKefsl_UiM0" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.youtube.com/watch?v=xKefsl_UiM0">
+				<span class="item-title">Laravel: Lessons Learned - php[world] 2015 - Taylor Otwell</span>
+				<span class="item-info">youtube.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.amazon.co.uk/gp/product/1491911468?keywords=php&qid=1447608578&ref_=sr_1_33&s=books&sr=1-33" class="item-link" target="_blank">Programmer's Guide to Drupal: Principles, Practices, and Pitfalls Paperback (by Jennifer Hodgdon, published 5 Nov 2015)</a>
-			<div>
-				<a href="http://amazon.co.uk" class="source" target="_blank">amazon.co.uk</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.amazon.co.uk/gp/product/1491911468?keywords=php&qid=1447608578&ref_=sr_1_33&s=books&sr=1-33" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.amazon.co.uk/gp/product/1491911468?keywords=php&qid=1447608578&ref_=sr_1_33&s=books&sr=1-33&text=Programmer's Guide to Drupal: Principles, Practices, and Pitfalls Paperback (by Jennifer Hodgdon, published 5 Nov 2015)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.amazon.co.uk/gp/product/1491911468?keywords=php&qid=1447608578&ref_=sr_1_33&s=books&sr=1-33" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.amazon.co.uk/gp/product/1491911468?keywords=php&qid=1447608578&ref_=sr_1_33&s=books&sr=1-33&title=Programmer's Guide to Drupal: Principles, Practices, and Pitfalls Paperback (by Jennifer Hodgdon, published 5 Nov 2015)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.amazon.co.uk/gp/product/1491911468?keywords=php&qid=1447608578&ref_=sr_1_33&s=books&sr=1-33" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.amazon.co.uk/gp/product/1491911468?keywords=php&qid=1447608578&ref_=sr_1_33&s=books&sr=1-33">
+				<span class="item-title">Programmer's Guide to Drupal: Principles, Practices, and Pitfalls Paperback (by Jennifer Hodgdon, published 5 Nov 2015)</span>
+				<span class="item-info">amazon.co.uk</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.phpnexus.com/" class="item-link" target="_blank">phpnexus</a>
-			<div>
-				<a href="http://phpnexus.com" class="source" target="_blank">phpnexus.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.phpnexus.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.phpnexus.com/&text=phpnexus" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.phpnexus.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.phpnexus.com/&title=phpnexus" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.phpnexus.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.phpnexus.com/">
+				<span class="item-title">phpnexus</span>
+				<span class="item-info">phpnexus.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/bitExpert/adroit" class="item-link" target="_blank">adroit</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/bitExpert/adroit" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/bitExpert/adroit&text=adroit" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/bitExpert/adroit" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/bitExpert/adroit&title=adroit" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/bitExpert/adroit" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/bitExpert/adroit">
+				<span class="item-title">adroit</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://confoo.ca/en" class="item-link" target="_blank">ConFoo.CA - February 24-26th 2016, Montreal</a>
-			<div>
-				<a href="http://confoo.ca" class="source" target="_blank">confoo.ca</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://confoo.ca/en" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://confoo.ca/en&text=ConFoo.CA - February 24-26th 2016, Montreal" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://confoo.ca/en" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://confoo.ca/en&title=ConFoo.CA - February 24-26th 2016, Montreal" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://confoo.ca/en" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://confoo.ca/en">
+				<span class="item-title">ConFoo.CA - February 24-26th 2016, Montreal</span>
+				<span class="item-info">confoo.ca</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://nomadphp.com/2015/09/18/using-apigility-to-build-apis-everyone-can-enjoy/" class="item-link" target="_blank">Nomad PHP US - December 17th 2015 20:00 CDT</a>
-			<div>
-				<a href="http://nomadphp.com" class="source" target="_blank">nomadphp.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://nomadphp.com/2015/09/18/using-apigility-to-build-apis-everyone-can-enjoy/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://nomadphp.com/2015/09/18/using-apigility-to-build-apis-everyone-can-enjoy/&text=Nomad PHP US - December 17th 2015 20:00 CDT" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://nomadphp.com/2015/09/18/using-apigility-to-build-apis-everyone-can-enjoy/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://nomadphp.com/2015/09/18/using-apigility-to-build-apis-everyone-can-enjoy/&title=Nomad PHP US - December 17th 2015 20:00 CDT" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://nomadphp.com/2015/09/18/using-apigility-to-build-apis-everyone-can-enjoy/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://nomadphp.com/2015/09/18/using-apigility-to-build-apis-everyone-can-enjoy/">
+				<span class="item-title">Nomad PHP US - December 17th 2015 20:00 CDT</span>
+				<span class="item-info">nomadphp.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://nomadphp.com/2015/09/18/nomadphp-2015-12-eu/" class="item-link" target="_blank">Nomad PHP EU - December 17th 2015 20:00 CET</a>
-			<div>
-				<a href="http://nomadphp.com" class="source" target="_blank">nomadphp.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://nomadphp.com/2015/09/18/nomadphp-2015-12-eu/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://nomadphp.com/2015/09/18/nomadphp-2015-12-eu/&text=Nomad PHP EU - December 17th 2015 20:00 CET" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://nomadphp.com/2015/09/18/nomadphp-2015-12-eu/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://nomadphp.com/2015/09/18/nomadphp-2015-12-eu/&title=Nomad PHP EU - December 17th 2015 20:00 CET" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://nomadphp.com/2015/09/18/nomadphp-2015-12-eu/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://nomadphp.com/2015/09/18/nomadphp-2015-12-eu/">
+				<span class="item-title">Nomad PHP EU - December 17th 2015 20:00 CET</span>
+				<span class="item-info">nomadphp.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.phpclasses.org/blog/post/329-PHP-and-JavaScript-Innovation-Award-Report-November-2015-Edition--August-2015-nominees.html" class="item-link" target="_blank">PHP and JavaScript Innovation Award Report November 2015 Edition - August 2015 Nominees</a>
-			<div>
-				<a href="http://phpclasses.org" class="source" target="_blank">phpclasses.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.phpclasses.org/blog/post/329-PHP-and-JavaScript-Innovation-Award-Report-November-2015-Edition--August-2015-nominees.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.phpclasses.org/blog/post/329-PHP-and-JavaScript-Innovation-Award-Report-November-2015-Edition--August-2015-nominees.html&text=PHP and JavaScript Innovation Award Report November 2015 Edition - August 2015 Nominees" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.phpclasses.org/blog/post/329-PHP-and-JavaScript-Innovation-Award-Report-November-2015-Edition--August-2015-nominees.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.phpclasses.org/blog/post/329-PHP-and-JavaScript-Innovation-Award-Report-November-2015-Edition--August-2015-nominees.html&title=PHP and JavaScript Innovation Award Report November 2015 Edition - August 2015 Nominees" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.phpclasses.org/blog/post/329-PHP-and-JavaScript-Innovation-Award-Report-November-2015-Edition--August-2015-nominees.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.phpclasses.org/blog/post/329-PHP-and-JavaScript-Innovation-Award-Report-November-2015-Edition--August-2015-nominees.html">
+				<span class="item-title">PHP and JavaScript Innovation Award Report November 2015 Edition - August 2015 Nominees</span>
+				<span class="item-info">phpclasses.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://magetalk.com/episode-69-jamon-of-the-turducken/" class="item-link" target="_blank">MageTalk Magento Podcast #69 - Jamon of the Turducken</a>
-			<div>
-				<a href="http://magetalk.com" class="source" target="_blank">magetalk.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://magetalk.com/episode-69-jamon-of-the-turducken/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://magetalk.com/episode-69-jamon-of-the-turducken/&text=MageTalk Magento Podcast #69 - Jamon of the Turducken" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://magetalk.com/episode-69-jamon-of-the-turducken/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://magetalk.com/episode-69-jamon-of-the-turducken/&title=MageTalk Magento Podcast #69 - Jamon of the Turducken" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://magetalk.com/episode-69-jamon-of-the-turducken/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://magetalk.com/episode-69-jamon-of-the-turducken/">
+				<span class="item-title">MageTalk Magento Podcast #69 - Jamon of the Turducken</span>
+				<span class="item-info">magetalk.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://threedevsandamaybe.com/php-internals-catch-up-with-joe-watkins/" class="item-link" target="_blank">Three Devs and a Maybe Podcast - PHP Internals Catch-up With Joe Watkins</a>
-			<div>
-				<a href="http://threedevsandamaybe.com" class="source" target="_blank">threedevsandamaybe.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://threedevsandamaybe.com/php-internals-catch-up-with-joe-watkins/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://threedevsandamaybe.com/php-internals-catch-up-with-joe-watkins/&text=Three Devs and a Maybe Podcast - PHP Internals Catch-up With Joe Watkins" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://threedevsandamaybe.com/php-internals-catch-up-with-joe-watkins/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://threedevsandamaybe.com/php-internals-catch-up-with-joe-watkins/&title=Three Devs and a Maybe Podcast - PHP Internals Catch-up With Joe Watkins" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://threedevsandamaybe.com/php-internals-catch-up-with-joe-watkins/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://threedevsandamaybe.com/php-internals-catch-up-with-joe-watkins/">
+				<span class="item-title">Three Devs and a Maybe Podcast - PHP Internals Catch-up With Joe Watkins</span>
+				<span class="item-info">threedevsandamaybe.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.soundofsymfony.com/episode/episode-9/" class="item-link" target="_blank">Sound of Symfony Podcast: Episode 9 - The Past and Future of Symfony</a>
-			<div>
-				<a href="http://soundofsymfony.com" class="source" target="_blank">soundofsymfony.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.soundofsymfony.com/episode/episode-9/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.soundofsymfony.com/episode/episode-9/&text=Sound of Symfony Podcast: Episode 9 - The Past and Future of Symfony" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.soundofsymfony.com/episode/episode-9/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.soundofsymfony.com/episode/episode-9/&title=Sound of Symfony Podcast: Episode 9 - The Past and Future of Symfony" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.soundofsymfony.com/episode/episode-9/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.soundofsymfony.com/episode/episode-9/">
+				<span class="item-title">Sound of Symfony Podcast: Episode 9 - The Past and Future of Symfony</span>
+				<span class="item-info">soundofsymfony.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://voicesoftheelephpant.com/2015/11/17/interview-with-joshua-warren/" class="item-link" target="_blank">Voices of the ElePHPant - Interview with Joshua Warren</a>
-			<div>
-				<a href="http://voicesoftheelephpant.com" class="source" target="_blank">voicesoftheelephpant.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://voicesoftheelephpant.com/2015/11/17/interview-with-joshua-warren/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://voicesoftheelephpant.com/2015/11/17/interview-with-joshua-warren/&text=Voices of the ElePHPant - Interview with Joshua Warren" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://voicesoftheelephpant.com/2015/11/17/interview-with-joshua-warren/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://voicesoftheelephpant.com/2015/11/17/interview-with-joshua-warren/&title=Voices of the ElePHPant - Interview with Joshua Warren" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://voicesoftheelephpant.com/2015/11/17/interview-with-joshua-warren/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://voicesoftheelephpant.com/2015/11/17/interview-with-joshua-warren/">
+				<span class="item-title">Voices of the ElePHPant - Interview with Joshua Warren</span>
+				<span class="item-info">voicesoftheelephpant.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://www.acquia.com/podcast/drupal-8/resources/podcasts/part-3-drupal-8-release-mega-episode-bonus-behind-scenes/19/11/2015/3290236" class="item-link" target="_blank">Acquia Podcast: Part 3 - Drupal 8 Release Mega Episode Bonus Behind the Scenes!</a>
-			<div>
-				<a href="http://acquia.com" class="source" target="_blank">acquia.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.acquia.com/podcast/drupal-8/resources/podcasts/part-3-drupal-8-release-mega-episode-bonus-behind-scenes/19/11/2015/3290236" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.acquia.com/podcast/drupal-8/resources/podcasts/part-3-drupal-8-release-mega-episode-bonus-behind-scenes/19/11/2015/3290236&text=Acquia Podcast: Part 3 - Drupal 8 Release Mega Episode Bonus Behind the Scenes!" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.acquia.com/podcast/drupal-8/resources/podcasts/part-3-drupal-8-release-mega-episode-bonus-behind-scenes/19/11/2015/3290236" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.acquia.com/podcast/drupal-8/resources/podcasts/part-3-drupal-8-release-mega-episode-bonus-behind-scenes/19/11/2015/3290236&title=Acquia Podcast: Part 3 - Drupal 8 Release Mega Episode Bonus Behind the Scenes!" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.acquia.com/podcast/drupal-8/resources/podcasts/part-3-drupal-8-release-mega-episode-bonus-behind-scenes/19/11/2015/3290236" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.acquia.com/podcast/drupal-8/resources/podcasts/part-3-drupal-8-release-mega-episode-bonus-behind-scenes/19/11/2015/3290236">
+				<span class="item-title">Acquia Podcast: Part 3 - Drupal 8 Release Mega Episode Bonus Behind the Scenes!</span>
+				<span class="item-info">acquia.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.phpclasses.org/blog/post/327-How-to-Easily-Search-DOCX-DOC-PDF-Documents-in-PHP-Converting-them-to-Plain-Text.html" class="item-link" target="_blank">How to Easily Search DOCX, DOC, PDF Documents in PHP Converting Them to Plain Text</a>
-			<div>
-				<a href="http://phpclasses.org" class="source" target="_blank">phpclasses.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.phpclasses.org/blog/post/327-How-to-Easily-Search-DOCX-DOC-PDF-Documents-in-PHP-Converting-them-to-Plain-Text.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.phpclasses.org/blog/post/327-How-to-Easily-Search-DOCX-DOC-PDF-Documents-in-PHP-Converting-them-to-Plain-Text.html&text=How to Easily Search DOCX, DOC, PDF Documents in PHP Converting Them to Plain Text" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.phpclasses.org/blog/post/327-How-to-Easily-Search-DOCX-DOC-PDF-Documents-in-PHP-Converting-them-to-Plain-Text.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.phpclasses.org/blog/post/327-How-to-Easily-Search-DOCX-DOC-PDF-Documents-in-PHP-Converting-them-to-Plain-Text.html&title=How to Easily Search DOCX, DOC, PDF Documents in PHP Converting Them to Plain Text" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.phpclasses.org/blog/post/327-How-to-Easily-Search-DOCX-DOC-PDF-Documents-in-PHP-Converting-them-to-Plain-Text.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.phpclasses.org/blog/post/327-How-to-Easily-Search-DOCX-DOC-PDF-Documents-in-PHP-Converting-them-to-Plain-Text.html">
+				<span class="item-title">How to Easily Search DOCX, DOC, PDF Documents in PHP Converting Them to Plain Text</span>
+				<span class="item-info">phpclasses.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.eschrade.com/page/magento-selenium-testing/" class="item-link" target="_blank">Magento Selenium Testing</a>
-			<div>
-				<a href="http://eschrade.com" class="source" target="_blank">eschrade.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.eschrade.com/page/magento-selenium-testing/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.eschrade.com/page/magento-selenium-testing/&text=Magento Selenium Testing" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.eschrade.com/page/magento-selenium-testing/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.eschrade.com/page/magento-selenium-testing/&title=Magento Selenium Testing" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.eschrade.com/page/magento-selenium-testing/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.eschrade.com/page/magento-selenium-testing/">
+				<span class="item-title">Magento Selenium Testing</span>
+				<span class="item-info">eschrade.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://www.script-tutorials.com/understanding-the-details-of-wordpress-theme-development-standards/" class="item-link" target="_blank">Understanding the Details of WordPress Theme Development Standards</a>
-			<div>
-				<a href="http://script-tutorials.com" class="source" target="_blank">script-tutorials.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.script-tutorials.com/understanding-the-details-of-wordpress-theme-development-standards/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.script-tutorials.com/understanding-the-details-of-wordpress-theme-development-standards/&text=Understanding the Details of WordPress Theme Development Standards" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.script-tutorials.com/understanding-the-details-of-wordpress-theme-development-standards/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.script-tutorials.com/understanding-the-details-of-wordpress-theme-development-standards/&title=Understanding the Details of WordPress Theme Development Standards" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.script-tutorials.com/understanding-the-details-of-wordpress-theme-development-standards/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.script-tutorials.com/understanding-the-details-of-wordpress-theme-development-standards/">
+				<span class="item-title">Understanding the Details of WordPress Theme Development Standards</span>
+				<span class="item-info">script-tutorials.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.sitepoint.com/powerful-custom-entities-with-the-diffbot-php-client/" class="item-link" target="_blank">Powerful Custom Entities with the Diffbot PHP Client</a>
-			<div>
-				<a href="http://sitepoint.com" class="source" target="_blank">sitepoint.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.sitepoint.com/powerful-custom-entities-with-the-diffbot-php-client/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.sitepoint.com/powerful-custom-entities-with-the-diffbot-php-client/&text=Powerful Custom Entities with the Diffbot PHP Client" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.sitepoint.com/powerful-custom-entities-with-the-diffbot-php-client/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.sitepoint.com/powerful-custom-entities-with-the-diffbot-php-client/&title=Powerful Custom Entities with the Diffbot PHP Client" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.sitepoint.com/powerful-custom-entities-with-the-diffbot-php-client/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.sitepoint.com/powerful-custom-entities-with-the-diffbot-php-client/">
+				<span class="item-title">Powerful Custom Entities with the Diffbot PHP Client</span>
+				<span class="item-info">sitepoint.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://framework.zend.com/blog/zend-framework-1-12-17-and-2-4-9-released.html" class="item-link" target="_blank">Zend Framework 1.12.17 and 2.4.9 Released!</a>
-			<div>
-				<a href="http://zend.com" class="source" target="_blank">zend.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://framework.zend.com/blog/zend-framework-1-12-17-and-2-4-9-released.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://framework.zend.com/blog/zend-framework-1-12-17-and-2-4-9-released.html&text=Zend Framework 1.12.17 and 2.4.9 Released!" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://framework.zend.com/blog/zend-framework-1-12-17-and-2-4-9-released.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://framework.zend.com/blog/zend-framework-1-12-17-and-2-4-9-released.html&title=Zend Framework 1.12.17 and 2.4.9 Released!" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://framework.zend.com/blog/zend-framework-1-12-17-and-2-4-9-released.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://framework.zend.com/blog/zend-framework-1-12-17-and-2-4-9-released.html">
+				<span class="item-title">Zend Framework 1.12.17 and 2.4.9 Released!</span>
+				<span class="item-info">zend.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://2016.sunshinephp.com/" class="item-link" target="_blank">Sunshine PHP Conference - February 4-6th 2016, Miami</a>
-			<div>
-				<a href="http://sunshinephp.com" class="source" target="_blank">sunshinephp.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://2016.sunshinephp.com/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://2016.sunshinephp.com/&text=Sunshine PHP Conference - February 4-6th 2016, Miami" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://2016.sunshinephp.com/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://2016.sunshinephp.com/&title=Sunshine PHP Conference - February 4-6th 2016, Miami" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://2016.sunshinephp.com/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://2016.sunshinephp.com/">
+				<span class="item-title">Sunshine PHP Conference - February 4-6th 2016, Miami</span>
+				<span class="item-info">sunshinephp.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://symfony.com/blog/newsflash-symfonycon-paris-2015-is-less-than-two-weeks-away-it-s-now-awards-time" class="item-link" target="_blank">Voting is Open for the Symfony Community Awards 2015</a>
-			<div>
-				<a href="http://symfony.com" class="source" target="_blank">symfony.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://symfony.com/blog/newsflash-symfonycon-paris-2015-is-less-than-two-weeks-away-it-s-now-awards-time" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://symfony.com/blog/newsflash-symfonycon-paris-2015-is-less-than-two-weeks-away-it-s-now-awards-time&text=Voting is Open for the Symfony Community Awards 2015" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://symfony.com/blog/newsflash-symfonycon-paris-2015-is-less-than-two-weeks-away-it-s-now-awards-time" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://symfony.com/blog/newsflash-symfonycon-paris-2015-is-less-than-two-weeks-away-it-s-now-awards-time&title=Voting is Open for the Symfony Community Awards 2015" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://symfony.com/blog/newsflash-symfonycon-paris-2015-is-less-than-two-weeks-away-it-s-now-awards-time" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://symfony.com/blog/newsflash-symfonycon-paris-2015-is-less-than-two-weeks-away-it-s-now-awards-time">
+				<span class="item-title">Voting is Open for the Symfony Community Awards 2015</span>
+				<span class="item-info">symfony.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://www.symfony.fi/entry/the-future-of-wordpress-is-javascript" class="item-link" target="_blank">The Future of WordPress is JavaScript</a>
-			<div>
-				<a href="http://symfony.fi" class="source" target="_blank">symfony.fi</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.symfony.fi/entry/the-future-of-wordpress-is-javascript" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.symfony.fi/entry/the-future-of-wordpress-is-javascript&text=The Future of WordPress is JavaScript" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.symfony.fi/entry/the-future-of-wordpress-is-javascript" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.symfony.fi/entry/the-future-of-wordpress-is-javascript&title=The Future of WordPress is JavaScript" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.symfony.fi/entry/the-future-of-wordpress-is-javascript" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.symfony.fi/entry/the-future-of-wordpress-is-javascript">
+				<span class="item-title">The Future of WordPress is JavaScript</span>
+				<span class="item-info">symfony.fi</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://code.tutsplus.com/articles/magento-theme-development-bootstrapping--cms-24590" class="item-link" target="_blank">Magento Theme Development: Bootstrapping</a>
-			<div>
-				<a href="http://tutsplus.com" class="source" target="_blank">tutsplus.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://code.tutsplus.com/articles/magento-theme-development-bootstrapping--cms-24590" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://code.tutsplus.com/articles/magento-theme-development-bootstrapping--cms-24590&text=Magento Theme Development: Bootstrapping" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://code.tutsplus.com/articles/magento-theme-development-bootstrapping--cms-24590" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://code.tutsplus.com/articles/magento-theme-development-bootstrapping--cms-24590&title=Magento Theme Development: Bootstrapping" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://code.tutsplus.com/articles/magento-theme-development-bootstrapping--cms-24590" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://code.tutsplus.com/articles/magento-theme-development-bootstrapping--cms-24590">
+				<span class="item-title">Magento Theme Development: Bootstrapping</span>
+				<span class="item-info">tutsplus.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.phpclasses.org/blog/package/9459/post/1-PHP-Automated-SMS-Gateway-for-Request-and-Response-Service--Part-1--The-Basics.html" class="item-link" target="_blank">PHP Automated SMS Gateway for Request and Response Service - Part 1 - The Basics</a>
-			<div>
-				<a href="http://phpclasses.org" class="source" target="_blank">phpclasses.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.phpclasses.org/blog/package/9459/post/1-PHP-Automated-SMS-Gateway-for-Request-and-Response-Service--Part-1--The-Basics.html" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.phpclasses.org/blog/package/9459/post/1-PHP-Automated-SMS-Gateway-for-Request-and-Response-Service--Part-1--The-Basics.html&text=PHP Automated SMS Gateway for Request and Response Service - Part 1 - The Basics" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.phpclasses.org/blog/package/9459/post/1-PHP-Automated-SMS-Gateway-for-Request-and-Response-Service--Part-1--The-Basics.html" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.phpclasses.org/blog/package/9459/post/1-PHP-Automated-SMS-Gateway-for-Request-and-Response-Service--Part-1--The-Basics.html&title=PHP Automated SMS Gateway for Request and Response Service - Part 1 - The Basics" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.phpclasses.org/blog/package/9459/post/1-PHP-Automated-SMS-Gateway-for-Request-and-Response-Service--Part-1--The-Basics.html" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.phpclasses.org/blog/package/9459/post/1-PHP-Automated-SMS-Gateway-for-Request-and-Response-Service--Part-1--The-Basics.html">
+				<span class="item-title">PHP Automated SMS Gateway for Request and Response Service - Part 1 - The Basics</span>
+				<span class="item-info">phpclasses.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://code.tutsplus.com/articles/the-beginners-guide-to-woocommerce-adding-coupons-general-settings-part-2--cms-22793" class="item-link" target="_blank">The Beginners Guide to WooCommerce: Adding Coupons - General Settings Part 2</a>
-			<div>
-				<a href="http://tutsplus.com" class="source" target="_blank">tutsplus.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://code.tutsplus.com/articles/the-beginners-guide-to-woocommerce-adding-coupons-general-settings-part-2--cms-22793" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://code.tutsplus.com/articles/the-beginners-guide-to-woocommerce-adding-coupons-general-settings-part-2--cms-22793&text=The Beginners Guide to WooCommerce: Adding Coupons - General Settings Part 2" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://code.tutsplus.com/articles/the-beginners-guide-to-woocommerce-adding-coupons-general-settings-part-2--cms-22793" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://code.tutsplus.com/articles/the-beginners-guide-to-woocommerce-adding-coupons-general-settings-part-2--cms-22793&title=The Beginners Guide to WooCommerce: Adding Coupons - General Settings Part 2" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://code.tutsplus.com/articles/the-beginners-guide-to-woocommerce-adding-coupons-general-settings-part-2--cms-22793" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://code.tutsplus.com/articles/the-beginners-guide-to-woocommerce-adding-coupons-general-settings-part-2--cms-22793">
+				<span class="item-title">The Beginners Guide to WooCommerce: Adding Coupons - General Settings Part 2</span>
+				<span class="item-info">tutsplus.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://www.designedbyaturtle.co.uk/2015/enabling-http2-support-on-apache2-and-php/" class="item-link" target="_blank">Enabling HTTP/2 Support on Apache2 and PHP</a>
-			<div>
-				<a href="http://designedbyaturtle.co.uk" class="source" target="_blank">designedbyaturtle.co.uk</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.designedbyaturtle.co.uk/2015/enabling-http2-support-on-apache2-and-php/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.designedbyaturtle.co.uk/2015/enabling-http2-support-on-apache2-and-php/&text=Enabling HTTP/2 Support on Apache2 and PHP" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.designedbyaturtle.co.uk/2015/enabling-http2-support-on-apache2-and-php/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.designedbyaturtle.co.uk/2015/enabling-http2-support-on-apache2-and-php/&title=Enabling HTTP/2 Support on Apache2 and PHP" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.designedbyaturtle.co.uk/2015/enabling-http2-support-on-apache2-and-php/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.designedbyaturtle.co.uk/2015/enabling-http2-support-on-apache2-and-php/">
+				<span class="item-title">Enabling HTTP/2 Support on Apache2 and PHP</span>
+				<span class="item-info">designedbyaturtle.co.uk</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.lornajane.net/posts/2015/git-wont-check-out-a-path-it-autocompleted" class="item-link" target="_blank">Git Won't Check Out A Path It Autocompleted</a>
-			<div>
-				<a href="http://lornajane.net" class="source" target="_blank">lornajane.net</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.lornajane.net/posts/2015/git-wont-check-out-a-path-it-autocompleted" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.lornajane.net/posts/2015/git-wont-check-out-a-path-it-autocompleted&text=Git Won't Check Out A Path It Autocompleted" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.lornajane.net/posts/2015/git-wont-check-out-a-path-it-autocompleted" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.lornajane.net/posts/2015/git-wont-check-out-a-path-it-autocompleted&title=Git Won't Check Out A Path It Autocompleted" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.lornajane.net/posts/2015/git-wont-check-out-a-path-it-autocompleted" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.lornajane.net/posts/2015/git-wont-check-out-a-path-it-autocompleted">
+				<span class="item-title">Git Won't Check Out A Path It Autocompleted</span>
+				<span class="item-info">lornajane.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://seld.be/notes/php-versions-stats-2015-edition?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+php-blog-seld+%28Seld.be+%3E+Blog+%3E+PHP%29" class="item-link" target="_blank">PHP Versions Stats - 2015 Edition</a>
-			<div>
-				<a href="http://seld.be" class="source" target="_blank">seld.be</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://seld.be/notes/php-versions-stats-2015-edition?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+php-blog-seld+%28Seld.be+%3E+Blog+%3E+PHP%29" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://seld.be/notes/php-versions-stats-2015-edition?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+php-blog-seld+%28Seld.be+%3E+Blog+%3E+PHP%29&text=PHP Versions Stats - 2015 Edition" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://seld.be/notes/php-versions-stats-2015-edition?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+php-blog-seld+%28Seld.be+%3E+Blog+%3E+PHP%29" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://seld.be/notes/php-versions-stats-2015-edition?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+php-blog-seld+%28Seld.be+%3E+Blog+%3E+PHP%29&title=PHP Versions Stats - 2015 Edition" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://seld.be/notes/php-versions-stats-2015-edition?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+php-blog-seld+%28Seld.be+%3E+Blog+%3E+PHP%29" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://seld.be/notes/php-versions-stats-2015-edition?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+php-blog-seld+%28Seld.be+%3E+Blog+%3E+PHP%29">
+				<span class="item-title">PHP Versions Stats - 2015 Edition</span>
+				<span class="item-info">seld.be</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.johnmorrisonline.com/7-steps-to-make-money-on-upwork/" class="item-link" target="_blank">7 Steps to Make Money on Upwork</a>
-			<div>
-				<a href="http://johnmorrisonline.com" class="source" target="_blank">johnmorrisonline.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.johnmorrisonline.com/7-steps-to-make-money-on-upwork/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.johnmorrisonline.com/7-steps-to-make-money-on-upwork/&text=7 Steps to Make Money on Upwork" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.johnmorrisonline.com/7-steps-to-make-money-on-upwork/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.johnmorrisonline.com/7-steps-to-make-money-on-upwork/&title=7 Steps to Make Money on Upwork" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.johnmorrisonline.com/7-steps-to-make-money-on-upwork/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.johnmorrisonline.com/7-steps-to-make-money-on-upwork/">
+				<span class="item-title">7 Steps to Make Money on Upwork</span>
+				<span class="item-info">johnmorrisonline.com</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -829,33 +499,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

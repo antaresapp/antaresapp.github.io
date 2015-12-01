@@ -94,7 +94,7 @@
 	{
 		"name": "Game Development",
 		"route": "gamedev",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Gamedev.js Weekly",
@@ -322,7 +322,7 @@
 	{
 		"name": "Wordpress",
 		"route": "wordpress",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "wpMail",
@@ -334,7 +334,7 @@
 	{
 		"name": "Perl",
 		"route": "perl",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Perl Weekly",
@@ -368,7 +368,7 @@
 	{
 		"name": "Non-Developer",
 		"route": "nondev",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Next Draft",
@@ -422,7 +422,7 @@
 	{
 		"name": "Real-time",
 		"route": "realtime",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "RealTime Weekly",
@@ -451,7 +451,7 @@
 	{
 		"name": "Web Audio",
 		"route": "web-audio",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Web Audio Weekly",
@@ -475,7 +475,7 @@
 	{
 		"name": "Scala",
 		"route": "scala",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Scala Times",
@@ -487,7 +487,7 @@
 	{
 		"name": "Product",
 		"route": "product",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Makers Weekly",
@@ -508,7 +508,7 @@
 	{
 		"name": "Raspberry Pi",
 		"route": "raspberrypi",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Raspi Weekly",
@@ -519,7 +519,7 @@
 	{
 		"name": "Rust",
 		"route": "rust",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "This Week in Rust",
@@ -560,7 +560,7 @@
 	{
 		"name": "People",
 		"route": "people",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Software Lead Weekly",
@@ -572,7 +572,7 @@
 	{
 		"name": "Data Science",
 		"route": "data-science",
-		"enabled": true,
+		"enabled": false,
 		"sources": [
 			{
 				"name": "Data Science Weekly",

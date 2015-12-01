@@ -32,386 +32,287 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" selected>Python</option>
-						<option value="/go" >Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" selected>Python</option>
+				<option value="/go" >Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>python</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>python</h2>
-		Sources: 
-					<a href="http://www.pythonweekly.com/" target="_blank">Python Weekly</a>
-					<a href="http://pycoders.com/" target="_blank">PyCoders Weekly</a>
-			</div>
-		<div class="small">Last updated: 2015-11-28 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 28</div>
-			<a href="http://cryzed.github.io/2015/11/26/creating-a-pyside-toolchain-for-pycharm/" class="item-link" target="_blank">Creating a PySide toolchain for PyCharm</a>
-			<div>
-				<a href="http://cryzed.github.io" class="source" target="_blank">cryzed.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://cryzed.github.io/2015/11/26/creating-a-pyside-toolchain-for-pycharm/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://cryzed.github.io/2015/11/26/creating-a-pyside-toolchain-for-pycharm/&text=Creating a PySide toolchain for PyCharm" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://cryzed.github.io/2015/11/26/creating-a-pyside-toolchain-for-pycharm/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://cryzed.github.io/2015/11/26/creating-a-pyside-toolchain-for-pycharm/&title=Creating a PySide toolchain for PyCharm" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://cryzed.github.io/2015/11/26/creating-a-pyside-toolchain-for-pycharm/" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="http://cryzed.github.io/2015/11/26/creating-a-pyside-toolchain-for-pycharm/">
+				<span class="item-title">Creating a PySide toolchain for PyCharm</span>
+				<span class="item-info">cryzed.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://blog.ziade.org/2015/11/25/should-i-use-pythonoptimize/" class="item-link" target="_blank">Should I use PYTHONOPTIMIZE ?</a>
-			<div>
-				<a href="http://ziade.org" class="source" target="_blank">ziade.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://blog.ziade.org/2015/11/25/should-i-use-pythonoptimize/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://blog.ziade.org/2015/11/25/should-i-use-pythonoptimize/&text=Should I use PYTHONOPTIMIZE ?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://blog.ziade.org/2015/11/25/should-i-use-pythonoptimize/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://blog.ziade.org/2015/11/25/should-i-use-pythonoptimize/&title=Should I use PYTHONOPTIMIZE ?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://blog.ziade.org/2015/11/25/should-i-use-pythonoptimize/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://blog.ziade.org/2015/11/25/should-i-use-pythonoptimize/">
+				<span class="item-title">Should I use PYTHONOPTIMIZE ?</span>
+				<span class="item-info">ziade.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.johndcook.com/blog/2015/11/24/estimating-the-exponent-of-discrete-power-law-data/" class="item-link" target="_blank">Estimating the exponent of discrete power law data</a>
-			<div>
-				<a href="http://johndcook.com" class="source" target="_blank">johndcook.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.johndcook.com/blog/2015/11/24/estimating-the-exponent-of-discrete-power-law-data/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.johndcook.com/blog/2015/11/24/estimating-the-exponent-of-discrete-power-law-data/&text=Estimating the exponent of discrete power law data" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.johndcook.com/blog/2015/11/24/estimating-the-exponent-of-discrete-power-law-data/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.johndcook.com/blog/2015/11/24/estimating-the-exponent-of-discrete-power-law-data/&title=Estimating the exponent of discrete power law data" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.johndcook.com/blog/2015/11/24/estimating-the-exponent-of-discrete-power-law-data/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.johndcook.com/blog/2015/11/24/estimating-the-exponent-of-discrete-power-law-data/">
+				<span class="item-title">Estimating the exponent of discrete power law data</span>
+				<span class="item-info">johndcook.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://opbeat.com/events/duth/" class="item-link" target="_blank">Django Under The Hood Talks</a>
-			<div>
-				<a href="http://opbeat.com" class="source" target="_blank">opbeat.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://opbeat.com/events/duth/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://opbeat.com/events/duth/&text=Django Under The Hood Talks" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://opbeat.com/events/duth/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://opbeat.com/events/duth/&title=Django Under The Hood Talks" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://opbeat.com/events/duth/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://opbeat.com/events/duth/">
+				<span class="item-title">Django Under The Hood Talks</span>
+				<span class="item-info">opbeat.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/amol-mandhane/htmlPy" class="item-link" target="_blank">htmlPy</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/amol-mandhane/htmlPy" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/amol-mandhane/htmlPy&text=htmlPy" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/amol-mandhane/htmlPy" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/amol-mandhane/htmlPy&title=htmlPy" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/amol-mandhane/htmlPy" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/amol-mandhane/htmlPy">
+				<span class="item-title">htmlPy</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/JelteF/PyLaTeX/tree/master" class="item-link" target="_blank">PyLaTeX</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/JelteF/PyLaTeX/tree/master" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/JelteF/PyLaTeX/tree/master&text=PyLaTeX" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/JelteF/PyLaTeX/tree/master" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/JelteF/PyLaTeX/tree/master&title=PyLaTeX" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/JelteF/PyLaTeX/tree/master" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/JelteF/PyLaTeX/tree/master">
+				<span class="item-title">PyLaTeX</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/MeirKriheli/statirator" class="item-link" target="_blank">statirator</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/MeirKriheli/statirator" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/MeirKriheli/statirator&text=statirator" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/MeirKriheli/statirator" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/MeirKriheli/statirator&title=statirator" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/MeirKriheli/statirator" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/MeirKriheli/statirator">
+				<span class="item-title">statirator</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/Changaco/version.py" class="item-link" target="_blank">version.py</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/Changaco/version.py" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/Changaco/version.py&text=version.py" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/Changaco/version.py" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/Changaco/version.py&title=version.py" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/Changaco/version.py" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/Changaco/version.py">
+				<span class="item-title">version.py</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/rasbt/biopandas" class="item-link" target="_blank">biopandas</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rasbt/biopandas" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/rasbt/biopandas&text=biopandas" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/rasbt/biopandas" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rasbt/biopandas&title=biopandas" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/rasbt/biopandas" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/rasbt/biopandas">
+				<span class="item-title">biopandas</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/gouthambs/Flask-Blogging" class="item-link" target="_blank">Flask-Blogging</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/gouthambs/Flask-Blogging" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/gouthambs/Flask-Blogging&text=Flask-Blogging" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/gouthambs/Flask-Blogging" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/gouthambs/Flask-Blogging&title=Flask-Blogging" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/gouthambs/Flask-Blogging" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/gouthambs/Flask-Blogging">
+				<span class="item-title">Flask-Blogging</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://github.com/rainyear/ImageColorTheme" class="item-link" target="_blank">ImageColorTheme</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/rainyear/ImageColorTheme" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/rainyear/ImageColorTheme&text=ImageColorTheme" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/rainyear/ImageColorTheme" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/rainyear/ImageColorTheme&title=ImageColorTheme" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/rainyear/ImageColorTheme" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/rainyear/ImageColorTheme">
+				<span class="item-title">ImageColorTheme</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/" class="item-link" target="_blank">Introducing the DSF's Director of Advancement</a>
-			<div>
-				<a href="http://djangoproject.com" class="source" target="_blank">djangoproject.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/&text=Introducing the DSF's Director of Advancement" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/&title=Introducing the DSF's Director of Advancement" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/">
+				<span class="item-title">Introducing the DSF's Director of Advancement</span>
+				<span class="item-info">djangoproject.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.python.org/downloads/release/python-2711rc1/" class="item-link" target="_blank">Python 2.7.11rc1 released</a>
-			<div>
-				<a href="http://python.org" class="source" target="_blank">python.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.python.org/downloads/release/python-2711rc1/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.python.org/downloads/release/python-2711rc1/&text=Python 2.7.11rc1 released" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.python.org/downloads/release/python-2711rc1/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.python.org/downloads/release/python-2711rc1/&title=Python 2.7.11rc1 released" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.python.org/downloads/release/python-2711rc1/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.python.org/downloads/release/python-2711rc1/">
+				<span class="item-title">Python 2.7.11rc1 released</span>
+				<span class="item-info">python.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.reddit.com/r/Python/comments/3udqg8/why_is_python_used_a_lot_for_statistics/" class="item-link" target="_blank">Why is Python used a lot for Statistics?</a>
-			<div>
-				<a href="http://reddit.com" class="source" target="_blank">reddit.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.reddit.com/r/Python/comments/3udqg8/why_is_python_used_a_lot_for_statistics/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.reddit.com/r/Python/comments/3udqg8/why_is_python_used_a_lot_for_statistics/&text=Why is Python used a lot for Statistics?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.reddit.com/r/Python/comments/3udqg8/why_is_python_used_a_lot_for_statistics/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.reddit.com/r/Python/comments/3udqg8/why_is_python_used_a_lot_for_statistics/&title=Why is Python used a lot for Statistics?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.reddit.com/r/Python/comments/3udqg8/why_is_python_used_a_lot_for_statistics/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.reddit.com/r/Python/comments/3udqg8/why_is_python_used_a_lot_for_statistics/">
+				<span class="item-title">Why is Python used a lot for Statistics?</span>
+				<span class="item-info">reddit.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.reddit.com/r/Python/comments/3ubvay/dear_sysadmins_what_is_your_job_and_how_do_you/" class="item-link" target="_blank">Dear sysadmins: what is your job and how do you use python to make it easier?</a>
-			<div>
-				<a href="http://reddit.com" class="source" target="_blank">reddit.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.reddit.com/r/Python/comments/3ubvay/dear_sysadmins_what_is_your_job_and_how_do_you/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.reddit.com/r/Python/comments/3ubvay/dear_sysadmins_what_is_your_job_and_how_do_you/&text=Dear sysadmins: what is your job and how do you use python to make it easier?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.reddit.com/r/Python/comments/3ubvay/dear_sysadmins_what_is_your_job_and_how_do_you/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.reddit.com/r/Python/comments/3ubvay/dear_sysadmins_what_is_your_job_and_how_do_you/&title=Dear sysadmins: what is your job and how do you use python to make it easier?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.reddit.com/r/Python/comments/3ubvay/dear_sysadmins_what_is_your_job_and_how_do_you/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.reddit.com/r/Python/comments/3ubvay/dear_sysadmins_what_is_your_job_and_how_do_you/">
+				<span class="item-title">Dear sysadmins: what is your job and how do you use python to make it easier?</span>
+				<span class="item-info">reddit.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.pythonjobshq.com/jobs/68091-software-architect-full-stack-django-web-developer-math-cloud-products-at-design-science" class="item-link" target="_blank">Software Architect, Full Stack(Django) (Long Beach)  </a>
-			<div>
-				<a href="http://pythonjobshq.com" class="source" target="_blank">pythonjobshq.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.pythonjobshq.com/jobs/68091-software-architect-full-stack-django-web-developer-math-cloud-products-at-design-science" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.pythonjobshq.com/jobs/68091-software-architect-full-stack-django-web-developer-math-cloud-products-at-design-science&text=Software Architect, Full Stack(Django) (Long Beach)  " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.pythonjobshq.com/jobs/68091-software-architect-full-stack-django-web-developer-math-cloud-products-at-design-science" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.pythonjobshq.com/jobs/68091-software-architect-full-stack-django-web-developer-math-cloud-products-at-design-science&title=Software Architect, Full Stack(Django) (Long Beach)  " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.pythonjobshq.com/jobs/68091-software-architect-full-stack-django-web-developer-math-cloud-products-at-design-science" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.pythonjobshq.com/jobs/68091-software-architect-full-stack-django-web-developer-math-cloud-products-at-design-science">
+				<span class="item-title">Software Architect, Full Stack(Django) (Long Beach)  </span>
+				<span class="item-info">pythonjobshq.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="http://www.pythonjobshq.com/jobs/73191-full-stack-python-engineer-at-undercover-tourist" class="item-link" target="_blank">Full Stack Python Engineer (Austin, TX)  </a>
-			<div>
-				<a href="http://pythonjobshq.com" class="source" target="_blank">pythonjobshq.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.pythonjobshq.com/jobs/73191-full-stack-python-engineer-at-undercover-tourist" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.pythonjobshq.com/jobs/73191-full-stack-python-engineer-at-undercover-tourist&text=Full Stack Python Engineer (Austin, TX)  " class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.pythonjobshq.com/jobs/73191-full-stack-python-engineer-at-undercover-tourist" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.pythonjobshq.com/jobs/73191-full-stack-python-engineer-at-undercover-tourist&title=Full Stack Python Engineer (Austin, TX)  " class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.pythonjobshq.com/jobs/73191-full-stack-python-engineer-at-undercover-tourist" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.pythonjobshq.com/jobs/73191-full-stack-python-engineer-at-undercover-tourist">
+				<span class="item-title">Full Stack Python Engineer (Austin, TX)  </span>
+				<span class="item-info">pythonjobshq.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.python.org/downloads/release/python-351rc1/" class="item-link" target="_blank">Python 3.5.1rc1 Release</a>
-			<div>
-				<a href="http://python.org" class="source" target="_blank">python.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.python.org/downloads/release/python-351rc1/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.python.org/downloads/release/python-351rc1/&text=Python 3.5.1rc1 Release" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.python.org/downloads/release/python-351rc1/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.python.org/downloads/release/python-351rc1/&title=Python 3.5.1rc1 Release" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.python.org/downloads/release/python-351rc1/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.python.org/downloads/release/python-351rc1/">
+				<span class="item-title">Python 3.5.1rc1 Release</span>
+				<span class="item-info">python.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/" class="item-link" target="_blank">Django security releases issued: 1.9rc2, 1.8.7, 1.7.11</a>
-			<div>
-				<a href="http://djangoproject.com" class="source" target="_blank">djangoproject.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/&text=Django security releases issued: 1.9rc2, 1.8.7, 1.7.11" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/&title=Django security releases issued: 1.9rc2, 1.8.7, 1.7.11" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/">
+				<span class="item-title">Django security releases issued: 1.9rc2, 1.8.7, 1.7.11</span>
+				<span class="item-info">djangoproject.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 28</div>
-			<a href="https://opbeat.com/blog/posts/client-side-JS-error-logging-testers-wanted/?utm_source=pycodersweekly&amp;utm_medium=newsletter&amp;utm_content=&amp;utm_campaign=javascriptbeta" class="item-link" target="_blank">read more</a>
-			<div>
-				<a href="http://opbeat.com" class="source" target="_blank">opbeat.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://opbeat.com/blog/posts/client-side-JS-error-logging-testers-wanted/?utm_source=pycodersweekly&amp;utm_medium=newsletter&amp;utm_content=&amp;utm_campaign=javascriptbeta" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://opbeat.com/blog/posts/client-side-JS-error-logging-testers-wanted/?utm_source=pycodersweekly&amp;utm_medium=newsletter&amp;utm_content=&amp;utm_campaign=javascriptbeta&text=read more" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://opbeat.com/blog/posts/client-side-JS-error-logging-testers-wanted/?utm_source=pycodersweekly&amp;utm_medium=newsletter&amp;utm_content=&amp;utm_campaign=javascriptbeta" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://opbeat.com/blog/posts/client-side-JS-error-logging-testers-wanted/?utm_source=pycodersweekly&amp;utm_medium=newsletter&amp;utm_content=&amp;utm_campaign=javascriptbeta&title=read more" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://opbeat.com/blog/posts/client-side-JS-error-logging-testers-wanted/?utm_source=pycodersweekly&amp;utm_medium=newsletter&amp;utm_content=&amp;utm_campaign=javascriptbeta" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://opbeat.com/blog/posts/client-side-JS-error-logging-testers-wanted/?utm_source=pycodersweekly&amp;utm_medium=newsletter&amp;utm_content=&amp;utm_campaign=javascriptbeta">
+				<span class="item-title">read more</span>
+				<span class="item-info">opbeat.com</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -424,33 +325,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>

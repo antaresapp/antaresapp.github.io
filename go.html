@@ -32,399 +32,293 @@
 
 </head>
 <body>
-	<div id="wrapper">
-	<header>
-	<h1>Antares</h1>
-	<span class="sub-text">Your developer news. All in one place.</span>
-	<div id="mobile-nav">
-		<select name="news_sources" id="news_sources" class="hidden">
-						<option value="/hn" >Hacker News</option>
-						<option value="/github" >Github</option>
-						<option value="/medium" >Medium</option>
-						<option value="/dn" >Designer News</option>
-						<option value="/php" >PHP</option>
-						<option value="/html5" >HTML5</option>
-						<option value="/css" >CSS</option>
-						<option value="/js" >JavaScript</option>
-						<option value="/ruby" >Ruby</option>
-						<option value="/db" >Database</option>
-						<option value="/programmer" >Programmer</option>
-						<option value="/webdesign" >Web Design</option>
-						<option value="/uxdesign" >UX Design</option>
-						<option value="/gamedev" >Game Development</option>
-						<option value="/webdev" >Web Development</option>
-						<option value="/mobile" >Mobile</option>
-						<option value="/tools" >Tools</option>
-						<option value="/python" >Python</option>
-						<option value="/go" selected>Go</option>
-						<option value="/perl" >Perl</option>
-						<option value="/devops" >Devops</option>
-						<option value="/wordpress" >Wordpress</option>
-						<option value="/nondev" >Non-developer</option>
-						<option value="/realtime" >RealTime</option>
-						<option value="/swift" >Swift</option>
-						<option value="/web-audio" >Web Audio</option>
-						<option value="/dotnet" >.Net</option>
-						<option value="/scala" >Scala Times</option>
-						<option value="/product" >Product</option>
-						<option value="/raspberrypi" >RaspBerry Pi</option>
-						<option value="/rust" >This Week in Rust</option>
-						<option value="/clojure" >Clojure</option>
-						<option value="/machine-learning" >Machine Learning</option>
-						<option value="/people" >People</option>
-						<option value="/data-science" >Data Science</option>
-					</select>
-		<div class="mobile-settings">
-			<a href="/settings">settings</a>
-		</div>
-	</div>
-</header>
-<div id="nav">
-	<ul class="hidden">	
-				<li><a href="/hn">Hacker News</a></li>
-				<li><a href="/github">Github</a></li>
-				<li><a href="/medium">Medium</a></li>
-				<li><a href="/dn">Designer News</a></li>
-				<li><a href="/php">PHP</a></li>
-				<li><a href="/html5">HTML5</a></li>
-				<li><a href="/css">CSS</a></li>
-				<li><a href="/js">JavaScript</a></li>
-				<li><a href="/ruby">Ruby</a></li>
-				<li><a href="/db">Database</a></li>
-				<li><a href="/programmer">Programmer</a></li>
-				<li><a href="/webdesign">Web Design</a></li>
-				<li><a href="/uxdesign">UX Design</a></li>
-				<li><a href="/gamedev">Game Development</a></li>
-				<li><a href="/webdev">Web Development</a></li>
-				<li><a href="/mobile">Mobile</a></li>
-				<li><a href="/tools">Tools</a></li>
-				<li><a href="/python">Python</a></li>
-				<li><a href="/go">Go</a></li>
-				<li><a href="/perl">Perl</a></li>
-				<li><a href="/devops">Devops</a></li>
-				<li><a href="/wordpress">Wordpress</a></li>
-				<li><a href="/nondev">Non-developer</a></li>
-				<li><a href="/realtime">RealTime</a></li>
-				<li><a href="/swift">Swift</a></li>
-				<li><a href="/web-audio">Web Audio</a></li>
-				<li><a href="/dotnet">.Net</a></li>
-				<li><a href="/scala">Scala Times</a></li>
-				<li><a href="/product">Product</a></li>
-				<li><a href="/raspberrypi">RaspBerry Pi</a></li>
-				<li><a href="/rust">This Week in Rust</a></li>
-				<li><a href="/clojure">Clojure</a></li>
-				<li><a href="/machine-learning">Machine Learning</a></li>
-				<li><a href="/people">People</a></li>
-				<li><a href="/data-science">Data Science</a></li>
+	
+<div id="news_sources_container">
+	<h3>Antares</h3>
+	<select name="news_sources" id="news_sources" class="hidden">
+				<option value="/hn" >Hacker News</option>
+				<option value="/github" >Github</option>
+				<option value="/medium" >Medium</option>
+				<option value="/dn" >Designer News</option>
+				<option value="/php" >PHP</option>
+				<option value="/html5" >HTML5</option>
+				<option value="/css" >CSS</option>
+				<option value="/js" >JavaScript</option>
+				<option value="/ruby" >Ruby</option>
+				<option value="/db" >Database</option>
+				<option value="/programmer" >Programmer</option>
+				<option value="/webdesign" >Web Design</option>
+				<option value="/uxdesign" >UX Design</option>
+				<option value="/gamedev" >Game Development</option>
+				<option value="/webdev" >Web Development</option>
+				<option value="/mobile" >Mobile</option>
+				<option value="/tools" >Tools</option>
+				<option value="/python" >Python</option>
+				<option value="/go" selected>Go</option>
+				<option value="/perl" >Perl</option>
+				<option value="/devops" >Devops</option>
+				<option value="/wordpress" >Wordpress</option>
+				<option value="/nondev" >Non-developer</option>
+				<option value="/realtime" >RealTime</option>
+				<option value="/swift" >Swift</option>
+				<option value="/web-audio" >Web Audio</option>
+				<option value="/dotnet" >.Net</option>
+				<option value="/scala" >Scala Times</option>
+				<option value="/product" >Product</option>
+				<option value="/raspberrypi" >RaspBerry Pi</option>
+				<option value="/rust" >This Week in Rust</option>
+				<option value="/clojure" >Clojure</option>
+				<option value="/machine-learning" >Machine Learning</option>
+				<option value="/people" >People</option>
+				<option value="/data-science" >Data Science</option>
+			</select>
+</div>
+
+<div id="sidebar">
+	<h3>Antares</h3>
+	<ul id="types">
+				<li>
+			<a href="/hn">Hacker News</a>
+		</li>
+				<li>
+			<a href="/github">Github</a>
+		</li>
+				<li>
+			<a href="/medium">Medium</a>
+		</li>
+				<li>
+			<a href="/dn">Designer News</a>
+		</li>
+				<li>
+			<a href="/php">PHP</a>
+		</li>
+				<li>
+			<a href="/html5">HTML5</a>
+		</li>
+				<li>
+			<a href="/css">CSS</a>
+		</li>
+				<li>
+			<a href="/js">JavaScript</a>
+		</li>
+				<li>
+			<a href="/ruby">Ruby</a>
+		</li>
+				<li>
+			<a href="/db">Database</a>
+		</li>
+				<li>
+			<a href="/programmer">Programmer</a>
+		</li>
+				<li>
+			<a href="/webdesign">Web Design</a>
+		</li>
+				<li>
+			<a href="/uxdesign">UX Design</a>
+		</li>
+				<li>
+			<a href="/gamedev">Game Development</a>
+		</li>
+				<li>
+			<a href="/webdev">Web Development</a>
+		</li>
+				<li>
+			<a href="/mobile">Mobile</a>
+		</li>
+				<li>
+			<a href="/tools">Tools</a>
+		</li>
+				<li>
+			<a href="/python">Python</a>
+		</li>
+				<li>
+			<a href="/go">Go</a>
+		</li>
+				<li>
+			<a href="/perl">Perl</a>
+		</li>
+				<li>
+			<a href="/devops">Devops</a>
+		</li>
+				<li>
+			<a href="/wordpress">Wordpress</a>
+		</li>
+				<li>
+			<a href="/nondev">Non-developer</a>
+		</li>
+				<li>
+			<a href="/realtime">RealTime</a>
+		</li>
+				<li>
+			<a href="/swift">Swift</a>
+		</li>
+				<li>
+			<a href="/web-audio">Web Audio</a>
+		</li>
+				<li>
+			<a href="/dotnet">.Net</a>
+		</li>
+				<li>
+			<a href="/scala">Scala Times</a>
+		</li>
+				<li>
+			<a href="/product">Product</a>
+		</li>
+				<li>
+			<a href="/raspberrypi">RaspBerry Pi</a>
+		</li>
+				<li>
+			<a href="/rust">This Week in Rust</a>
+		</li>
+				<li>
+			<a href="/clojure">Clojure</a>
+		</li>
+				<li>
+			<a href="/machine-learning">Machine Learning</a>
+		</li>
+				<li>
+			<a href="/people">People</a>
+		</li>
+				<li>
+			<a href="/data-science">Data Science</a>
+		</li>
 			</ul>
 </div>
 
+<div id="items-container">
+	<h1>go</h1>
 
-<div id="news">
-	<div id="news-category">
-		<h2>go</h2>
-		Sources: 
-					<a href="http://golangweekly.com/" target="_blank">Go Newsletter</a>
-			</div>
-		<div class="small">Last updated: 2015-11-27 PHT</div>
-	<div class="clear"></div>
-	<ul id="items" class="hidden">				
-			<li class="item">
-			<div class="date ">Nov 27</div>
-			<a href="https://github.com/neurosnap/sentences?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">sentences: A Multilingual Command Line Sentence Tokenizer</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/neurosnap/sentences?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/neurosnap/sentences?utm_source=golangweekly&amp;utm_medium=email&text=sentences: A Multilingual Command Line Sentence Tokenizer" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/neurosnap/sentences?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/neurosnap/sentences?utm_source=golangweekly&amp;utm_medium=email&title=sentences: A Multilingual Command Line Sentence Tokenizer" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/neurosnap/sentences?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+	<ul id="items">
+				<li class="item">
+			<a href="https://github.com/neurosnap/sentences?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">sentences: A Multilingual Command Line Sentence Tokenizer</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/spf13/hugo/releases/tag/v0.15?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Hugo 0.15 Released: The Fast and Flexible Static Site Generator</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/spf13/hugo/releases/tag/v0.15?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/spf13/hugo/releases/tag/v0.15?utm_source=golangweekly&amp;utm_medium=email&text=Hugo 0.15 Released: The Fast and Flexible Static Site Generator" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/spf13/hugo/releases/tag/v0.15?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/spf13/hugo/releases/tag/v0.15?utm_source=golangweekly&amp;utm_medium=email&title=Hugo 0.15 Released: The Fast and Flexible Static Site Generator" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/spf13/hugo/releases/tag/v0.15?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/spf13/hugo/releases/tag/v0.15?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Hugo 0.15 Released: The Fast and Flexible Static Site Generator</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://www.outlearn.com/learn/jonathanfmills/advanced-js" class="item-link" target="_blank">Advanced JavaScript Highlights</a>
-			<div>
-				<a href="http://outlearn.com" class="source" target="_blank">outlearn.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://www.outlearn.com/learn/jonathanfmills/advanced-js" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://www.outlearn.com/learn/jonathanfmills/advanced-js&text=Advanced JavaScript Highlights" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://www.outlearn.com/learn/jonathanfmills/advanced-js" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://www.outlearn.com/learn/jonathanfmills/advanced-js&title=Advanced JavaScript Highlights" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://www.outlearn.com/learn/jonathanfmills/advanced-js" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://www.outlearn.com/learn/jonathanfmills/advanced-js">
+				<span class="item-title">Advanced JavaScript Highlights</span>
+				<span class="item-info">outlearn.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/fatih/vim-go/releases/tag/v1.3?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">vim-go 1.3 Released: A Go Development Plugin for Vim</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/fatih/vim-go/releases/tag/v1.3?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/fatih/vim-go/releases/tag/v1.3?utm_source=golangweekly&amp;utm_medium=email&text=vim-go 1.3 Released: A Go Development Plugin for Vim" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/fatih/vim-go/releases/tag/v1.3?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/fatih/vim-go/releases/tag/v1.3?utm_source=golangweekly&amp;utm_medium=email&title=vim-go 1.3 Released: A Go Development Plugin for Vim" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/fatih/vim-go/releases/tag/v1.3?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/fatih/vim-go/releases/tag/v1.3?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">vim-go 1.3 Released: A Go Development Plugin for Vim</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://aws.amazon.com/blogs/aws/now-available-version-1-0-of-the-aws-sdk-for-go/?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Version 1.0 of the AWS SDK for Go Now Available</a>
-			<div>
-				<a href="http://amazon.com" class="source" target="_blank">amazon.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://aws.amazon.com/blogs/aws/now-available-version-1-0-of-the-aws-sdk-for-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://aws.amazon.com/blogs/aws/now-available-version-1-0-of-the-aws-sdk-for-go/?utm_source=golangweekly&amp;utm_medium=email&text=Version 1.0 of the AWS SDK for Go Now Available" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://aws.amazon.com/blogs/aws/now-available-version-1-0-of-the-aws-sdk-for-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://aws.amazon.com/blogs/aws/now-available-version-1-0-of-the-aws-sdk-for-go/?utm_source=golangweekly&amp;utm_medium=email&title=Version 1.0 of the AWS SDK for Go Now Available" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://aws.amazon.com/blogs/aws/now-available-version-1-0-of-the-aws-sdk-for-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://aws.amazon.com/blogs/aws/now-available-version-1-0-of-the-aws-sdk-for-go/?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Version 1.0 of the AWS SDK for Go Now Available</span>
+				<span class="item-info">amazon.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://maciekmm.net/html-golang-stream-processing/?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Parsing HTML with Go using Stream Processing</a>
-			<div>
-				<a href="http://maciekmm.net" class="source" target="_blank">maciekmm.net</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://maciekmm.net/html-golang-stream-processing/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://maciekmm.net/html-golang-stream-processing/?utm_source=golangweekly&amp;utm_medium=email&text=Parsing HTML with Go using Stream Processing" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://maciekmm.net/html-golang-stream-processing/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://maciekmm.net/html-golang-stream-processing/?utm_source=golangweekly&amp;utm_medium=email&title=Parsing HTML with Go using Stream Processing" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://maciekmm.net/html-golang-stream-processing/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://maciekmm.net/html-golang-stream-processing/?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Parsing HTML with Go using Stream Processing</span>
+				<span class="item-info">maciekmm.net</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.levigross.com/2015/11/21/mutual-tls-authentication-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Mutual TLS Authentication in Go</a>
-			<div>
-				<a href="http://levigross.com" class="source" target="_blank">levigross.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.levigross.com/2015/11/21/mutual-tls-authentication-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.levigross.com/2015/11/21/mutual-tls-authentication-in-go/?utm_source=golangweekly&amp;utm_medium=email&text=Mutual TLS Authentication in Go" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.levigross.com/2015/11/21/mutual-tls-authentication-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.levigross.com/2015/11/21/mutual-tls-authentication-in-go/?utm_source=golangweekly&amp;utm_medium=email&title=Mutual TLS Authentication in Go" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.levigross.com/2015/11/21/mutual-tls-authentication-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.levigross.com/2015/11/21/mutual-tls-authentication-in-go/?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Mutual TLS Authentication in Go</span>
+				<span class="item-info">levigross.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://medium.com/@felixge/why-you-should-use-go-build-a-or-gb-c469157d5c1b?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Why You Should Use 'go build -a' (or gb)</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@felixge/why-you-should-use-go-build-a-or-gb-c469157d5c1b?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@felixge/why-you-should-use-go-build-a-or-gb-c469157d5c1b?utm_source=golangweekly&amp;utm_medium=email&text=Why You Should Use 'go build -a' (or gb)" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@felixge/why-you-should-use-go-build-a-or-gb-c469157d5c1b?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@felixge/why-you-should-use-go-build-a-or-gb-c469157d5c1b?utm_source=golangweekly&amp;utm_medium=email&title=Why You Should Use 'go build -a' (or gb)" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@felixge/why-you-should-use-go-build-a-or-gb-c469157d5c1b?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@felixge/why-you-should-use-go-build-a-or-gb-c469157d5c1b?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Why You Should Use 'go build -a' (or gb)</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://groups.google.com/d/msg/golang-nuts/R7ryo7RdBPY/t7XFNGyRDQAJ?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">What's So Bad About Stdlib's Log Package?</a>
-			<div>
-				<a href="http://google.com" class="source" target="_blank">google.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://groups.google.com/d/msg/golang-nuts/R7ryo7RdBPY/t7XFNGyRDQAJ?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://groups.google.com/d/msg/golang-nuts/R7ryo7RdBPY/t7XFNGyRDQAJ?utm_source=golangweekly&amp;utm_medium=email&text=What's So Bad About Stdlib's Log Package?" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://groups.google.com/d/msg/golang-nuts/R7ryo7RdBPY/t7XFNGyRDQAJ?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://groups.google.com/d/msg/golang-nuts/R7ryo7RdBPY/t7XFNGyRDQAJ?utm_source=golangweekly&amp;utm_medium=email&title=What's So Bad About Stdlib's Log Package?" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://groups.google.com/d/msg/golang-nuts/R7ryo7RdBPY/t7XFNGyRDQAJ?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://groups.google.com/d/msg/golang-nuts/R7ryo7RdBPY/t7XFNGyRDQAJ?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">What's So Bad About Stdlib's Log Package?</span>
+				<span class="item-info">google.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/gosuri/uilive?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">uilive: Update Terminal Output in Real Time</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/gosuri/uilive?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/gosuri/uilive?utm_source=golangweekly&amp;utm_medium=email&text=uilive: Update Terminal Output in Real Time" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/gosuri/uilive?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/gosuri/uilive?utm_source=golangweekly&amp;utm_medium=email&title=uilive: Update Terminal Output in Real Time" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/gosuri/uilive?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/gosuri/uilive?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">uilive: Update Terminal Output in Real Time</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/michaelmacinnis/oh?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Oh: A Unix Shell Written in Go</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/michaelmacinnis/oh?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/michaelmacinnis/oh?utm_source=golangweekly&amp;utm_medium=email&text=Oh: A Unix Shell Written in Go" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/michaelmacinnis/oh?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/michaelmacinnis/oh?utm_source=golangweekly&amp;utm_medium=email&title=Oh: A Unix Shell Written in Go" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/michaelmacinnis/oh?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/michaelmacinnis/oh?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Oh: A Unix Shell Written in Go</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/gernest/apidemic?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Apidemic: Fake JSON Response Server</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/gernest/apidemic?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/gernest/apidemic?utm_source=golangweekly&amp;utm_medium=email&text=Apidemic: Fake JSON Response Server" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/gernest/apidemic?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/gernest/apidemic?utm_source=golangweekly&amp;utm_medium=email&title=Apidemic: Fake JSON Response Server" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/gernest/apidemic?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/gernest/apidemic?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Apidemic: Fake JSON Response Server</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.informit.com/store/go-programming-language-9780134190440" class="item-link" target="_blank">The Go Programming Language</a>
-			<div>
-				<a href="http://informit.com" class="source" target="_blank">informit.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.informit.com/store/go-programming-language-9780134190440" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.informit.com/store/go-programming-language-9780134190440&text=The Go Programming Language" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.informit.com/store/go-programming-language-9780134190440" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.informit.com/store/go-programming-language-9780134190440&title=The Go Programming Language" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.informit.com/store/go-programming-language-9780134190440" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.informit.com/store/go-programming-language-9780134190440">
+				<span class="item-title">The Go Programming Language</span>
+				<span class="item-info">informit.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://golang.org/conduct?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">The Go Community Code of Conduct</a>
-			<div>
-				<a href="http://golang.org" class="source" target="_blank">golang.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://golang.org/conduct?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://golang.org/conduct?utm_source=golangweekly&amp;utm_medium=email&text=The Go Community Code of Conduct" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://golang.org/conduct?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://golang.org/conduct?utm_source=golangweekly&amp;utm_medium=email&title=The Go Community Code of Conduct" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://golang.org/conduct?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://golang.org/conduct?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">The Go Community Code of Conduct</span>
+				<span class="item-info">golang.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://github.com/valyala/fasthttp?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">fasthttp: Fast HTTP package for Go</a>
-			<div>
-				<a href="http://github.com" class="source" target="_blank">github.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://github.com/valyala/fasthttp?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://github.com/valyala/fasthttp?utm_source=golangweekly&amp;utm_medium=email&text=fasthttp: Fast HTTP package for Go" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://github.com/valyala/fasthttp?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://github.com/valyala/fasthttp?utm_source=golangweekly&amp;utm_medium=email&title=fasthttp: Fast HTTP package for Go" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://github.com/valyala/fasthttp?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://github.com/valyala/fasthttp?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">fasthttp: Fast HTTP package for Go</span>
+				<span class="item-info">github.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://medium.com/@deckarep/dancing-with-go-s-mutexes-92407ae927bf?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Dancing with Go’s Mutexes</a>
-			<div>
-				<a href="http://medium.com" class="source" target="_blank">medium.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://medium.com/@deckarep/dancing-with-go-s-mutexes-92407ae927bf?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://medium.com/@deckarep/dancing-with-go-s-mutexes-92407ae927bf?utm_source=golangweekly&amp;utm_medium=email&text=Dancing with Go’s Mutexes" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://medium.com/@deckarep/dancing-with-go-s-mutexes-92407ae927bf?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://medium.com/@deckarep/dancing-with-go-s-mutexes-92407ae927bf?utm_source=golangweekly&amp;utm_medium=email&title=Dancing with Go’s Mutexes" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://medium.com/@deckarep/dancing-with-go-s-mutexes-92407ae927bf?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://medium.com/@deckarep/dancing-with-go-s-mutexes-92407ae927bf?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Dancing with Go’s Mutexes</span>
+				<span class="item-info">medium.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://go-proverbs.github.io/?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Go Proverbs: Several Short and Simple Thoughts on Go Development</a>
-			<div>
-				<a href="http://go-proverbs.github.io" class="source" target="_blank">go-proverbs.github.io</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://go-proverbs.github.io/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://go-proverbs.github.io/?utm_source=golangweekly&amp;utm_medium=email&text=Go Proverbs: Several Short and Simple Thoughts on Go Development" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://go-proverbs.github.io/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://go-proverbs.github.io/?utm_source=golangweekly&amp;utm_medium=email&title=Go Proverbs: Several Short and Simple Thoughts on Go Development" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://go-proverbs.github.io/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://go-proverbs.github.io/?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Go Proverbs: Several Short and Simple Thoughts on Go Development</span>
+				<span class="item-info">go-proverbs.github.io</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://forum.golangbridge.org/t/the-go-proverbs-project/1552" class="item-link" target="_blank">encouraged to contribute your own</a>
-			<div>
-				<a href="http://golangbridge.org" class="source" target="_blank">golangbridge.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://forum.golangbridge.org/t/the-go-proverbs-project/1552" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://forum.golangbridge.org/t/the-go-proverbs-project/1552&text=encouraged to contribute your own" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://forum.golangbridge.org/t/the-go-proverbs-project/1552" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://forum.golangbridge.org/t/the-go-proverbs-project/1552&title=encouraged to contribute your own" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://forum.golangbridge.org/t/the-go-proverbs-project/1552" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://forum.golangbridge.org/t/the-go-proverbs-project/1552">
+				<span class="item-title">encouraged to contribute your own</span>
+				<span class="item-info">golangbridge.org</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="https://hired.com/?utm_source=newsletters&amp;utm_medium=gonewsletter&amp;utm_campaign=q4_15-petercooperpress&amp;utm_term=sponsored&amp;utm_content=112615-go" class="item-link" target="_blank">Go Get Hired, With Hired</a>
-			<div>
-				<a href="http://hired.com" class="source" target="_blank">hired.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=https://hired.com/?utm_source=newsletters&amp;utm_medium=gonewsletter&amp;utm_campaign=q4_15-petercooperpress&amp;utm_term=sponsored&amp;utm_content=112615-go" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=https://hired.com/?utm_source=newsletters&amp;utm_medium=gonewsletter&amp;utm_campaign=q4_15-petercooperpress&amp;utm_term=sponsored&amp;utm_content=112615-go&text=Go Get Hired, With Hired" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=https://hired.com/?utm_source=newsletters&amp;utm_medium=gonewsletter&amp;utm_campaign=q4_15-petercooperpress&amp;utm_term=sponsored&amp;utm_content=112615-go" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=https://hired.com/?utm_source=newsletters&amp;utm_medium=gonewsletter&amp;utm_campaign=q4_15-petercooperpress&amp;utm_term=sponsored&amp;utm_content=112615-go&title=Go Get Hired, With Hired" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=https://hired.com/?utm_source=newsletters&amp;utm_medium=gonewsletter&amp;utm_campaign=q4_15-petercooperpress&amp;utm_term=sponsored&amp;utm_content=112615-go" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="https://hired.com/?utm_source=newsletters&amp;utm_medium=gonewsletter&amp;utm_campaign=q4_15-petercooperpress&amp;utm_term=sponsored&amp;utm_content=112615-go">
+				<span class="item-title">Go Get Hired, With Hired</span>
+				<span class="item-info">hired.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">How to Optimize Garbage Collection in Go</a>
-			<div>
-				<a href="http://cockroachlabs.com" class="source" target="_blank">cockroachlabs.com</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/?utm_source=golangweekly&amp;utm_medium=email&text=How to Optimize Garbage Collection in Go" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/?utm_source=golangweekly&amp;utm_medium=email&title=How to Optimize Garbage Collection in Go" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">How to Optimize Garbage Collection in Go</span>
+				<span class="item-info">cockroachlabs.com</span>
+			</a>
 		</li>
-			<li class="item">
-			<div class="date hidden">Nov 27</div>
-			<a href="http://features.slashdot.org/story/15/11/18/1748247/interviews-alan-donovan-and-brian-kernighan-answer-your-questions?utm_source=golangweekly&amp;utm_medium=email" class="item-link" target="_blank">Alan Donovan and Brian Kernighan Answer Questions About Go</a>
-			<div>
-				<a href="http://slashdot.org" class="source" target="_blank">slashdot.org</a>
-			</div>
-			<div class="actions">
-				<a href="http://www.facebook.com/sharer.php?u=http://features.slashdot.org/story/15/11/18/1748247/interviews-alan-donovan-and-brian-kernighan-answer-your-questions?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com/share?url=http://features.slashdot.org/story/15/11/18/1748247/interviews-alan-donovan-and-brian-kernighan-answer-your-questions?utm_source=golangweekly&amp;utm_medium=email&text=Alan Donovan and Brian Kernighan Answer Questions About Go" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=http://features.slashdot.org/story/15/11/18/1748247/interviews-alan-donovan-and-brian-kernighan-answer-your-questions?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?url=http://features.slashdot.org/story/15/11/18/1748247/interviews-alan-donovan-and-brian-kernighan-answer-your-questions?utm_source=golangweekly&amp;utm_medium=email&title=Alan Donovan and Brian Kernighan Answer Questions About Go" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="https://getpocket.com/save?url=http://features.slashdot.org/story/15/11/18/1748247/interviews-alan-donovan-and-brian-kernighan-answer-your-questions?utm_source=golangweekly&amp;utm_medium=email" class="hidden" target="_blank">Pocket</a>
-			</div>
+				<li class="item">
+			<a href="http://features.slashdot.org/story/15/11/18/1748247/interviews-alan-donovan-and-brian-kernighan-answer-your-questions?utm_source=golangweekly&amp;utm_medium=email">
+				<span class="item-title">Alan Donovan and Brian Kernighan Answer Questions About Go</span>
+				<span class="item-info">slashdot.org</span>
+			</a>
 		</li>
-		</ul>
+			
+	</ul>
 </div>
+
 
 <script id="categories-template" type="text/x-handlebars-template">
 	{{#each categories}}
@@ -437,33 +331,14 @@
 </script><script id="items-template" type="text/x-handlebars-template">
 	{{#each items}}
 	<li class="item">
-		<a href="{{url}}" class="item-link" target="_blank">{{title}}</a>
-		<div>
-			<a href="http://{{source}}" class="source" target="_blank">{{source}}</a>
-		</div>
-		<div class="actions">
-			<a href="http://www.facebook.com/sharer.php?u={{url}}" class="hidden" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/share?url={{url}}&amp;text=AMP and Incentives" class="hidden" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://plus.google.com/share?url={{url}}" class="hidden" target="_blank"><i class="fa fa-google-plus"></i></a>
-			<a href="http://www.linkedin.com/shareArticle?url={{url}}&amp;title={{title}}" class="hidden" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://getpocket.com/save?url={{url}}" class="hidden" target="_blank">Pocket</a>
-		</div>
-	</li>
-	{{/each}}
-</script>	
-	<div class="settings">
-		<a href="/settings">settings</a>
-	</div>
-
-	<div id="app">
-		<a href="https://play.google.com/store/apps/details?id=com.wern.antares" target="_blank">
-	  		<img src="assets/img/googleplay.png" alt="get the app on google play">
+		<a href="{{url}}">
+			<span class="item-title">{{title}}</span>
+			<span class="item-info">{{source}}</span>
 		</a>
-	</div>
-
-	</div>
+	</li>	
+	{{/each}}
+</script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.infinitescroll.js"></script>
 	
 	<script src="assets/js/store.min.js"></script>
 	<script src="assets/js/lodash.min.js"></script>
