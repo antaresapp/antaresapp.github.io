@@ -5,8 +5,9 @@ var categories_mobile_template = Handlebars.compile($('#categories-mobile-templa
 var timeout = 100;
 if(!store.get('categories')){
 	timeout = 1000;
-	$.getJSON('/json/settings.json', function(response){
-		store.set('categories', response.sources);
+	$.getJSON('/files/settings.json', function(response){
+		store.set('categories', response);
+		store.set('settings', response);
 	});
 }
 
@@ -36,7 +37,7 @@ setTimeout(function(){
 	}
 
 	var current_category = _.find(categories, function(cat) {
-	  return cat.route == category;
+	  return cat.name == category;
 	});
 
 	var enabled_sources = _.filter(current_category.sources, function(src){
@@ -58,23 +59,22 @@ setTimeout(function(){
 
 	var requests = [];
 
-	var base_url = 'http://antaresapp.space/json/';
-
 
 	if(enabled_sources.length > 0){
 		for(var x in current_category.sources){
 
 			var source = current_category.sources[x];
 			if(source.enabled){		
+			console.log(source);
 
 				requests.push(
-					$.getJSON(base_url + source.route + '.json')
+					$.getJSON('/files/' + source.route + '.json')
 				);
 			}
 		}
 	}else{	
 		requests.push(
-			$.getJSON(base_url + current_category.route + '.json')
+			$.getJSON('/files/' + current_category.name + '.json')
 		);
 	}
 

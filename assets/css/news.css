@@ -4,8 +4,31 @@ body {
     margin: 0;
 }
 
+a:focus, a:hover {
+    box-shadow: none;
+}
+
+.small-button {
+    font-size: .75em;
+}
+
+#settings-button {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
 h1 {
     padding-left: 40px;
+    display: inline-block;
+}
+
+#news_sources_container h3 {
+    display: inline-block;
+}
+
+#mobile-settings-button {
+    float: right;
 }
 
 #sidebar {
@@ -90,6 +113,19 @@ ul#types {
     display: none;
 }
 
+.category {
+    margin-bottom: 20px;
+}
+
+.sources {
+    margin-left: 20px;
+}
+
+.modal {
+    overflow: hidden;
+}
+
+
 
 @media screen and (max-width: 800px){
 
@@ -114,7 +150,6 @@ ul#types {
 
     #news_sources {
         display: block;
-        width: 90%;
     }
 
 }
