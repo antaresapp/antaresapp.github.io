@@ -122,16 +122,24 @@
 	{{#each categories}}
 	<option value="/{{route}}">{{name}}</option>
 	{{/each}}
-</script><script id="items-template" type="text/x-handlebars-template">
-	{{#each items}}
-	<li class="item">
-		<a href="{{url}}">
-			<span class="item-title">{{title}}</span>
-			<span class="item-info">{{source}}</span>
-		</a>
-	</li>	
+</script>
+<script id="settings-template" type="text/x-handlebars-template">
+	{{#each categories}}
+	<li class="category" data-category="{{name}}">
+	{{name}}
+	{{#each sources}}
+	<div class="sources">      
+		<label>
+		    <input type="checkbox" class="setting" data-key="{{@key}}" data-route="{{route}}" {{check enabled}}>
+		    <span class="checkable">{{name}}</span>
+		</label>
+	</div>
+	{{/each}}
+	</li>
 	{{/each}}
 </script>
+
+
 	<script src="/assets/jquery/dist/jquery.min.js"></script>
 	
 	<script src="/assets/store.js/store.min.js"></script>
