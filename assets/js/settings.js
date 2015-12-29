@@ -27,3 +27,9 @@ $('#settings').on('click', '.setting', function(){
 
 	store.set('categories', categories);
 });
+
+
+$('#news_sources').change(function(){
+	var value = $(this).val();
+	window.location.href = value;
+});
